@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Fibrotek Company – Fibra de Vidrio Bolivia</title>
+  <meta name="description" content="Empresa boliviana líder en fabricación de productos en fibra de vidrio: piscinas, tanques, juegos infantiles y estructuras a medida. Más de 15 años de experiencia."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body>
+
+<!-- ══ CURSOR ══════════════════════════════════════════ -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ══ MOBILE NAV ══════════════════════════════════════ -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" onclick="closeMobile()">✕</button>
+  <a href="#hero"     onclick="closeMobile()">Inicio</a>
+  <a href="#about"    onclick="closeMobile()">Nosotros</a>
+  <a href="#video-section" onclick="closeMobile()">Video</a>
+  <a href="#services" onclick="closeMobile()">Servicios</a>
+  <a href="#products" onclick="closeMobile()">Productos</a>
+  <a href="#gallery"  onclick="closeMobile()">Galería</a>
+  <a href="#projects" onclick="closeMobile()">Proyectos</a>
+  <a href="#contact"  onclick="closeMobile()">Contacto</a>
+</div>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════ -->
+<header id="navbar">
+  <a href="#hero" class="logo-wrap">
+    <!--
+      LOGO: reemplaza src con la ruta real, ej: src="./src/assets/logo.png"
+      Si no tienes logo aún, la letra "F" se mostrará automáticamente.
+    -->
+    <img
+      class="logo-img"
+      src="./assets/logo.png"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+      alt="Fibrotek logo"
+    />
+    <span class="logo-img" style="display:none">F</span>
+    <span class="logo-text">Fibro<span>tek</span></span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about">Nosotros</a></li>
+    <li><a href="#video-section">Video</a></li>
+    <li><a href="#services">Servicios</a></li>
+    <li><a href="#products">Productos</a></li>
+    <li><a href="#gallery">Galería</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#contact">Contacto</a></li>
+  </ul>
+
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    Cotizar
+  </button>
+
+  <button type="button" class="menu-toggle" aria-label="Abrir menú móvil" onclick="document.getElementById('mobileNav').classList.add('open')">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ══════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <div class="hero-inner">
+    <!-- Texto -->
+    <div class="hero-content">
+      <div class="hero-tag">🏭 Industria boliviana · Desde 2010</div>
+      <h1 class="hero-h1">
+        <span class="line1">Fibrotek</span>
+        <span class="line2">Company</span>
+      </h1>
+      <p class="hero-sub">
+        Fabricamos productos en fibra de vidrio con calidad industrial premium.
+        Durabilidad, diseño y precisión para proyectos que perduran.
+      </p>
+      <div class="hero-btns">
+        <button class="btn-glow" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+          Ver Productos
+        </button>
+        <button class="btn-ghost" onclick="document.getElementById('video-section').scrollIntoView({behavior:'smooth'})">
+          ▶ Ver presentación
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-n" data-target="15">0</div>
+          <div class="stat-l">Años de exp.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n" data-target="500">0</div>
+          <div class="stat-l">Proyectos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n" data-target="9">0</div>
+          <div class="stat-l">Departamentos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel visual derecho -->
+    <div class="hero-visual">
+      <div class="hero-panel">
+        <div class="panel-title">Nuestros productos principales</div>
+        <div class="product-mini-grid">
+          <div class="mini-card">
+            <div class="mini-icon">🏊</div>
+            <div class="mini-label">Piscinas</div>
+            <div class="mini-sub">Residencial & comercial</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-icon">🛢️</div>
+            <div class="mini-label">Tanques</div>
+            <div class="mini-sub">Agua & químicos</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-icon">🎠</div>
+            <div class="mini-label">Juegos</div>
+            <div class="mini-sub">Infantiles & parques</div>
+          </div>
+          <div class="mini-card">
+            <div class="mini-icon">🏗️</div>
+            <div class="mini-label">Estructuras</div>
+            <div class="mini-sub">Industrial & civil</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-ind">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-text reveal">
+      <div class="section-eyebrow">Sobre Nosotros</div>
+      <h2 class="section-h2">Expertos en fibra<br>de vidrio</h2>
+      <p class="section-sub">
+        Somos una empresa boliviana con más de 15 años fabricando soluciones en fibra de vidrio
+        de alta calidad. Nuestro compromiso: durabilidad, innovación y servicio excepcional.
+      </p>
+      <div class="about-list">
+        <div class="about-item">
+          <div class="about-icon">🔬</div>
+          <div>
+            <h4>Materiales premium</h4>
+            <p>Usamos resinas y fibras de la más alta calidad para garantizar productos que superan los estándares industriales.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">⚡</div>
+          <div>
+            <h4>Producción eficiente</h4>
+            <p>Nuestros procesos optimizados nos permiten entregar proyectos en tiempo y forma, sin comprometer la calidad.</p>
+          </div>
+        </div>
+        <div class="about-item">
+          <div class="about-icon">🛡️</div>
+          <div>
+            <h4>Garantía total</h4>
+            <p>Respaldamos cada producto con garantía de fabricación y soporte técnico post-venta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual reveal">
+      <div class="about-big-card">
+        <div class="big-stat">
+          <div class="big-num">+500</div>
+          <div class="big-lbl">Proyectos completados</div>
+        </div>
+        <div class="mini-stats">
+          <div class="ms-card"><div class="ms-n">+15</div><div class="ms-l">Años en el mercado</div></div>
+          <div class="ms-card"><div class="ms-n">9</div><div class="ms-l">Depts. cubiertos</div></div>
+          <div class="ms-card"><div class="ms-n">100%</div><div class="ms-l">Clientes satisfechos</div></div>
+          <div class="ms-card"><div class="ms-n">24h</div><div class="ms-l">Tiempo de respuesta</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     VIDEO DE PRESENTACIÓN
+     ─────────────────────────────────────────────────────
+     OPCIÓN A – Video local (recomendado para empresa):
+       Reemplaza src="./src/assets/video-presentacion.mp4"
+       con la ruta de tu archivo de video.
+
+     OPCIÓN B – YouTube embed:
+       Comenta el bloque <video> y descomenta el <iframe>.
+══════════════════════════════════════════════════════════ -->
+<section id="video-section">
+  <div class="container">
+    <div class="video-header reveal">
+      <div class="section-eyebrow">Quiénes somos</div>
+      <h2 class="section-h2">Conoce Fibrotek</h2>
+      <p class="section-sub">
+        Mira cómo fabricamos cada producto con dedicación, tecnología y el más alto estándar de calidad.
+      </p>
+    </div>
+
+    <div class="video-wrapper reveal">
+
+      <!-- ── OPCIÓN A: Video local ─────────────────────
+           Cambia src por la ruta real de tu video, ej:
+           src="./src/assets/presentacion-fibrotek.mp4"
+      ─────────────────────────────────────────────── -->
+      <video
+        id="presentacionVideo"
+        src="./assets/video/vid.mp4"
+        poster="./assets/video-poster.jpg"
+        preload="none"
+        playsinline
+      ></video>
+
+      <!-- ── OPCIÓN B: YouTube embed ──────────────────
+           Descomenta este bloque y comenta el <video> de arriba.
+           Reemplaza VIDEO_ID por el ID real de tu video de YouTube.
+
+      <iframe
+        src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1"
+        title="Presentación Fibrotek"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      ──────────────────────────────────────────────── -->
+
+      <!-- Overlay de play (solo aplica con video local) -->
+      <div class="video-overlay" id="videoOverlay">
+        <div class="play-btn">
+          <!-- Ícono play SVG -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+        <p>Ver presentación de la empresa</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     SERVICES
+══════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="header reveal">
+      <div class="section-eyebrow">Lo que hacemos</div>
+      <h2 class="section-h2">Nuestros Servicios</h2>
+      <p class="section-sub" style="margin:0 auto">
+        Ofrecemos soluciones integrales desde el diseño hasta la instalación final.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="srv-card reveal">
+        <div class="srv-num">01</div>
+        <div class="srv-icon-wrap">🏭</div>
+        <h3>Fabricación</h3>
+        <p>Producción personalizada de piezas y estructuras en fibra de vidrio con moldes propios y control de calidad riguroso.</p>
+        <span class="srv-tag">Proceso industrial</span>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">02</div>
+        <div class="srv-icon-wrap">🔧</div>
+        <h3>Instalación</h3>
+        <p>Equipo técnico especializado para instalación y montaje en sitio, con protocolos de seguridad certificados.</p>
+        <span class="srv-tag">Equipo experto</span>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">03</div>
+        <div class="srv-icon-wrap">🚚</div>
+        <h3>Entrega nacional</h3>
+        <p>Logística propia para entrega segura a los 9 departamentos de Bolivia. Embalaje especial para cada producto.</p>
+        <span class="srv-tag">Todo Bolivia</span>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">04</div>
+        <div class="srv-icon-wrap">📐</div>
+        <h3>Diseño a medida</h3>
+        <p>Diseñamos y fabricamos piezas personalizadas según tus especificaciones. Traemos tu visión a la realidad.</p>
+        <span class="srv-tag">100% personalizable</span>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">05</div>
+        <div class="srv-icon-wrap">🛠️</div>
+        <h3>Mantenimiento</h3>
+        <p>Servicio de mantenimiento preventivo y correctivo para todos nuestros productos instalados.</p>
+        <span class="srv-tag">Soporte continuo</span>
+      </div>
+      <div class="srv-card reveal">
+        <div class="srv-num">06</div>
+        <div class="srv-icon-wrap">📋</div>
+        <h3>Asesoría técnica</h3>
+        <p>Consultamos contigo desde la etapa de proyecto para elegir la solución óptima en materiales y diseño.</p>
+        <span class="srv-tag">Gratis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     PRODUCTS
+     ─────────────────────────────────────────────────────
+     Imágenes: reemplaza los src de cada <img> con fotos
+     reales de tus productos.
+     Rutas sugeridas:
+       ./src/assets/productos/piscina.jpg
+       ./src/assets/productos/tanque.jpg
+       ./src/assets/productos/juegos.jpg
+══════════════════════════════════════════════════════════ -->
+<section id="products">
+  <div class="container">
+    <div class="header reveal">
+      <div class="section-eyebrow">Catálogo</div>
+      <h2 class="section-h2">Nuestros Productos</h2>
+      <p class="section-sub">Fabricados con los mejores materiales para máxima durabilidad.</p>
+    </div>
+    <div class="prod-grid">
+
+      <!-- Producto 1 – Piscinas -->
+      <div class="prod-card reveal">
+        <div class="prod-img">
+          <img
+            src="./assets/productos/Img (2).jpeg"
+            alt="Piscinas de fibra de vidrio Fibrotek"
+            onerror="this.parentElement.innerHTML='<div class=\'prod-img-fallback\' style=\'background:linear-gradient(135deg,#0a2040,#0d5c6e)\'><span class=\'prod-emoji\'>🏊</span></div>'"
+          />
+          <div class="prod-img-overlay"></div>
+        </div>
+        <div class="prod-body">
+          <h3>Piscinas</h3>
+          <p>Piscinas residenciales y comerciales en fibra de vidrio. Duraderas, fáciles de mantener y con acabados premium.</p>
+          <span class="prod-tag">⚡ Entrega rápida</span>
+        </div>
+      </div>
+
+      <!-- Producto 2 – Tanques -->
+      <div class="prod-card reveal">
+        <div class="prod-img">
+          <img
+            src="./assets/productos/Img (85).jpeg"
+            alt="Tanques de fibra de vidrio Fibrotek"
+            onerror="this.parentElement.innerHTML='<div class=\'prod-img-fallback\' style=\'background:linear-gradient(135deg,#1a0a0a,#6b1a0a)\'><span class=\'prod-emoji\'>🛢️</span></div>'"
+          />
+          <div class="prod-img-overlay"></div>
+        </div>
+        <div class="prod-body">
+          <h3>Tanques</h3>
+          <p>Tanques para agua potable, agua caliente, combustibles y químicos. Certificados para uso industrial y domiciliario.</p>
+          <span class="prod-tag">🛡️ Certificado</span>
+        </div>
+      </div>
+
+      <!-- Producto 3 – Juegos Infantiles -->
+      <div class="prod-card reveal">
+        <div class="prod-img">
+          <img
+            src="./assets/productos/Img (3).jpeg"
+            alt="Juegos infantiles de fibra de vidrio Fibrotek"
+            onerror="this.parentElement.innerHTML='<div class=\'prod-img-fallback\' style=\'background:linear-gradient(135deg,#0a1a0a,#2a6b1a)\'><span class=\'prod-emoji\'>🎠</span></div>'"
+          />
+          <div class="prod-img-overlay"></div>
+        </div>
+        <div class="prod-body">
+          <h3>Juegos Infantiles</h3>
+          <p>Equipamiento de juegos y mobiliario urbano en fibra de vidrio. Colores vivos, resistente a la intemperie y seguros.</p>
+          <span class="prod-tag">🌈 Full color</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     GALERÍA DE IMÁGENES
+     ─────────────────────────────────────────────────────
+     Reemplaza los src con fotos reales de la empresa:
+     instalaciones, taller, productos terminados, equipo.
+     Rutas sugeridas:
+       ./src/assets/galeria/galeria-1.jpg  (imagen grande)
+       ./src/assets/galeria/galeria-2.jpg
+       ./src/assets/galeria/galeria-3.jpg
+       ./src/assets/galeria/galeria-4.jpg
+       ./src/assets/galeria/galeria-5.jpg
+══════════════════════════════════════════════════════════ -->
+<section id="gallery">
+  <div class="gallery-header reveal container">
+    <div class="section-eyebrow">Nuestro trabajo</div>
+    <h2 class="section-h2">Galería</h2>
+    <p class="section-sub" style="margin:12px auto 0;text-align:center">
+      Imágenes de nuestras instalaciones, procesos y proyectos terminados.
+    </p>
+  </div>
+
+  <div class="gallery-grid reveal">
+
+    <!-- Imagen destacada grande (ocupa 2 cols × 2 filas) -->
+    <div class="gallery-item">
+      <img
+        src="./assets/galeria/Img (3).jpeg"
+        alt="Instalación Fibrotek"
+        onerror="this.src='https://placehold.co/800x600/0d1f3c/00d4aa?text=Fibrotek'"
+      />
+      <div class="gallery-item-overlay"><span>Instalación en sitio</span></div>
+    </div>
+
+    <!-- Imagen 2 -->
+    <div class="gallery-item">
+      <img
+        src="./assets/galeria/Img (4).jpeg"
+        alt="Taller Fibrotek"
+        onerror="this.src='https://placehold.co/400x300/0a1628/00d4aa?text=Taller'"
+      />
+      <div class="gallery-item-overlay"><span>Nuestro taller</span></div>
+    </div>
+
+    <!-- Imagen 3 -->
+    <div class="gallery-item">
+      <img
+        src="./assets/galeria/Img (5).jpeg"
+        alt="Producto terminado"
+        onerror="this.src='https://placehold.co/400x300/0a1628/ff6b35?text=Producto'"
+      />
+      <div class="gallery-item-overlay"><span>Producto terminado</span></div>
+    </div>
+
+    <!-- Imagen 4 -->
+    <div class="gallery-item">
+      <img
+        src="./assets/galeria/Img (6).jpeg"
+        alt="Equipo Fibrotek"
+        onerror="this.src='https://placehold.co/400x300/0a1628/ffb627?text=Equipo'"
+      />
+      <div class="gallery-item-overlay"><span>Nuestro equipo</span></div>
+    </div>
+
+    <!-- Imagen 5 -->
+    <div class="gallery-item">
+      <img
+        src="./assets/galeria/Img (7).jpeg"
+        alt="Proyecto Fibrotek"
+        onerror="this.src='https://placehold.co/400x300/0a1628/00ffcc?text=Proyecto'"
+      />
+      <div class="gallery-item-overlay"><span>Proyecto 2024</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     PROJECTS SLIDER
+     ─────────────────────────────────────────────────────
+     Reemplaza los src de cada slide con fotos reales.
+     Ruta sugerida: ./src/assets/proyectos/proyecto-X.jpg
+══════════════════════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="proj-header reveal">
+      <div class="section-eyebrow">Portafolio</div>
+      <h2 class="section-h2">Proyectos Realizados</h2>
+      <p class="section-sub">Algunos de los trabajos que nos enorgullece haber completado en todo Bolivia.</p>
+    </div>
+
+    <div class="slider-outer reveal">
+      <div class="slider-track" id="sliderTrack">
+
+        <!-- Slide 1 -->
+        <div class="proj-slide">
+          <div class="proj-slide-img">
+            <img
+              src="./assets/proyectos/Img (10).jpeg"
+              alt="Piscina Club Hípico La Paz"
+              onerror="this.parentElement.innerHTML='<div class=\'proj-slide-img-fallback\'>🏊</div>'"
+            />
+            <div class="proj-slide-img-overlay"></div>
+            <span class="proj-slide-year">2024</span>
+          </div>
+          <div class="proj-slide-body">
+            <h3>Piscina Club Hípico</h3>
+            <p>La Paz · 18m × 6m</p>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="proj-slide">
+          <div class="proj-slide-img">
+            <img
+              src="./assets/proyectos/Img (11).jpeg"
+              alt="Tanques Industriales Santa Cruz"
+              onerror="this.parentElement.innerHTML='<div class=\'proj-slide-img-fallback\'>🏗️</div>'"
+            />
+            <div class="proj-slide-img-overlay"></div>
+            <span class="proj-slide-year">2024</span>
+          </div>
+          <div class="proj-slide-body">
+            <h3>Tanques Industriales</h3>
+            <p>Santa Cruz · 10,000 L c/u</p>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="proj-slide">
+          <div class="proj-slide-img">
+            <img
+              src="./assets/proyectos/Img (12).jpeg"
+              alt="Parque Infantil Cochabamba"
+              onerror="this.parentElement.innerHTML='<div class=\'proj-slide-img-fallback\'>🎠</div>'"
+            />
+            <div class="proj-slide-img-overlay"></div>
+            <span class="proj-slide-year">2023</span>
+          </div>
+          <div class="proj-slide-body">
+            <h3>Parque Infantil Municipal</h3>
+            <p>Cochabamba · Zona norte</p>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="proj-slide">
+          <div class="proj-slide-img">
+            <img
+              src="./assets/proyectos/Img (13).jpeg"
+              alt="Piscina Hotel Dreams Santa Cruz"
+              onerror="this.parentElement.innerHTML='<div class=\'proj-slide-img-fallback\'>🏊</div>'"
+            />
+            <div class="proj-slide-img-overlay"></div>
+            <span class="proj-slide-year">2023</span>
+          </div>
+          <div class="proj-slide-body">
+            <h3>Piscina Hotel Dreams</h3>
+            <p>Santa Cruz · Olímpica</p>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="proj-slide">
+          <div class="proj-slide-img">
+            <img
+              src="./assets/proyectos/Img (14).jpeg"
+              alt="Reservorios Comunales Oruro"
+              onerror="this.parentElement.innerHTML='<div class=\'proj-slide-img-fallback\'>🛢️</div>'"
+            />
+            <div class="proj-slide-img-overlay"></div>
+            <span class="proj-slide-year">2022</span>
+          </div>
+          <div class="proj-slide-body">
+            <h3>Reservorios Comunales</h3>
+            <p>Oruro · 5 comunidades</p>
+          </div>
+        </div>
+
+      </div><!-- /slider-track -->
+
+      <div class="slider-controls">
+        <button class="sl-btn" id="slPrev">←</button>
+        <button class="sl-btn" id="slNext">→</button>
+        <div class="sl-dots" id="slDots"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     PROCESS TIMELINE
+══════════════════════════════════════════════════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="header reveal">
+      <div class="section-eyebrow">Cómo trabajamos</div>
+      <h2 class="section-h2">Nuestro Proceso</h2>
+      <p class="section-sub" style="margin:0 auto">De tu idea a la entrega final en pasos claros y transparentes.</p>
+    </div>
+
+    <div class="timeline" style="margin-top:48px">
+      <div class="tl-item">
+        <div class="tl-dot">📞</div>
+        <div class="tl-content">
+          <span class="tl-step">Paso 01</span>
+          <h4>Consulta inicial</h4>
+          <p>Nos contactas por WhatsApp, llamada o formulario. Evaluamos tu proyecto sin costo y te brindamos asesoría técnica especializada.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">📐</div>
+        <div class="tl-content">
+          <span class="tl-step">Paso 02</span>
+          <h4>Diseño y cotización</h4>
+          <p>Preparamos planos, especificaciones técnicas y una cotización detallada en 24 horas. Sin sorpresas ni costos ocultos.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🏭</div>
+        <div class="tl-content">
+          <span class="tl-step">Paso 03</span>
+          <h4>Fabricación</h4>
+          <p>Iniciamos producción con los mejores materiales. Recibirás actualizaciones del avance de tu pedido en tiempo real.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">🚚</div>
+        <div class="tl-content">
+          <span class="tl-step">Paso 04</span>
+          <h4>Entrega e instalación</h4>
+          <p>Entregamos e instalamos en tu ubicación. Nuestro equipo técnico se asegura de que todo quede perfecto antes de retirarse.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot">✅</div>
+        <div class="tl-content">
+          <span class="tl-step">Paso 05</span>
+          <h4>Garantía y soporte</h4>
+          <p>Tu producto queda cubierto con garantía de fabricación y soporte técnico continuo para cualquier consulta o servicio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-info reveal">
+      <div class="section-eyebrow">Contáctanos</div>
+      <h2 class="section-h2">¿Listo para<br>tu proyecto?</h2>
+      <p class="section-sub">Escríbenos y recibe una cotización gratuita en menos de 24 horas. Estamos en toda Bolivia.</p>
+      <div class="contact-items">
+        <div class="ci">
+          <div class="ci-icon">📱</div>
+          <div class="ci-text"><strong>WhatsApp</strong>+591 XXX XXXXX</div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">📧</div>
+          <div class="ci-text"><strong>Email</strong>info@fibrotek.bo</div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">📍</div>
+          <div class="ci-text"><strong>Ubicación</strong>La Paz, Bolivia</div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">⏰</div>
+          <div class="ci-text"><strong>Horario</strong>Lun–Vie 8:00–18:00 · Sáb 9:00–13:00</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal" id="contactFormWrap">
+      <div id="formFields">
+        <h3 style="font-family:var(--font-head);font-size:24px;margin-bottom:24px;color:var(--white)">
+          Solicitar Cotización
+        </h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre completo" id="fname"/>
+          </div>
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="tel" placeholder="+591 XXX XXXXX" id="fphone"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="tu@email.com" id="femail"/>
+        </div>
+        <div class="form-group">
+          <label for="fproduct">Producto de interés</label>
+          <select id="fproduct">
+            <option value="">Selecciona un producto…</option>
+            <option>Piscina residencial</option>
+            <option>Piscina comercial</option>
+            <option>Tanque de agua</option>
+            <option>Tanque industrial</option>
+            <option>Juegos infantiles</option>
+            <option>Estructuras a medida</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea placeholder="Cuéntanos sobre tu proyecto, dimensiones, ubicación…" id="fmsg"></textarea>
+        </div>
+        <button class="btn-submit" onclick="submitForm()">
+          <span>Enviar solicitud</span> →
+        </button>
+      </div>
+      <div class="form-success" id="formSuccess">
+        <div class="check">✅</div>
+        <h3>¡Mensaje enviado!</h3>
+        <p>Te contactaremos en menos de 24 horas. Gracias por confiar en Fibrotek.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#hero" class="logo-wrap" style="margin-bottom:0">
+          <img
+            src="./src/assets/logo.png"
+            class="logo-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+            alt="logo"
+          />
+          <span class="logo-img" style="display:none">F</span>
+          <span class="logo-text">Fibro<span>tek</span></span>
+        </a>
+        <p>Fabricación de productos en fibra de vidrio con calidad industrial para proyectos modernos y duraderos en toda Bolivia.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#about">Sobre Nosotros</a></li>
+          <li><a href="#video-section">Presentación</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#products">Productos</a></li>
+          <li><a href="#gallery">Galería</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <ul>
+          <li><a href="#products">Piscinas</a></li>
+          <li><a href="#products">Tanques</a></li>
+          <li><a href="#products">Juegos infantiles</a></li>
+          <li><a href="#products">Estructuras</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fibrotek Company · Todos los derechos reservados</p>
+      <div class="footer-socials">
+        <a class="soc-btn" href="#" title="Facebook">📘</a>
+        <a class="soc-btn" href="#" title="Instagram">📷</a>
+        <a class="soc-btn" href="https://wa.me/591XXXXXXXX" title="WhatsApp">💬</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FLOAT ═══════════════════════════════════ -->
+<div class="wa-float">
+  <div class="wa-bubble">¡Hola! ¿Tienes alguna consulta? Escríbenos 👋</div>
+  <a class="wa-btn" href="https://wa.me/591XXXXXXXX" target="_blank" title="WhatsApp">💬</a>
+</div>
+
+<!-- ══ BACK TO TOP ══════════════════════════════════════ -->
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- ══ SCRIPTS ══════════════════════════════════════════ -->
+<script src="./js/main.js"></script>
+
+</body>
+</html>
