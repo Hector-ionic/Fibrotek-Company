@@ -7,20 +7,20 @@
 
 /* ── TOKENS ─────────────────────────────────────────── */
 :root{
-  --ink:   #040b12;
-  --ink2:  #081018;
-  --ink3:  #0c1620;
-  --lime:  #b5f23a;
-  --lime2: rgba(181,242,58,.12);
-  --lime3: rgba(181,242,58,.28);
-  --rust:  #e8501a;
-  --gold:  #f0c040;
-  --fog:   #7a8fa8;
-  --cloud: #c8d8ec;
-  --snow:  #eef5ff;
-  --plate: #0e1a28;
-  --wire:  rgba(181,242,58,.15);
-  --wire2: rgba(255,255,255,.07);
+  --ink:   #c2d6ec;
+  --ink2:  #ccddf0;
+  --ink3:  #d6e5f5;
+  --lime:  #f5a800;
+  --lime2: rgba(245,168,0,.12);
+  --lime3: rgba(245,168,0,.28);
+  --rust:  #f07800;
+  --gold:  #f5a800;
+  --fog:   #3a5a82;
+  --cloud: #1a6fc4;
+  --snow:  #1a3a6b;
+  --plate: #dce8f5;
+  --wire:  rgba(245,168,0,.25);
+  --wire2: rgba(26,58,107,.10);
   --r:     16px;
   --nav:   70px;
 
