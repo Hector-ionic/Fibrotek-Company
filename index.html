@@ -3,255 +3,172 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Fibrotek Company – Fibra de Vidrio Bolivia</title>
-  <meta name="description" content="Empresa boliviana líder en fibra de vidrio: piscinas, tanques, juegos infantiles y estructuras a medida. +15 años de experiencia en Bolivia."/>
- 
-  <!-- Fonts -->
+  <title>Fibrotek Company — Transformamos el vidrio en soluciones</title>
+  <meta name="description" content="Empresa boliviana líder en fabricación de productos en fibra de vidrio. Piscinas, tanques, juegos infantiles y estructuras a medida en todo Bolivia."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
- 
-  <!-- Bootstrap Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
- 
-  <!-- Styles -->
   <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
  
-<!-- CURSOR -->
 <div id="cur"></div>
 <div id="cur-r"></div>
  
-<!-- ═══════════════════════════════════════════
-     MOBILE NAV
-═══════════════════════════════════════════ -->
+<!-- MOB NAV -->
 <div class="mob-nav" id="mobNav">
   <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
-  <a href="#hero"     onclick="closeMob()">Inicio</a>
-  <a href="#about"    onclick="closeMob()">Nosotros</a>
-  <a href="#vsec"     onclick="closeMob()">Video</a>
-  <a href="#services" onclick="closeMob()">Servicios</a>
-  <a href="#products" onclick="closeMob()">Productos</a>
-  <a href="#gallery"  onclick="closeMob()">Galería</a>
-  <a href="#projects" onclick="closeMob()">Proyectos</a>
-  <a href="#contact"  onclick="closeMob()">Contacto</a>
+  <a href="index.html"     onclick="closeMob()">Inicio</a>
+  <a href="productos.html" onclick="closeMob()">Productos</a>
+  <a href="proyectos.html" onclick="closeMob()">Proyectos</a>
+  <a href="#services"      onclick="closeMob()">Servicios</a>
+  <a href="#contact"       onclick="closeMob()">Contacto</a>
 </div>
  
-<!-- ═══════════════════════════════════════════
-     NAVBAR
-═══════════════════════════════════════════ -->
+<!-- NAVBAR -->
 <nav>
-  <!-- LOGO
-    Pon tu logo en: assets/logo.png
-    Si no existe, se muestra "FB" automáticamente.
-  -->
-  <a href="#hero" class="logo">
-    <div class="logo-img-wrap">
-      <img
-        src="./assets/logo.png"
-        alt="Fibrotek logo"
-        onerror="this.parentElement.style.display='none';document.querySelector('.logo-fb').style.display='flex'"
-      />
+  <a href="index.html" class="logo">
+    <div class="logo-img">
+      <!-- Pon tu logo en assets/logo.png -->
+      <img src="./assets/logo.png" alt="Fibrotek"
+        onerror="this.style.display='none';document.querySelector('.logo-fb').style.display='block'"/>
+      <span class="logo-fb">FT</span>
     </div>
-    <div class="logo-fb">FB</div>
     <span class="logo-name">Fibro<em>tek</em></span>
   </a>
  
-  <ul class="nav-ul">
-    <li><a href="#about">Nosotros</a></li>
-    <li><a href="#vsec">Video</a></li>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="productos.html">Productos</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="#services">Servicios</a></li>
-    <li><a href="#products">Productos</a></li>
-    <li><a href="#gallery">Galería</a></li>
-    <li><a href="#projects">Proyectos</a></li>
     <li><a href="#contact">Contacto</a></li>
   </ul>
  
-  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-    <i class="bi bi-chat-dots-fill"></i> Cotizar
-  </button>
+  <a class="nav-cta" href="#contact">
+    <i class="bi bi-chat-dots-fill"></i> Cotizar ahora
+  </a>
  
   <button class="ham" onclick="openMob()">
     <span></span><span></span><span></span>
   </button>
 </nav>
  
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════════════════════
      HERO
+     eslogan: "Resistencia que dura generaciones"
 ═══════════════════════════════════════════ -->
 <section id="hero">
-  <div class="hero-mesh"></div>
-  <div class="hero-grid"></div>
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
-  <div class="orb o3"></div>
+  <div class="h-bg"></div>
+  <div class="h-grid"></div>
+  <div class="h-orb h-orb1"></div>
+  <div class="h-orb h-orb2"></div>
  
-  <div class="hero-inner">
-    <!-- LEFT -->
+  <div class="h-inner">
     <div>
-      <div class="tag htag">
-        <i class="bi bi-building-fill"></i>
-        Industria boliviana · Desde 2010
-      </div>
-      <h1 class="hero-h">
-        <span class="l1">Fibrotek</span>
-        <span class="l2">Company</span>
-        <span class="l3">Bolivia</span>
+      <div class="ey h-tag"><i class="bi bi-geo-alt-fill"></i> Hecho en Bolivia · Desde 2010</div>
+      <h1 class="h-title">
+        <span class="a">Más fuerte</span>
+        <span class="b">que el acero,</span>
+        <span class="c">más liviano.</span>
       </h1>
-      <p class="hero-p">
-        Fabricamos productos en fibra de vidrio con calidad industrial premium.
-        Durabilidad, diseño y precisión para proyectos que perduran.
+      <p class="h-slogan">
+        Fabricamos en fibra de vidrio lo que otros no se atreven a construir.
+        Resistencia que dura generaciones.
       </p>
-      <div class="hero-btns">
-        <button class="btn-solid" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
-          <i class="bi bi-grid-fill"></i> Ver Productos
-        </button>
-        <button class="btn-line" onclick="document.getElementById('vsec').scrollIntoView({behavior:'smooth'})">
-          <i class="bi bi-play-circle-fill"></i> Ver presentación
-        </button>
+      <div class="h-btns">
+        <a class="btn-a" href="productos.html">
+          <i class="bi bi-grid-fill"></i> Ver catálogo
+        </a>
+        <a class="btn-b" href="proyectos.html">
+          <i class="bi bi-journal-richtext"></i> Ver proyectos
+        </a>
       </div>
-      <div class="hero-kpis">
-        <div class="kpi">
-          <div class="kpi-n" data-count="15">0+</div>
-          <div class="kpi-l">Años de exp.</div>
+      <div class="h-stats">
+        <div class="hstat">
+          <div class="hstat-n" data-count="15">15+</div>
+          <div class="hstat-l">Años activos</div>
         </div>
-        <div class="kpi">
-          <div class="kpi-n" data-count="500">0+</div>
-          <div class="kpi-l">Proyectos</div>
+        <div class="hstat">
+          <div class="hstat-n" data-count="500">500+</div>
+          <div class="hstat-l">Proyectos</div>
         </div>
-        <div class="kpi">
-          <div class="kpi-n" data-count="9">0+</div>
-          <div class="kpi-l">Departamentos</div>
+        <div class="hstat">
+          <div class="hstat-n" data-count="9">9</div>
+          <div class="hstat-l">Departamentos</div>
         </div>
       </div>
     </div>
  
-    <!-- RIGHT panel -->
-    <div class="hero-panel">
-      <div class="panel-hd">
-        <i class="bi bi-stars"></i> Productos principales
-      </div>
-      <div class="pg">
-        <div class="mc">
+    <div class="h-panel">
+      <div class="h-panel-hd"><i class="bi bi-lightning-charge-fill"></i> Especialidades</div>
+      <div class="h-mini-grid">
+        <div class="h-mini">
           <i class="bi bi-droplet-fill"></i>
-          <div class="mc-t">Piscinas</div>
-          <div class="mc-s">Residencial & comercial</div>
+          <div class="h-mini-t">Piscinas</div>
+          <div class="h-mini-s">Residencial & hotel</div>
         </div>
-        <div class="mc">
+        <div class="h-mini">
           <i class="bi bi-archive-fill"></i>
-          <div class="mc-t">Tanques</div>
-          <div class="mc-s">Agua & químicos</div>
+          <div class="h-mini-t">Tanques</div>
+          <div class="h-mini-s">Agua & químicos</div>
         </div>
-        <div class="mc">
+        <div class="h-mini">
           <i class="bi bi-emoji-smile-fill"></i>
-          <div class="mc-t">Juegos</div>
-          <div class="mc-s">Infantiles & parques</div>
+          <div class="h-mini-t">Juegos</div>
+          <div class="h-mini-s">Parques & toboganes</div>
         </div>
-        <div class="mc">
+        <div class="h-mini">
           <i class="bi bi-columns-gap"></i>
-          <div class="mc-t">Estructuras</div>
-          <div class="mc-s">Industrial & civil</div>
+          <div class="h-mini-t">Estructuras</div>
+          <div class="h-mini-s">Industrial & civil</div>
         </div>
       </div>
     </div>
   </div>
  
-  <div class="scroll-hint">
-    <span>Scroll</span>
-    <div class="sh-line"></div>
+  <div class="h-scroll">
+    <span>Descubrir</span>
+    <div class="h-scroll-line"></div>
   </div>
 </section>
  
-<!-- ═══════════════════════════════════════════
-     ABOUT
-═══════════════════════════════════════════ -->
-<section id="about">
-  <div class="container">
-    <div class="inner">
-      <!-- LEFT -->
-      <div class="rv">
-        <div class="tag" style="margin-bottom:18px">
-          <i class="bi bi-info-circle-fill"></i> Sobre Nosotros
-        </div>
-        <h2 class="sec-title">Expertos en<br><span>fibra de vidrio</span></h2>
-        <p class="sec-sub">
-          Empresa boliviana con más de 15 años fabricando soluciones en fibra de vidrio de alta calidad.
-          Compromiso con durabilidad, innovación y servicio excepcional.
-        </p>
-        <div class="about-list">
-          <div class="ai">
-            <div class="ai-ic"><i class="bi bi-gem"></i></div>
-            <div>
-              <h4>Materiales premium</h4>
-              <p>Resinas y fibras de la más alta calidad para productos que superan los estándares industriales.</p>
-            </div>
-          </div>
-          <div class="ai">
-            <div class="ai-ic"><i class="bi bi-lightning-charge-fill"></i></div>
-            <div>
-              <h4>Producción eficiente</h4>
-              <p>Procesos optimizados para entregar proyectos en tiempo y forma sin comprometer la calidad.</p>
-            </div>
-          </div>
-          <div class="ai">
-            <div class="ai-ic"><i class="bi bi-shield-fill-check"></i></div>
-            <div>
-              <h4>Garantía total</h4>
-              <p>Respaldamos cada producto con garantía de fabricación y soporte técnico post-venta.</p>
-            </div>
-          </div>
-        </div>
-      </div>
- 
-      <!-- RIGHT big card -->
-      <div class="about-bigcard rv d2">
-        <div class="big-n">+500</div>
-        <div class="big-l">Proyectos completados</div>
-        <div class="ms">
-          <div class="ms-c"><div class="ms-n">+15</div><div class="ms-l">Años en el mercado</div></div>
-          <div class="ms-c"><div class="ms-n">9</div><div class="ms-l">Departamentos</div></div>
-          <div class="ms-c"><div class="ms-n">100%</div><div class="ms-l">Satisfacción</div></div>
-          <div class="ms-c"><div class="ms-n">24h</div><div class="ms-l">Tiempo respuesta</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════════════════════
      VIDEO DE PRESENTACIÓN
-     ───────────────────────────────────────────
-     OPCIÓN A – Video local:
-       Pon tu video en: assets/video.mp4
-       Pon la miniatura en: assets/video-poster.jpg
+     eslogan: "Una mirada al proceso que nos distingue"
+     ─────────────────────────────────────
+     OPCIÓN A — Video local:
+       Pon tu archivo en: assets/video.mp4
+       Pon miniatura en:  assets/video-poster.jpg
  
-     OPCIÓN B – YouTube:
-       Comenta el bloque <video> y descomenta el <iframe>
-       Reemplaza VIDEO_ID con el ID real de YouTube.
+     OPCIÓN B — YouTube:
+       Comenta el bloque <video> y descomenta <iframe>
+       Reemplaza VIDEO_ID con el ID real.
 ═══════════════════════════════════════════ -->
-<section id="vsec">
-  <div class="container">
-    <div class="vhd rv">
-      <div class="tag"><i class="bi bi-camera-video-fill"></i> Quiénes somos</div>
-      <h2 class="sec-title" style="margin-top:14px">Conoce <span>Fibrotek</span></h2>
-      <p class="sec-sub">
-        Mira cómo fabricamos cada producto con dedicación, tecnología y el más alto estándar de calidad.
+<section id="vsec" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="v-head rv">
+      <div class="ey" style="justify-content:center"><i class="bi bi-camera-video-fill"></i> Quiénes somos</div>
+      <h2 class="d2-title" style="text-align:center;margin-top:10px">
+        Una mirada al proceso<br><b>que nos distingue</b>
+      </h2>
+      <p class="body-txt" style="margin:14px auto 0;text-align:center;max-width:520px">
+        Desde la materia prima hasta la entrega final — así fabricamos cada producto con orgullo boliviano.
       </p>
     </div>
  
-    <div class="vwrap rv d1">
- 
+    <div class="v-wrap rv d1" style="margin-top:48px">
       <!-- OPCIÓN A: Video local -->
       <video
-        id="presentacionVideo"
+        id="mainVideo"
         src="./assets/video.mp4"
         poster="./assets/video-poster.jpg"
         preload="none"
         playsinline
       ></video>
  
-      <!-- OPCIÓN B: YouTube (descomenta y borra el <video> de arriba)
+      <!-- OPCIÓN B: YouTube (descomentar y borrar el video de arriba)
       <iframe
         src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1"
         title="Presentación Fibrotek"
@@ -260,838 +177,409 @@
       ></iframe>
       -->
  
-      <!-- Play overlay (solo para video local) -->
-      <div class="vover" id="videoOverlay">
-        <div class="play-c">
-          <i class="bi bi-play-fill"></i>
-        </div>
-        <p>Ver presentación de la empresa</p>
+      <div class="v-over" id="videoOv">
+        <div class="v-play"><i class="bi bi-play-fill"></i></div>
+        <p>Reproducir presentación</p>
       </div>
     </div>
   </div>
 </section>
  
-<!-- ═══════════════════════════════════════════
+<!-- ═══════════════════════════════════════
+     ABOUT
+     eslogan: "No vendemos productos, entregamos certeza"
+═══════════════════════════════════════════ -->
+<section id="about" style="background:var(--ink3)">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center" class="rv">
+      <div>
+        <div class="ey"><i class="bi bi-building-fill"></i> Nuestra empresa</div>
+        <h2 class="d2-title">No vendemos productos,<br><b>entregamos certeza.</b></h2>
+        <p class="body-txt">
+          Más de 15 años fabricando en fibra de vidrio con los estándares más exigentes del mercado boliviano.
+          Cada pieza que sale de nuestro taller lleva el sello de la permanencia.
+        </p>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:13px">
+          <div style="display:flex;align-items:flex-start;gap:15px;padding:18px;background:var(--plate);border:1px solid var(--wire2);border-radius:14px;transition:border-color .25s"
+               onmouseenter="this.style.borderColor='var(--wire)'" onmouseleave="this.style.borderColor='var(--wire2)'">
+            <div style="width:40px;height:40px;border-radius:10px;background:var(--lime2);border:1px solid var(--wire);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i class="bi bi-gem" style="font-size:18px;color:var(--lime)"></i>
+            </div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;color:var(--snow);margin-bottom:4px">Materiales de grado industrial</h4>
+              <p style="font-size:13px;color:var(--fog);line-height:1.55">Resinas y fibras importadas que superan los estándares locales. Sin atajos, sin compromisos.</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:15px;padding:18px;background:var(--plate);border:1px solid var(--wire2);border-radius:14px;transition:border-color .25s"
+               onmouseenter="this.style.borderColor='var(--wire)'" onmouseleave="this.style.borderColor='var(--wire2)'">
+            <div style="width:40px;height:40px;border-radius:10px;background:var(--lime2);border:1px solid var(--wire);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i class="bi bi-award-fill" style="font-size:18px;color:var(--lime)"></i>
+            </div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;color:var(--snow);margin-bottom:4px">Garantía real, no solo palabras</h4>
+              <p style="font-size:13px;color:var(--fog);line-height:1.55">Cada producto entregado cuenta con garantía de fabricación y soporte técnico post-instalación.</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:15px;padding:18px;background:var(--plate);border:1px solid var(--wire2);border-radius:14px;transition:border-color .25s"
+               onmouseenter="this.style.borderColor='var(--wire)'" onmouseleave="this.style.borderColor='var(--wire2)'">
+            <div style="width:40px;height:40px;border-radius:10px;background:var(--lime2);border:1px solid var(--wire);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <i class="bi bi-truck" style="font-size:18px;color:var(--lime)"></i>
+            </div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;color:var(--snow);margin-bottom:4px">Llegamos a donde otros no llegan</h4>
+              <p style="font-size:13px;color:var(--fog);line-height:1.55">Distribución propia a los 9 departamentos. Embalaje especializado para cada tipo de producto.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="background:var(--plate);border:1px solid var(--wire);border-radius:22px;padding:40px;text-align:center;position:relative;overflow:hidden">
+        <div style="font-family:var(--fD);font-size:120px;color:rgba(181,242,58,.04);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);white-space:nowrap;pointer-events:none">FIBROTEK</div>
+        <div style="font-family:var(--fD);font-size:88px;letter-spacing:2px;color:transparent;background:linear-gradient(135deg,var(--lime),var(--gold));-webkit-background-clip:text;background-clip:text;line-height:1">+500</div>
+        <div style="font-family:var(--fM);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--fog);margin-top:6px">Proyectos completados</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px">
+          <div style="background:rgba(255,255,255,.04);border:1px solid var(--wire2);border-radius:12px;padding:16px">
+            <div style="font-family:var(--fD);font-size:28px;color:var(--rust);letter-spacing:1px">+15</div>
+            <div style="font-family:var(--fM);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--fog);margin-top:3px">Años en el mercado</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border:1px solid var(--wire2);border-radius:12px;padding:16px">
+            <div style="font-family:var(--fD);font-size:28px;color:var(--rust);letter-spacing:1px">9</div>
+            <div style="font-family:var(--fM);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--fog);margin-top:3px">Departamentos</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border:1px solid var(--wire2);border-radius:12px;padding:16px">
+            <div style="font-family:var(--fD);font-size:28px;color:var(--rust);letter-spacing:1px">100%</div>
+            <div style="font-family:var(--fM);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--fog);margin-top:3px">Satisfacción</div>
+          </div>
+          <div style="background:rgba(255,255,255,.04);border:1px solid var(--wire2);border-radius:12px;padding:16px">
+            <div style="font-family:var(--fD);font-size:28px;color:var(--rust);letter-spacing:1px">24h</div>
+            <div style="font-family:var(--fM);font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--fog);margin-top:3px">Tiempo respuesta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════════════════════════════════
      SERVICES
+     eslogan: "Del molde a la obra, sin intermediarios"
 ═══════════════════════════════════════════ -->
 <section id="services">
-  <div class="container">
-    <div class="srv-hd rv">
-      <div class="tag"><i class="bi bi-tools"></i> Lo que hacemos</div>
-      <h2 class="sec-title" style="margin-top:14px">Nuestros <span>Servicios</span></h2>
-      <p class="sec-sub" style="margin:14px auto 0">
-        Soluciones integrales desde el diseño hasta la instalación final.
-      </p>
+  <div class="wrap">
+    <div class="srv-head rv">
+      <div class="ey"><i class="bi bi-tools"></i> Lo que ofrecemos</div>
+      <h2 class="d2-title">Del molde a la obra,<br><b>sin intermediarios.</b></h2>
+      <p class="body-txt">Control total de cada etapa del proceso. Fabricamos, instalamos, garantizamos.</p>
     </div>
     <div class="srv-grid">
-      <div class="sc2 rv">
-        <div class="sc2-num">01</div>
-        <div class="sc2-ic"><i class="bi bi-gear-wide-connected"></i></div>
-        <h3>Fabricación</h3>
-        <p>Producción personalizada con moldes propios y control de calidad riguroso en cada etapa.</p>
-        <span class="sc2-badge">Proceso industrial</span>
+      <div class="srv-c rv">
+        <div class="srv-n">01</div>
+        <div class="srv-ic"><i class="bi bi-gear-wide-connected"></i></div>
+        <h3>Fabricación a medida</h3>
+        <p>Moldes propios y producción personalizada. Cualquier forma, cualquier tamaño, cualquier color.</p>
+        <span class="srv-badge">Proceso industrial</span>
       </div>
-      <div class="sc2 rv d1">
-        <div class="sc2-num">02</div>
-        <div class="sc2-ic"><i class="bi bi-wrench-adjustable"></i></div>
-        <h3>Instalación</h3>
-        <p>Equipo técnico especializado para montaje en sitio con protocolos de seguridad certificados.</p>
-        <span class="sc2-badge">Equipo experto</span>
+      <div class="srv-c rv d1">
+        <div class="srv-n">02</div>
+        <div class="srv-ic"><i class="bi bi-wrench-adjustable"></i></div>
+        <h3>Instalación técnica</h3>
+        <p>Equipo especializado que garantiza el montaje perfecto. Nos vamos cuando estás satisfecho, no antes.</p>
+        <span class="srv-badge">Equipo certificado</span>
       </div>
-      <div class="sc2 rv d2">
-        <div class="sc2-num">03</div>
-        <div class="sc2-ic"><i class="bi bi-truck"></i></div>
+      <div class="srv-c rv d2">
+        <div class="srv-n">03</div>
+        <div class="srv-ic"><i class="bi bi-truck"></i></div>
         <h3>Entrega nacional</h3>
-        <p>Logística propia para entrega segura a los 9 departamentos. Embalaje especial por producto.</p>
-        <span class="sc2-badge">Todo Bolivia</span>
+        <p>Flota propia para los 9 departamentos. Embalaje industrial para que llegue sin un rasguño.</p>
+        <span class="srv-badge">Todo Bolivia</span>
       </div>
-      <div class="sc2 rv">
-        <div class="sc2-num">04</div>
-        <div class="sc2-ic"><i class="bi bi-rulers"></i></div>
-        <h3>Diseño a medida</h3>
-        <p>Fabricamos piezas personalizadas según tus especificaciones exactas. Tu visión, nuestra ejecución.</p>
-        <span class="sc2-badge">100% personalizable</span>
+      <div class="srv-c rv">
+        <div class="srv-n">04</div>
+        <div class="srv-ic"><i class="bi bi-rulers"></i></div>
+        <h3>Diseño personalizado</h3>
+        <p>Traemos tus planos a la realidad en fibra de vidrio. Si lo puedes imaginar, lo podemos construir.</p>
+        <span class="srv-badge">Tu visión, nuestras manos</span>
       </div>
-      <div class="sc2 rv d1">
-        <div class="sc2-num">05</div>
-        <div class="sc2-ic"><i class="bi bi-tools"></i></div>
-        <h3>Mantenimiento</h3>
-        <p>Servicio preventivo y correctivo para todos los productos instalados por Fibrotek.</p>
-        <span class="sc2-badge">Soporte continuo</span>
+      <div class="srv-c rv d1">
+        <div class="srv-n">05</div>
+        <div class="srv-ic"><i class="bi bi-shield-fill-check"></i></div>
+        <h3>Mantenimiento y garantía</h3>
+        <p>Soporte preventivo y correctivo post-entrega. Porque nuestra relación no termina en la instalación.</p>
+        <span class="srv-badge">Soporte continuo</span>
       </div>
-      <div class="sc2 rv d2">
-        <div class="sc2-num">06</div>
-        <div class="sc2-ic"><i class="bi bi-clipboard2-check-fill"></i></div>
-        <h3>Asesoría técnica</h3>
-        <p>Te acompañamos desde la etapa de proyecto para elegir la solución óptima en material y diseño.</p>
-        <span class="sc2-badge">Sin costo</span>
+      <div class="srv-c rv d2">
+        <div class="srv-n">06</div>
+        <div class="srv-ic"><i class="bi bi-clipboard2-check-fill"></i></div>
+        <h3>Asesoría sin costo</h3>
+        <p>Evaluamos tu proyecto antes de cobrar un centavo. Cotización detallada en menos de 24 horas.</p>
+        <span class="srv-badge">Gratis siempre</span>
       </div>
     </div>
   </div>
 </section>
  
-<!-- ═══════════════════════════════════════════
-     PRODUCTS
-     ───────────────────────────────────────────
-     Imágenes en: assets/piscina-1.jpg, assets/piscina-2.jpg ...
-     Usa tantos slides como fotos tengas por producto.
+<!-- ═══════════════════════════════════════
+     GALERÍA
+     eslogan: "Ver para creer — nuestro trabajo habla solo"
 ═══════════════════════════════════════════ -->
-<section id="products">
-  <div class="container">
-    <div class="prod-hd rv">
-      <div class="tag" style="margin-bottom:18px"><i class="bi bi-box-seam-fill"></i> Catálogo</div>
-      <h2 class="sec-title">Nuestros <span>Productos</span></h2>
-      <p class="sec-sub">Fabricados con los mejores materiales para máxima durabilidad.</p>
-    </div>
- 
-    <!-- TABS -->
-    <div class="prod-tabs rv d1">
-      <button class="ptab on" data-tab="tab-piscinas">
-        <i class="bi bi-droplet-fill"></i> Piscinas
-      </button>
-      <button class="ptab" data-tab="tab-tanques">
-        <i class="bi bi-archive-fill"></i> Tanques
-      </button>
-      <button class="ptab" data-tab="tab-juegos">
-        <i class="bi bi-emoji-smile-fill"></i> Juegos infantiles
-      </button>
-      <button class="ptab" data-tab="tab-estructuras">
-        <i class="bi bi-columns-gap"></i> Estructuras
-      </button>
-    </div>
- 
-    <!-- ── TAB PISCINAS ── -->
-    <div class="prod-panel on" id="tab-piscinas">
- 
-      <div class="pcard rv">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <!-- Agrega aquí todas las fotos de piscinas residenciales -->
-            <div class="pcar-slide">
-              <img src="./assets/piscina-residencial-1.jpg" alt="Piscina residencial"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a2040,#0d5c6e)\'>🏊</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/piscina-residencial-2.jpg" alt="Piscina residencial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a2040,#0d5c6e)\'>🏊</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/piscina-residencial-3.jpg" alt="Piscina residencial 3"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a2040,#0d5c6e)\'>🏊</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Piscina Residencial</h3>
-          <p>Diseños exclusivos para el hogar. Duraderas, fáciles de mantener y con acabados premium.</p>
-          <span class="pb-tag"><i class="bi bi-lightning-charge-fill"></i> Entrega rápida</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d1">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/piscina-comercial-1.jpg" alt="Piscina comercial"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a2040,#0d6b80)\'>🏊</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/piscina-comercial-2.jpg" alt="Piscina comercial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a2040,#0d6b80)\'>🏊</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Piscina Comercial</h3>
-          <p>Para hoteles, clubes y complejos deportivos. Capacidad y resistencia para alto uso.</p>
-          <span class="pb-tag"><i class="bi bi-building-fill"></i> Uso intensivo</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d2">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/piscina-olimpica-1.jpg" alt="Piscina olímpica"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a1a30,#0d4060)\'>🏅</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/piscina-olimpica-2.jpg" alt="Piscina olímpica 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a1a30,#0d4060)\'>🏅</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Piscina Olímpica</h3>
-          <p>Medidas reglamentarias para competencia. Certificación y calidad de nivel internacional.</p>
-          <span class="pb-tag"><i class="bi bi-trophy-fill"></i> Competencia</span>
-        </div>
-      </div>
- 
-    </div><!-- /tab-piscinas -->
- 
-    <!-- ── TAB TANQUES ── -->
-    <div class="prod-panel" id="tab-tanques">
- 
-      <div class="pcard rv">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/tanque-agua-1.jpg" alt="Tanque de agua"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0a0a,#5c1a0d)\'>🛢️</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/tanque-agua-2.jpg" alt="Tanque de agua 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0a0a,#5c1a0d)\'>🛢️</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Tanque de Agua</h3>
-          <p>Para agua potable y agua caliente. Capacidades desde 500L hasta 30,000L. Apto para uso domiciliario e industrial.</p>
-          <span class="pb-tag"><i class="bi bi-shield-fill-check"></i> Certificado</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d1">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/tanque-industrial-1.jpg" alt="Tanque industrial"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0d00,#4a2800)\'>⚙️</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/tanque-industrial-2.jpg" alt="Tanque industrial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0d00,#4a2800)\'>⚙️</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Tanque Industrial</h3>
-          <p>Para combustibles, aceites y químicos. Alta resistencia química y mecánica. Fabricación a medida.</p>
-          <span class="pb-tag"><i class="bi bi-gear-fill"></i> Industrial</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d2">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/reservorio-1.jpg" alt="Reservorio"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#001a0d,#004a30)\'>🌊</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/reservorio-2.jpg" alt="Reservorio 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#001a0d,#004a30)\'>🌊</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Reservorios Comunales</h3>
-          <p>Soluciones de almacenamiento de agua para comunidades rurales y proyectos de desarrollo social.</p>
-          <span class="pb-tag"><i class="bi bi-people-fill"></i> Comunidades</span>
-        </div>
-      </div>
- 
-    </div><!-- /tab-tanques -->
- 
-    <!-- ── TAB JUEGOS ── -->
-    <div class="prod-panel" id="tab-juegos">
- 
-      <div class="pcard rv">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/juego-parque-1.jpg" alt="Juegos de parque"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a1a0a,#2a6b1a)\'>🎠</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/juego-parque-2.jpg" alt="Juegos de parque 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a1a0a,#2a6b1a)\'>🎠</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/juego-parque-3.jpg" alt="Juegos de parque 3"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a1a0a,#2a6b1a)\'>🎠</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Juegos de Parque</h3>
-          <p>Toboganes, columpios, trepadoras y más. Colores vivos y resistentes a la intemperie.</p>
-          <span class="pb-tag"><i class="bi bi-sun-fill"></i> Full color</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d1">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/juego-tobogan-1.jpg" alt="Toboganes"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0a1a,#6b1a6b)\'>🎢</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/juego-tobogan-2.jpg" alt="Toboganes 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0a1a,#6b1a6b)\'>🎢</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Toboganes</h3>
-          <p>Toboganes simples y en espiral. Perfectos para piscinas, parques y centros recreativos.</p>
-          <span class="pb-tag"><i class="bi bi-water"></i> Acuáticos</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d2">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/mobiliario-1.jpg" alt="Mobiliario urbano"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a0a1a,#1a1a6b)\'>🪑</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/mobiliario-2.jpg" alt="Mobiliario urbano 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a0a1a,#1a1a6b)\'>🪑</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Mobiliario Urbano</h3>
-          <p>Bancas, maceteros, pérgolas y estructuras decorativas en fibra de vidrio para espacios públicos.</p>
-          <span class="pb-tag"><i class="bi bi-tree-fill"></i> Exterior</span>
-        </div>
-      </div>
- 
-    </div><!-- /tab-juegos -->
- 
-    <!-- ── TAB ESTRUCTURAS ── -->
-    <div class="prod-panel" id="tab-estructuras">
- 
-      <div class="pcard rv">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/estructura-1.jpg" alt="Estructura industrial"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a0d1f,#161f40)\'>🏗️</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/estructura-2.jpg" alt="Estructura industrial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#0a0d1f,#161f40)\'>🏗️</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Estructuras Industriales</h3>
-          <p>Cubiertas, canaletas, tuberías y piezas especiales para uso industrial y minero.</p>
-          <span class="pb-tag"><i class="bi bi-gear-wide-connected"></i> Industrial</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d1">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/cubierta-1.jpg" alt="Cubiertas"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0a00,#402000)\'>🏠</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/cubierta-2.jpg" alt="Cubiertas 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#1a0a00,#402000)\'>🏠</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Cubiertas y Techos</h3>
-          <p>Cubiertas translúcidas y opacas para galpones, canchas y espacios comerciales.</p>
-          <span class="pb-tag"><i class="bi bi-house-fill"></i> Arquitectura</span>
-        </div>
-      </div>
- 
-      <div class="pcard rv d2">
-        <div class="pcar">
-          <div class="pcar-inner">
-            <div class="pcar-slide">
-              <img src="./assets/pieza-especial-1.jpg" alt="Piezas especiales"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#001a12,#004a30)\'>🔩</div>'"/>
-            </div>
-            <div class="pcar-slide">
-              <img src="./assets/pieza-especial-2.jpg" alt="Piezas especiales 2"
-                onerror="this.parentElement.innerHTML='<div class=\'pcar-fb\' style=\'background:linear-gradient(135deg,#001a12,#004a30)\'>🔩</div>'"/>
-            </div>
-          </div>
-          <button class="pcar-arr pcar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="pcar-arr pcar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="pcar-dots"></div>
-          <div class="pcar-ov"></div>
-        </div>
-        <div class="pb">
-          <h3>Piezas a Medida</h3>
-          <p>Cualquier pieza o estructura especial en fibra de vidrio fabricada según tu diseño o plano.</p>
-          <span class="pb-tag"><i class="bi bi-rulers"></i> A medida</span>
-        </div>
-      </div>
- 
-    </div><!-- /tab-estructuras -->
- 
-  </div>
-</section>
- 
-<!-- ═══════════════════════════════════════════
-     GALLERY
-     ───────────────────────────────────────────
-     Imágenes en: assets/galeria-1.jpg ... galeria-5.jpg
-     Reemplaza con fotos reales del taller, instalaciones, equipo.
-═══════════════════════════════════════════ -->
-<section id="gallery">
-  <div class="container">
-    <div class="g-hd rv">
-      <div class="tag"><i class="bi bi-images"></i> Nuestro trabajo</div>
-      <h2 class="sec-title" style="margin-top:14px">Galería <span>Fibrotek</span></h2>
-      <p class="sec-sub" style="margin:14px auto 0;text-align:center">
-        Instalaciones, procesos y proyectos terminados en toda Bolivia.
+<section id="gallery" style="background:var(--ink2)">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:44px">
+      <div class="ey" style="justify-content:center"><i class="bi bi-images"></i> Nuestro trabajo</div>
+      <h2 class="d2-title" style="text-align:center;margin-top:10px">Ver para creer.<br><b>Nuestro trabajo habla solo.</b></h2>
+      <p class="body-txt" style="margin:14px auto 0;text-align:center">
+        Instalaciones reales, procesos reales, clientes reales en toda Bolivia.
       </p>
     </div>
   </div>
+  <!-- Imágenes en: assets/galeria-1.jpg … galeria-5.jpg -->
   <div class="g-grid rv d1">
     <div class="gi">
       <img src="./assets/galeria-1.jpg" alt="Galería 1"
-        onerror="this.src='https://placehold.co/800x600/0d1829/00e5b4?text=Fibrotek'"/>
+        onerror="this.src='https://placehold.co/800x600/0c1620/b5f23a?text=Fibrotek'"/>
       <div class="gi-ov"><span><i class="bi bi-zoom-in"></i> Instalación en sitio</span></div>
     </div>
     <div class="gi">
       <img src="./assets/galeria-2.jpg" alt="Galería 2"
-        onerror="this.src='https://placehold.co/400x300/0d1829/00e5b4?text=Taller'"/>
-      <div class="gi-ov"><span><i class="bi bi-zoom-in"></i> Nuestro taller</span></div>
+        onerror="this.src='https://placehold.co/400x300/0c1620/b5f23a?text=Taller'"/>
+      <div class="gi-ov"><span><i class="bi bi-zoom-in"></i> Taller de producción</span></div>
     </div>
     <div class="gi">
       <img src="./assets/galeria-3.jpg" alt="Galería 3"
-        onerror="this.src='https://placehold.co/400x300/0d1829/ff5e1a?text=Producto'"/>
+        onerror="this.src='https://placehold.co/400x300/0c1620/e8501a?text=Producto'"/>
       <div class="gi-ov"><span><i class="bi bi-zoom-in"></i> Producto terminado</span></div>
     </div>
     <div class="gi">
       <img src="./assets/galeria-4.jpg" alt="Galería 4"
-        onerror="this.src='https://placehold.co/800x300/0d1829/f0b429?text=Equipo'"/>
+        onerror="this.src='https://placehold.co/800x300/0c1620/f0c040?text=Equipo'"/>
       <div class="gi-ov"><span><i class="bi bi-zoom-in"></i> Nuestro equipo</span></div>
     </div>
     <div class="gi">
       <img src="./assets/galeria-5.jpg" alt="Galería 5"
-        onerror="this.src='https://placehold.co/400x300/0d1829/00ffcc?text=Proyecto'"/>
+        onerror="this.src='https://placehold.co/400x300/0c1620/b5f23a?text=2024'"/>
       <div class="gi-ov"><span><i class="bi bi-zoom-in"></i> Proyecto 2024</span></div>
     </div>
   </div>
-</section>
- 
-<!-- ═══════════════════════════════════════════
-     PROJECTS SLIDER
-     ───────────────────────────────────────────
-     Cada slide puede tener varias imágenes.
-     Imágenes en: assets/proyecto-1a.jpg, assets/proyecto-1b.jpg ...
-═══════════════════════════════════════════ -->
-<section id="projects">
-  <div class="sl-hd rv">
-    <div class="tag" style="margin-bottom:18px"><i class="bi bi-journal-richtext"></i> Portafolio</div>
-    <h2 class="sec-title">Proyectos <span>Realizados</span></h2>
-    <p class="sec-sub">Trabajos que nos enorgullece haber completado en toda Bolivia.</p>
-  </div>
- 
-  <div class="sl-outer rv d1">
-    <div class="sl-track" id="sliderTrack">
- 
-      <!-- Proyecto 1 -->
-      <div class="slide">
-        <div class="scar">
-          <div class="scar-inner">
-            <div class="scar-slide">
-              <img src="./assets/proyecto-1a.jpg" alt="Proyecto Club Hípico"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#0d1f3c,#00534a)\'>🏊</div>'"/>
-            </div>
-            <div class="scar-slide">
-              <img src="./assets/proyecto-1b.jpg" alt="Proyecto Club Hípico b"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#0d1f3c,#00534a)\'>🏊</div>'"/>
-            </div>
-          </div>
-          <button class="scar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="scar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="scar-dots"></div>
-          <div class="scar-ov"></div>
-          <span class="scar-yr">2024</span>
-        </div>
-        <div class="sb">
-          <h3>Piscina Club Hípico</h3>
-          <p><i class="bi bi-geo-alt-fill"></i> La Paz · 18m × 6m</p>
-        </div>
-      </div>
- 
-      <!-- Proyecto 2 -->
-      <div class="slide">
-        <div class="scar">
-          <div class="scar-inner">
-            <div class="scar-slide">
-              <img src="./assets/proyecto-2a.jpg" alt="Tanques Industriales"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#1a0d00,#3d2200)\'>🏗️</div>'"/>
-            </div>
-            <div class="scar-slide">
-              <img src="./assets/proyecto-2b.jpg" alt="Tanques Industriales b"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#1a0d00,#3d2200)\'>🏗️</div>'"/>
-            </div>
-          </div>
-          <button class="scar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="scar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="scar-dots"></div>
-          <div class="scar-ov"></div>
-          <span class="scar-yr">2024</span>
-        </div>
-        <div class="sb">
-          <h3>Tanques Industriales</h3>
-          <p><i class="bi bi-geo-alt-fill"></i> Santa Cruz · 10,000 L c/u</p>
-        </div>
-      </div>
- 
-      <!-- Proyecto 3 -->
-      <div class="slide">
-        <div class="scar">
-          <div class="scar-inner">
-            <div class="scar-slide">
-              <img src="./assets/proyecto-3a.jpg" alt="Parque Infantil"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#0a0d1f,#160040)\'>🎠</div>'"/>
-            </div>
-            <div class="scar-slide">
-              <img src="./assets/proyecto-3b.jpg" alt="Parque Infantil b"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#0a0d1f,#160040)\'>🎠</div>'"/>
-            </div>
-          </div>
-          <button class="scar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="scar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="scar-dots"></div>
-          <div class="scar-ov"></div>
-          <span class="scar-yr">2023</span>
-        </div>
-        <div class="sb">
-          <h3>Parque Infantil Municipal</h3>
-          <p><i class="bi bi-geo-alt-fill"></i> Cochabamba · Zona norte</p>
-        </div>
-      </div>
- 
-      <!-- Proyecto 4 -->
-      <div class="slide">
-        <div class="scar">
-          <div class="scar-inner">
-            <div class="scar-slide">
-              <img src="./assets/proyecto-4a.jpg" alt="Hotel Dreams"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#001a12,#004a30)\'>🏨</div>'"/>
-            </div>
-            <div class="scar-slide">
-              <img src="./assets/proyecto-4b.jpg" alt="Hotel Dreams b"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#001a12,#004a30)\'>🏨</div>'"/>
-            </div>
-          </div>
-          <button class="scar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="scar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="scar-dots"></div>
-          <div class="scar-ov"></div>
-          <span class="scar-yr">2023</span>
-        </div>
-        <div class="sb">
-          <h3>Piscina Hotel Dreams</h3>
-          <p><i class="bi bi-geo-alt-fill"></i> Santa Cruz · Olímpica</p>
-        </div>
-      </div>
- 
-      <!-- Proyecto 5 -->
-      <div class="slide">
-        <div class="scar">
-          <div class="scar-inner">
-            <div class="scar-slide">
-              <img src="./assets/proyecto-5a.jpg" alt="Reservorios Oruro"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#1f0a0a,#4a0020)\'>🛢️</div>'"/>
-            </div>
-            <div class="scar-slide">
-              <img src="./assets/proyecto-5b.jpg" alt="Reservorios Oruro b"
-                onerror="this.parentElement.innerHTML='<div class=\'scar-fb\' style=\'background:linear-gradient(135deg,#1f0a0a,#4a0020)\'>🛢️</div>'"/>
-            </div>
-          </div>
-          <button class="scar-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="scar-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="scar-dots"></div>
-          <div class="scar-ov"></div>
-          <span class="scar-yr">2022</span>
-        </div>
-        <div class="sb">
-          <h3>Reservorios Comunales</h3>
-          <p><i class="bi bi-geo-alt-fill"></i> Oruro · 5 comunidades</p>
-        </div>
-      </div>
- 
-    </div>
-  </div>
- 
-  <div class="sl-ctrl">
-    <button class="sl-btn" id="slPrev"><i class="bi bi-arrow-left"></i></button>
-    <button class="sl-btn" id="slNext"><i class="bi bi-arrow-right"></i></button>
-    <div class="sl-dots2" id="slDots"></div>
+  <div class="wrap" style="margin-top:36px;text-align:center">
+    <a class="btn-b" href="proyectos.html" style="display:inline-flex">
+      <i class="bi bi-journal-richtext"></i> Ver todos los proyectos
+    </a>
   </div>
 </section>
  
-<!-- ═══════════════════════════════════════════
-     PROCESS TIMELINE
+<!-- ═══════════════════════════════════════
+     PROCESS
+     eslogan: "Cinco pasos. Cero sorpresas."
 ═══════════════════════════════════════════ -->
 <section id="process">
-  <div class="container">
-    <div class="pr-hd rv">
-      <div class="tag"><i class="bi bi-diagram-3-fill"></i> Cómo trabajamos</div>
-      <h2 class="sec-title" style="margin-top:14px">Nuestro <span>Proceso</span></h2>
-      <p class="sec-sub" style="margin:14px auto 0;text-align:center">
-        De tu idea a la entrega final en pasos claros y transparentes.
+  <div class="wrap">
+    <div class="pr-head rv">
+      <div class="ey" style="justify-content:center"><i class="bi bi-diagram-3-fill"></i> Cómo trabajamos</div>
+      <h2 class="d2-title" style="text-align:center;margin-top:10px">Cinco pasos.<br><b>Cero sorpresas.</b></h2>
+      <p class="body-txt" style="margin:14px auto 0;text-align:center">
+        Transparencia total de inicio a fin. Sabés exactamente qué pasa con tu pedido en todo momento.
       </p>
     </div>
-    <div class="timeline" style="margin-top:52px">
-      <div class="tl">
+    <div class="tl" style="margin-top:52px">
+      <div class="tl-row">
         <div class="tl-dot"><i class="bi bi-telephone-fill"></i></div>
-        <div class="tl-c">
+        <div class="tl-body">
           <span class="tl-step">Paso 01</span>
-          <h4>Consulta inicial</h4>
-          <p>Nos contactas por WhatsApp, llamada o formulario. Evaluamos tu proyecto sin costo y brindamos asesoría técnica especializada.</p>
+          <h4>Nos contactás, nosotros escuchamos</h4>
+          <p>WhatsApp, llamada o formulario. Sin llamadas en espera, sin robots. Una persona real atiende tu consulta.</p>
         </div>
       </div>
-      <div class="tl">
-        <div class="tl-dot"><i class="bi bi-rulers"></i></div>
-        <div class="tl-c">
+      <div class="tl-row">
+        <div class="tl-dot"><i class="bi bi-file-earmark-text-fill"></i></div>
+        <div class="tl-body">
           <span class="tl-step">Paso 02</span>
-          <h4>Diseño y cotización</h4>
-          <p>Preparamos planos, especificaciones técnicas y cotización detallada en 24 horas. Sin sorpresas ni costos ocultos.</p>
+          <h4>Cotización en 24 horas, sin letra chica</h4>
+          <p>Planos, especificaciones y precio final. Lo que ves es lo que pagas. Sin cargos sorpresa en la entrega.</p>
         </div>
       </div>
-      <div class="tl">
+      <div class="tl-row">
         <div class="tl-dot"><i class="bi bi-gear-wide-connected"></i></div>
-        <div class="tl-c">
+        <div class="tl-body">
           <span class="tl-step">Paso 03</span>
-          <h4>Fabricación</h4>
-          <p>Iniciamos producción con los mejores materiales. Recibirás actualizaciones del avance de tu pedido en tiempo real.</p>
+          <h4>Fabricamos, te mantenemos informado</h4>
+          <p>Producción en nuestro taller con actualizaciones de avance. Ves crecer tu proyecto en tiempo real.</p>
         </div>
       </div>
-      <div class="tl">
+      <div class="tl-row">
         <div class="tl-dot"><i class="bi bi-truck"></i></div>
-        <div class="tl-c">
+        <div class="tl-body">
           <span class="tl-step">Paso 04</span>
-          <h4>Entrega e instalación</h4>
-          <p>Entregamos e instalamos en tu ubicación. Nuestro equipo técnico se asegura de que todo quede perfecto.</p>
+          <h4>Entregamos e instalamos nosotros</h4>
+          <p>No subcontratamos la instalación. Nuestro equipo técnico llega a tu dirección y no se va hasta que todo quede perfecto.</p>
         </div>
       </div>
-      <div class="tl">
+      <div class="tl-row">
         <div class="tl-dot"><i class="bi bi-patch-check-fill"></i></div>
-        <div class="tl-c">
+        <div class="tl-body">
           <span class="tl-step">Paso 05</span>
-          <h4>Garantía y soporte</h4>
-          <p>Tu producto queda cubierto con garantía de fabricación y soporte técnico continuo para cualquier consulta.</p>
+          <h4>Garantía activa, soporte real</h4>
+          <p>Tu producto queda respaldado. Ante cualquier problema post-instalación, respondemos. Sin excusas.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
  
-<!-- ═══════════════════════════════════════════
-     CONTACT
+<!-- ═══════════════════════════════════════
+     CONTACT — FORMULARIO WHATSAPP
+     eslogan: "Tu proyecto empieza con un mensaje"
 ═══════════════════════════════════════════ -->
 <section id="contact">
-  <div class="container">
-    <div class="inner">
+  <div class="wrap">
+    <div class="ct-inner">
       <div class="rv">
-        <div class="tag" style="margin-bottom:18px"><i class="bi bi-send-fill"></i> Contáctanos</div>
-        <h2 class="sec-title">¿Listo para<br><span>tu proyecto?</span></h2>
-        <p class="sec-sub">
-          Escríbenos y recibe cotización gratuita en menos de 24 horas. Estamos en toda Bolivia.
+        <div class="ey"><i class="bi bi-whatsapp"></i> Contacto directo</div>
+        <h2 class="d2-title">Tu proyecto empieza<br><b>con un mensaje.</b></h2>
+        <p class="body-txt">
+          Completa el formulario y tu consulta llega directo a nuestro WhatsApp.
+          Sin formularios que se pierden, sin esperas de email.
         </p>
-        <div class="ci-list">
-          <div class="cit">
-            <div class="cit-ic"><i class="bi bi-whatsapp"></i></div>
-            <div class="cit-t">
-              <strong>WhatsApp</strong>
+        <div class="ct-items" style="margin-top:28px">
+          <div class="ct-item">
+            <div class="ct-ic"><i class="bi bi-whatsapp"></i></div>
+            <div>
               <!-- Reemplaza con tu número real -->
+              <strong>WhatsApp directo</strong>
               <span>+591 XXX XXXXX</span>
             </div>
           </div>
-          <div class="cit">
-            <div class="cit-ic"><i class="bi bi-envelope-fill"></i></div>
-            <div class="cit-t">
+          <div class="ct-item">
+            <div class="ct-ic"><i class="bi bi-envelope-fill"></i></div>
+            <div>
               <strong>Email</strong>
               <span>info@fibrotek.bo</span>
             </div>
           </div>
-          <div class="cit">
-            <div class="cit-ic"><i class="bi bi-geo-alt-fill"></i></div>
-            <div class="cit-t">
-              <strong>Ubicación</strong>
+          <div class="ct-item">
+            <div class="ct-ic"><i class="bi bi-geo-alt-fill"></i></div>
+            <div>
+              <strong>Taller y oficina</strong>
               <span>La Paz, Bolivia</span>
             </div>
           </div>
-          <div class="cit">
-            <div class="cit-ic"><i class="bi bi-clock-fill"></i></div>
-            <div class="cit-t">
-              <strong>Horario</strong>
+          <div class="ct-item">
+            <div class="ct-ic"><i class="bi bi-clock-fill"></i></div>
+            <div>
+              <strong>Horario de atención</strong>
               <span>Lun–Vie 8:00–18:00 · Sáb 9:00–13:00</span>
             </div>
           </div>
         </div>
       </div>
  
-      <div class="cform rv d2">
+      <div class="wa-form rv d2">
         <div id="formFields">
-          <h3>Solicitar Cotización</h3>
+          <h3>Solicitar cotización</h3>
           <div class="frow">
             <div class="fg">
-              <label>Nombre</label>
-              <input type="text" placeholder="Tu nombre completo" id="fname"/>
+              <label>Tu nombre *</label>
+              <input type="text" id="wa-nombre" placeholder="Nombre completo"/>
             </div>
             <div class="fg">
-              <label>Teléfono</label>
-              <input type="tel" placeholder="+591 XXX XXXXX"/>
+              <label>Teléfono *</label>
+              <input type="tel" id="wa-tel" placeholder="+591 XXX XXXXX"/>
             </div>
           </div>
           <div class="fg">
-            <label>Email</label>
-            <input type="email" placeholder="tu@email.com" id="femail"/>
-          </div>
-          <div class="fg">
-            <label>Producto de interés</label>
-            <select>
+            <label>Producto de interés *</label>
+            <select id="wa-prod">
               <option value="">Selecciona un producto…</option>
               <option>Piscina residencial</option>
-              <option>Piscina comercial</option>
-              <option>Tanque de agua</option>
-              <option>Tanque industrial</option>
-              <option>Juegos infantiles</option>
-              <option>Estructuras a medida</option>
+              <option>Piscina comercial / hotel</option>
+              <option>Piscina olímpica</option>
+              <option>Tanque de agua potable</option>
+              <option>Tanque industrial / químicos</option>
+              <option>Reservorio comunal</option>
+              <option>Juegos infantiles / parque</option>
+              <option>Tobogán</option>
+              <option>Mobiliario urbano</option>
+              <option>Estructura industrial</option>
+              <option>Cubierta / techo</option>
+              <option>Pieza a medida</option>
               <option>Otro</option>
             </select>
           </div>
           <div class="fg">
-            <label>Mensaje</label>
-            <textarea placeholder="Cuéntanos sobre tu proyecto, dimensiones, ubicación…"></textarea>
+            <label>Ciudad / Departamento</label>
+            <input type="text" id="wa-ciudad" placeholder="Ej: La Paz, Santa Cruz, Cochabamba…"/>
           </div>
-          <button class="btn-send" onclick="submitForm()">
-            <i class="bi bi-send-fill"></i> Enviar solicitud
+          <div class="fg">
+            <label>Detalle del proyecto</label>
+            <textarea id="wa-detalle" placeholder="Dimensiones aproximadas, cantidad, uso, plazos u otros detalles que nos ayuden a cotizar mejor…"></textarea>
+          </div>
+          <button class="btn-wa" style="width:100%;justify-content:center;margin-top:4px" onclick="sendWA()">
+            <i class="bi bi-whatsapp"></i> Enviar por WhatsApp
           </button>
+          <p style="font-family:var(--fM);font-size:10px;letter-spacing:1px;color:var(--fog);text-align:center;margin-top:12px">
+            Al enviar, se abrirá WhatsApp con tu mensaje listo para enviar.
+          </p>
         </div>
         <div class="form-ok" id="formOk">
-          <i class="bi bi-check-circle-fill"></i>
-          <h3>¡Mensaje enviado!</h3>
-          <p>Te contactaremos en menos de 24 horas.<br>Gracias por confiar en Fibrotek.</p>
+          <i class="bi bi-whatsapp"></i>
+          <h3>¡WhatsApp abierto!</h3>
+          <p>Tu mensaje está listo en WhatsApp.<br>Solo presioná enviar y te respondemos en minutos.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
  
-<!-- ═══════════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
-  <div class="ft">
+  <div class="wrap ft">
     <div class="ft-top">
       <div class="ft-brand">
-        <a href="#hero" class="logo">
-          <div class="logo-img-wrap" style="width:38px;height:38px">
-            <img src="./assets/logo.png" alt="logo"
-              onerror="this.parentElement.style.display='none'"/>
+        <a href="index.html" class="logo">
+          <div class="logo-img" style="width:38px;height:38px">
+            <img src="./assets/logo.png" alt="logo" onerror="this.style.display='none'"/>
           </div>
           <span class="logo-name">Fibro<em>tek</em></span>
         </a>
-        <p>Fabricación de productos en fibra de vidrio con calidad industrial para proyectos modernos y duraderos en toda Bolivia.</p>
+        <p>Fabricamos en fibra de vidrio lo que otros no se atreven a construir. Hecho en Bolivia para durar generaciones.</p>
       </div>
       <div class="ft-col">
-        <h4>Navegación</h4>
+        <h4>Páginas</h4>
         <ul>
-          <li><a href="#about"><i class="bi bi-chevron-right"></i>Nosotros</a></li>
-          <li><a href="#vsec"><i class="bi bi-chevron-right"></i>Presentación</a></li>
+          <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
+          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Productos</a></li>
+          <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
           <li><a href="#services"><i class="bi bi-chevron-right"></i>Servicios</a></li>
-          <li><a href="#products"><i class="bi bi-chevron-right"></i>Productos</a></li>
-          <li><a href="#gallery"><i class="bi bi-chevron-right"></i>Galería</a></li>
-          <li><a href="#projects"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
           <li><a href="#contact"><i class="bi bi-chevron-right"></i>Contacto</a></li>
         </ul>
       </div>
       <div class="ft-col">
         <h4>Productos</h4>
         <ul>
-          <li><a href="#products"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
-          <li><a href="#products"><i class="bi bi-chevron-right"></i>Tanques</a></li>
-          <li><a href="#products"><i class="bi bi-chevron-right"></i>Juegos infantiles</a></li>
-          <li><a href="#products"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
+          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
+          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Tanques</a></li>
+          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Juegos infantiles</a></li>
+          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
         </ul>
       </div>
     </div>
     <div class="ft-bot">
       <p>© 2025 Fibrotek Company · Todos los derechos reservados</p>
       <div class="socs">
-        <!-- Reemplaza # con tus links reales -->
-        <a class="soc" href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-        <a class="soc" href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
-        <a class="soc" href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
-        <a class="soc" href="https://wa.me/591XXXXXXXX" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a class="soc" href="#"><i class="bi bi-facebook"></i></a>
+        <a class="soc" href="#"><i class="bi bi-instagram"></i></a>
+        <a class="soc" href="#"><i class="bi bi-tiktok"></i></a>
+        <a class="soc" href="https://wa.me/591XXXXXXXXX"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
   </div>
 </footer>
  
-<!-- WhatsApp flotante -->
-<div class="wa">
-  <div class="wa-bubble">¡Hola! ¿Tienes alguna consulta? 👋</div>
-  <!-- Reemplaza 591XXXXXXXX con tu número real -->
-  <a class="wa-btn" href="https://wa.me/591XXXXXXXX" target="_blank">
-    <i class="bi bi-whatsapp"></i>
-  </a>
+<!-- WA float -->
+<div class="wa-float">
+  <div class="wa-bubble">¿Necesitás una cotización? Escribinos 👋</div>
+  <a class="wa-fab" href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="bi bi-whatsapp"></i></a>
 </div>
- 
-<!-- Back to top -->
-<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  <i class="bi bi-arrow-up"></i>
-</button>
+<button id="btt"><i class="bi bi-arrow-up"></i></button>
  
 <script src="./js/main.js"></script>
 </body>
 </html>
- 
