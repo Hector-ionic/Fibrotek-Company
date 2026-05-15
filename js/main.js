@@ -168,7 +168,7 @@ window.sendWA = function(){
   }
 
   // ⚠️  CAMBIA ESTE NÚMERO por el real de Fibrotek (sin + ni espacios)
-  const WA_NUMBER = '591XXXXXXXXX';
+  const WA_NUMBER = '59168124071';
 
   const msg = `*COTIZACIÓN FIBROTEK*\n\n`
     + `👤 *Nombre:* ${nombre}\n`

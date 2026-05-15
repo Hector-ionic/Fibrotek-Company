@@ -17,7 +17,7 @@
  
 <!-- MOB NAV -->
 <div class="mob-nav" id="mobNav">
-  <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
+  <button type="button" class="mob-close" onclick="closeMob()" aria-label="Cerrar menú" title="Cerrar menú"><i class="bi bi-x-lg"></i></button>
   <a href="index.html"     onclick="closeMob()">Inicio</a>
   <a href="productos.html" onclick="closeMob()">Productos</a>
   <a href="proyectos.html" onclick="closeMob()">Proyectos</a>
@@ -45,7 +45,7 @@
   <a class="nav-cta" href="index.html#contact">
     <i class="bi bi-chat-dots-fill"></i> Cotizar ahora
   </a>
-  <button class="ham" onclick="openMob()">
+  <button type="button" class="ham" onclick="openMob()" aria-label="Abrir menú" title="Abrir menú">
     <span></span><span></span><span></span>
   </button>
 </nav>
@@ -560,7 +560,7 @@
         <a class="soc" href="#"><i class="bi bi-facebook"></i></a>
         <a class="soc" href="#"><i class="bi bi-instagram"></i></a>
         <a class="soc" href="#"><i class="bi bi-tiktok"></i></a>
-        <a class="soc" href="https://wa.me/591XXXXXXXXX"><i class="bi bi-whatsapp"></i></a>
+        <a class="soc" href="https://wa.me/68124071"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
   </div>
@@ -568,7 +568,7 @@
  
 <div class="wa-float">
   <div class="wa-bubble">¿Querés cotizar un producto? 👋</div>
-  <a class="wa-fab" href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
 </div>
 <button id="btt"><i class="bi bi-arrow-up"></i></button>
  
@@ -576,7 +576,7 @@
 <script>
 // Cotizar producto específico directo por WhatsApp
 window.cotizarWA = function(producto){
-  const WA_NUMBER = '591XXXXXXXXX'; // ⚠️ Cambiar por número real
+  const WA_NUMBER = '59168124071'; // ⚠️ Cambiar por número real
   const msg = `*CONSULTA FIBROTEK*\n\n`
     + `📦 *Producto de interés:* ${producto}\n\n`
     + `Hola, me gustaría recibir información y cotización sobre este producto.`;
