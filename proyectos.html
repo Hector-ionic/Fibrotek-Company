@@ -1,95 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Proyectos — Fibrotek Company</title>
-  <meta name="description" content="Portafolio de proyectos realizados por Fibrotek en toda Bolivia: piscinas, tanques, parques infantiles y estructuras en fibra de vidrio."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <meta name="description" content="Portafolio de proyectos realizados por Fibrotek en Bolivia: piscinas, tanques, parques y estructuras en fibra de vidrio."/>
+  <link rel="icon" type="image/png" href="./assets/favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
   <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
-<div id="cur"></div>
-<div id="cur-r"></div>
- 
-<!-- MOB NAV -->
+<div id="preloader"><div class="pl-logo">Fibro<em>tek</em></div><div class="pl-track"><div class="pl-bar"></div></div></div>
+<div id="cur"></div><div id="cur-r"></div>
+
 <div class="mob-nav" id="mobNav">
   <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
-  <a href="index.html"     onclick="closeMob()">Inicio</a>
-  <a href="productos.html" onclick="closeMob()">Productos</a>
-  <a href="proyectos.html" onclick="closeMob()">Proyectos</a>
-  <a href="index.html#services" onclick="closeMob()">Servicios</a>
-  <a href="index.html#contact"  onclick="closeMob()">Contacto</a>
+  <a href="index.html" onclick="closeMob()">Inicio</a><a href="nosotros.html" onclick="closeMob()">Nosotros</a>
+  <a href="productos.html" onclick="closeMob()">Productos</a><a href="proyectos.html" onclick="closeMob()">Proyectos</a>
+  <a href="servicios.html" onclick="closeMob()">Servicios</a><a href="index.html#contacto" onclick="closeMob()">Contacto</a>
 </div>
- 
-<!-- NAVBAR -->
 <nav>
   <a href="index.html" class="logo">
-    <div class="logo-img">
-      <img src="./assets/logo.png" alt="Fibrotek"
-        onerror="this.style.display='none';document.querySelector('.logo-fb').style.display='block'"/>
-      <span class="logo-fb">FT</span>
-    </div>
-    <span class="logo-name">Fibro<em>tek</em></span>
+    <div class="logo-img-box"><img src="./assets/img/logo.png" alt="Fibrotek" onerror="this.style.display='none';document.querySelector('.logo-fb').style.display='block'"/><span class="logo-fb">FT</span></div>
+    
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="productos.html">Productos</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
+  <ul class="nav-ul">
+    <li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="productos.html">Productos</a></li><li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="servicios.html">Servicios</a></li><li><a href="index.html#contacto">Contacto</a></li>
   </ul>
-  <a class="nav-cta" href="index.html#contact">
-    <i class="bi bi-chat-dots-fill"></i> Cotizar ahora
-  </a>
-  <button class="ham" onclick="openMob()">
-    <span></span><span></span><span></span>
-  </button>
+  <a class="nav-cta" href="index.html#contacto"><i class="bi bi-whatsapp"></i> Cotizar</a>
+  <button class="ham" onclick="openMob()"><span></span><span></span><span></span></button>
 </nav>
- 
-<!-- ═══════════════════════════════════════
-     SUB-HERO
-     eslogan: "Cada proyecto es la prueba de lo que somos"
-═══════════════════════════════════════════ -->
+
+<!-- SUB-HERO -->
 <div class="sub-hero">
-  <div class="h-bg"></div>
-  <div class="h-grid"></div>
-  <div class="h-orb h-orb1" style="opacity:.5"></div>
+  <div class="h-bg"></div><div class="h-grid"></div>
   <div class="wrap">
-    <div class="sub-hero-inner">
+    <div class="sub-hi">
       <div>
-        <div class="ey"><i class="bi bi-journal-richtext"></i> Portafolio de trabajos</div>
-        <h1 class="d1-title">Cada proyecto es<br><b>la prueba</b><br><i>de lo que somos.</i></h1>
-        <p class="body-txt">
-          Más de 500 proyectos completados en toda Bolivia.
-          Estos son algunos de los que más nos enorgullecen.
-        </p>
+        <div class="ey"><i class="bi bi-journal-richtext"></i> Portafolio</div>
+        <h1 class="d1">Cada proyecto es<br><b>la prueba</b><br><i>de lo que somos.</i></h1>
+        <p class="sub">Más de 500 proyectos completados en toda Bolivia. Estos son algunos que más nos enorgullecen.</p>
       </div>
-      <!-- Stats rápidos -->
-      <div style="display:flex;flex-direction:column;gap:12px;align-self:flex-end">
-        <div style="background:var(--plate);border:1px solid var(--wire);border-radius:14px;padding:16px 22px;text-align:center">
-          <div style="font-family:var(--fD);font-size:36px;color:var(--lime);letter-spacing:1px">+500</div>
-          <div style="font-family:var(--fM);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--fog);margin-top:2px">Proyectos</div>
-        </div>
-        <div style="background:var(--plate);border:1px solid var(--wire);border-radius:14px;padding:16px 22px;text-align:center">
-          <div style="font-family:var(--fD);font-size:36px;color:var(--lime);letter-spacing:1px">9</div>
-          <div style="font-family:var(--fM);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--fog);margin-top:2px">Departamentos</div>
-        </div>
+      <div style="display:flex;flex-direction:column;gap:10px;align-self:flex-end">
+        <div style="background:var(--bg4);border:1px solid var(--bd1);border-radius:14px;padding:16px 22px;text-align:center"><div style="font-family:var(--fD);font-size:36px;color:var(--ac);letter-spacing:1px">+500</div><div style="font-family:var(--fM);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--t4);margin-top:2px">Proyectos</div></div>
+        <div style="background:var(--bg4);border:1px solid var(--bd1);border-radius:14px;padding:16px 22px;text-align:center"><div style="font-family:var(--fD);font-size:36px;color:var(--ac);letter-spacing:1px">9</div><div style="font-family:var(--fM);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--t4);margin-top:2px">Departamentos</div></div>
       </div>
     </div>
   </div>
 </div>
- 
-<!-- ═══════════════════════════════════════
-     PROYECTOS CON FILTROS
-═══════════════════════════════════════════ -->
-<section style="background:var(--ink2);padding-top:48px">
+
+<!-- PROYECTOS -->
+<section style="background:var(--bg2);padding-top:48px">
   <div class="wrap">
- 
-    <!-- FILTROS -->
     <div class="filter-bar rv">
       <button class="f-btn on" data-cat="all"><i class="bi bi-grid-fill"></i> Todos</button>
       <button class="f-btn" data-cat="piscina"><i class="bi bi-droplet-fill"></i> Piscinas</button>
@@ -97,386 +62,175 @@
       <button class="f-btn" data-cat="juego"><i class="bi bi-emoji-smile-fill"></i> Juegos</button>
       <button class="f-btn" data-cat="estructura"><i class="bi bi-columns-gap"></i> Estructuras</button>
     </div>
- 
-    <!-- GRID DE PROYECTOS -->
+
+    <!-- Macros de proyecto para no repetir (inline) -->
+    <!-- assets: proy-Xa.jpg, proy-Xb.jpg, proy-Xc.jpg por proyecto -->
     <div class="proj-grid">
- 
-      <!-- ── PROYECTO 1 ──
-           Fotos en: assets/proy-1a.jpg, assets/proy-1b.jpg, assets/proy-1c.jpg -->
-      <div class="proj-card rv" data-cat="piscina">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-1a.jpg" alt="Proyecto 1 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-1b.jpg" alt="Proyecto 1 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-1c.jpg" alt="Proyecto 1 foto 3"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 3</div>
-          <span class="proj-yr">2024</span>
+
+      <div class="proj-c rv" data-cat="piscina">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/img/proy-1a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
+          <div class="car-sl"><img src="./assets/img/proy-1b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
+          <div class="car-sl"><img src="./assets/img/proy-1c.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Piscina Club Hípico La Paz</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> La Paz</span>
-            <span><i class="bi bi-arrows-fullscreen"></i> 18 × 6 m</span>
-            <span><i class="bi bi-calendar-fill"></i> 2024</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-droplet-fill"></i> Piscina comercial</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div><span class="proj-yr">2024</span></div>
+        <div class="proj-body"><h3>Piscina Club Hípico La Paz</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> La Paz</span><span><i class="bi bi-arrows-fullscreen"></i> 18 × 6 m</span><span><i class="bi bi-calendar-fill"></i> 2024</span></div>
+        <span class="proj-cat"><i class="bi bi-droplet-fill"></i> Piscina comercial</span></div>
       </div>
- 
-      <!-- ── PROYECTO 2 ──
-           Fotos en: assets/proy-2a.jpg, assets/proy-2b.jpg -->
-      <div class="proj-card rv d1" data-cat="tanque">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-2a.jpg" alt="Proyecto 2 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180808,#4a1208)\'>🛢️</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-2b.jpg" alt="Proyecto 2 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180808,#4a1208)\'>🛢️</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
-          <span class="proj-yr">2024</span>
+
+      <div class="proj-c rv d1" data-cat="tanque">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/img/proy-2a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c8b8,#c8a070)\'>🛢️</div>'"/></div>
+          <div class="car-sl"><img src="./assets/img/proy-2b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c8b8,#c8a070)\'>🛢️</div>'"/></div>
+          <div class="car-sl"><img src="./assets/img/proy-2c.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c8b8,#c8a070)\'>🛢️</div>'"/></div>
+          <div class="car-sl"><img src="./assets/img/proy-2d.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c8b8,#c8a070)\'>🛢️</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Tanques Industriales — Planta Santa Cruz</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> Santa Cruz</span>
-            <span><i class="bi bi-box-fill"></i> 6 tanques 10,000L</span>
-            <span><i class="bi bi-calendar-fill"></i> 2024</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-archive-fill"></i> Tanque industrial</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 4</div><span class="proj-yr">2024</span></div>
+        <div class="proj-body"><h3>Resbaladillas — Santa Cruz</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> Santa Cruz</span><span><i class="bi bi-box-fill"></i> 6 × 10,000L</span><span><i class="bi bi-calendar-fill"></i> 2024</span></div>
+        <span class="proj-cat"><i class="bi bi-archive-fill"></i> Tanque industrial</span></div>
       </div>
- 
-      <!-- ── PROYECTO 3 ──
-           Fotos en: assets/proy-3a.jpg, assets/proy-3b.jpg -->
-      <div class="proj-card rv d2" data-cat="juego">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-3a.jpg" alt="Proyecto 3 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081808,#204818)\'>🎠</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-3b.jpg" alt="Proyecto 3 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081808,#204818)\'>🎠</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
-          <span class="proj-yr">2023</span>
+
+      <div class="proj-c rv d2" data-cat="juego">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/img/proy-3a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
+          <div class="car-sl"><img src="./assets/img/proy-3b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Parque Infantil Municipal — Cochabamba</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> Cochabamba</span>
-            <span><i class="bi bi-people-fill"></i> Uso público</span>
-            <span><i class="bi bi-calendar-fill"></i> 2023</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-emoji-smile-fill"></i> Juegos infantiles</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div><span class="proj-yr">2023</span></div>
+        <div class="proj-body"><h3>Parque Infantil Municipal — Cochabamba</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> Cochabamba</span><span><i class="bi bi-people-fill"></i> Uso público</span><span><i class="bi bi-calendar-fill"></i> 2023</span></div>
+        <span class="proj-cat"><i class="bi bi-emoji-smile-fill"></i> Juegos infantiles</span></div>
       </div>
- 
-      <!-- ── PROYECTO 4 ──
-           Fotos en: assets/proy-4a.jpg, assets/proy-4b.jpg, assets/proy-4c.jpg -->
-      <div class="proj-card rv" data-cat="piscina">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-4a.jpg" alt="Proyecto 4 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#083050)\'>🏨</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-4b.jpg" alt="Proyecto 4 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#083050)\'>🏨</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-4c.jpg" alt="Proyecto 4 foto 3"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#083050)\'>🏨</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 3</div>
-          <span class="proj-yr">2023</span>
+
+      <div class="proj-c rv" data-cat="piscina">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/proy-4a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🏨</div>'"/></div>
+          <div class="car-sl"><img src="./assets/proy-4b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🏨</div>'"/></div>
+          <div class="car-sl"><img src="./assets/proy-4c.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🏨</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Piscina Hotel Dreams — Santa Cruz</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> Santa Cruz</span>
-            <span><i class="bi bi-arrows-fullscreen"></i> 25 × 12 m</span>
-            <span><i class="bi bi-calendar-fill"></i> 2023</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-droplet-fill"></i> Piscina hotel</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div><span class="proj-yr">2023</span></div>
+        <div class="proj-body"><h3>Piscina Hotel Dreams — Santa Cruz</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> Santa Cruz</span><span><i class="bi bi-arrows-fullscreen"></i> 25 × 12 m</span><span><i class="bi bi-calendar-fill"></i> 2023</span></div>
+        <span class="proj-cat"><i class="bi bi-droplet-fill"></i> Piscina hotel</span></div>
       </div>
- 
-      <!-- ── PROYECTO 5 ──
-           Fotos en: assets/proy-5a.jpg, assets/proy-5b.jpg -->
-      <div class="proj-card rv d1" data-cat="tanque">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-5a.jpg" alt="Proyecto 5 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#001810,#004a30)\'>🌊</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-5b.jpg" alt="Proyecto 5 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#001810,#004a30)\'>🌊</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
-          <span class="proj-yr">2023</span>
+
+      <div class="proj-c rv d1" data-cat="tanque">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/proy-5a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#70b890)\'>🌊</div>'"/></div>
+          <div class="car-sl"><img src="./assets/proy-5b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#70b890)\'>🌊</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Reservorios Comunales — Oruro</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> Oruro</span>
-            <span><i class="bi bi-people-fill"></i> 5 comunidades</span>
-            <span><i class="bi bi-calendar-fill"></i> 2023</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-archive-fill"></i> Reservorio comunal</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div><span class="proj-yr">2023</span></div>
+        <div class="proj-body"><h3>Reservorios Comunales — Oruro</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> Oruro</span><span><i class="bi bi-people-fill"></i> 5 comunidades</span><span><i class="bi bi-calendar-fill"></i> 2023</span></div>
+        <span class="proj-cat"><i class="bi bi-archive-fill"></i> Reservorio comunal</span></div>
       </div>
- 
-      <!-- ── PROYECTO 6 ──
-           Fotos en: assets/proy-6a.jpg, assets/proy-6b.jpg -->
-      <div class="proj-card rv d2" data-cat="estructura">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-6a.jpg" alt="Proyecto 6 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#080810,#141840)\'>🏗️</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-6b.jpg" alt="Proyecto 6 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#080810,#141840)\'>🏗️</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
-          <span class="proj-yr">2022</span>
+
+      <div class="proj-c rv d2" data-cat="estructura">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/proy-6a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8c8e0,#8888c0)\'>🏗️</div>'"/></div>
+          <div class="car-sl"><img src="./assets/proy-6b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8c8e0,#8888c0)\'>🏗️</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Cubierta Galpón Industrial — El Alto</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> El Alto</span>
-            <span><i class="bi bi-arrows-fullscreen"></i> 800 m²</span>
-            <span><i class="bi bi-calendar-fill"></i> 2022</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-columns-gap"></i> Cubierta industrial</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div><span class="proj-yr">2022</span></div>
+        <div class="proj-body"><h3>Cubierta Galpón Industrial — El Alto</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> El Alto</span><span><i class="bi bi-arrows-fullscreen"></i> 800 m²</span><span><i class="bi bi-calendar-fill"></i> 2022</span></div>
+        <span class="proj-cat"><i class="bi bi-columns-gap"></i> Cubierta industrial</span></div>
       </div>
- 
-      <!-- ── PROYECTO 7 ──
-           Fotos en: assets/proy-7a.jpg, assets/proy-7b.jpg -->
-      <div class="proj-card rv" data-cat="juego">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-7a.jpg" alt="Proyecto 7 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180818,#481848)\'>🎢</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-7b.jpg" alt="Proyecto 7 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180818,#481848)\'>🎢</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
-          <span class="proj-yr">2022</span>
+
+      <div class="proj-c rv" data-cat="juego">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/proy-7a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8d8,#b888b8)\'>🎢</div>'"/></div>
+          <div class="car-sl"><img src="./assets/proy-7b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8d8,#b888b8)\'>🎢</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Toboganes Acuáticos — Beni</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> Trinidad, Beni</span>
-            <span><i class="bi bi-box-fill"></i> 4 toboganes</span>
-            <span><i class="bi bi-calendar-fill"></i> 2022</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-water"></i> Toboganes</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div><span class="proj-yr">2022</span></div>
+        <div class="proj-body"><h3>Toboganes Acuáticos — Beni</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> Trinidad, Beni</span><span><i class="bi bi-box-fill"></i> 4 toboganes</span><span><i class="bi bi-calendar-fill"></i> 2022</span></div>
+        <span class="proj-cat"><i class="bi bi-water"></i> Toboganes</span></div>
       </div>
- 
-      <!-- ── PROYECTO 8 ──
-           Fotos en: assets/proy-8a.jpg, assets/proy-8b.jpg -->
-      <div class="proj-card rv d1" data-cat="piscina">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-8a.jpg" alt="Proyecto 8 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-8b.jpg" alt="Proyecto 8 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
-          <span class="proj-yr">2022</span>
+
+      <div class="proj-c rv d1" data-cat="piscina">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/proy-8a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
+          <div class="car-sl"><img src="./assets/proy-8b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Piscinas Residenciales — Urbanización Tarija</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> Tarija</span>
-            <span><i class="bi bi-house-fill"></i> 8 unidades</span>
-            <span><i class="bi bi-calendar-fill"></i> 2022</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-droplet-fill"></i> Piscina residencial</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div><span class="proj-yr">2022</span></div>
+        <div class="proj-body"><h3>Piscinas Residenciales — Urbanización Tarija</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> Tarija</span><span><i class="bi bi-house-fill"></i> 8 unidades</span><span><i class="bi bi-calendar-fill"></i> 2022</span></div>
+        <span class="proj-cat"><i class="bi bi-droplet-fill"></i> Piscina residencial</span></div>
       </div>
- 
-      <!-- ── PROYECTO 9 ──
-           Fotos en: assets/proy-9a.jpg, assets/proy-9b.jpg -->
-      <div class="proj-card rv d2" data-cat="estructura">
-        <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/proy-9a.jpg" alt="Proyecto 9 foto 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#181008,#402800)\'>🏠</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/proy-9b.jpg" alt="Proyecto 9 foto 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#181008,#402800)\'>🏠</div>'"/>
-            </div>
-          </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
-          <span class="proj-yr">2021</span>
+
+      <div class="proj-c rv d2" data-cat="estructura">
+        <div class="car"><div class="car-in">
+          <div class="car-sl"><img src="./assets/proy-9a.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b0,#c09060)\'>🏠</div>'"/></div>
+          <div class="car-sl"><img src="./assets/proy-9b.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b0,#c09060)\'>🏠</div>'"/></div>
         </div>
-        <div class="proj-body">
-          <h3>Techos Traslúcidos — Centro Comercial Sucre</h3>
-          <div class="proj-meta">
-            <span><i class="bi bi-geo-alt-fill"></i> Sucre</span>
-            <span><i class="bi bi-arrows-fullscreen"></i> 1,200 m²</span>
-            <span><i class="bi bi-calendar-fill"></i> 2021</span>
-          </div>
-          <span class="proj-cat"><i class="bi bi-columns-gap"></i> Cubierta arquitectónica</span>
-        </div>
+        <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button><button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+        <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div><span class="proj-yr">2021</span></div>
+        <div class="proj-body"><h3>Techos Traslúcidos — Centro Comercial Sucre</h3>
+        <div class="proj-meta"><span><i class="bi bi-geo-alt-fill"></i> Sucre</span><span><i class="bi bi-arrows-fullscreen"></i> 1,200 m²</span><span><i class="bi bi-calendar-fill"></i> 2021</span></div>
+        <span class="proj-cat"><i class="bi bi-columns-gap"></i> Cubierta arquitectónica</span></div>
       </div>
- 
-    </div><!-- /proj-grid -->
- 
-  </div>
-</section>
- 
-<!-- CTA -->
-<section style="background:var(--ink3);padding:72px 0;text-align:center">
-  <div class="wrap rv">
-    <div class="ey" style="justify-content:center"><i class="bi bi-plus-circle-fill"></i> ¿Querés ser el próximo?</div>
-    <h2 class="d2-title" style="text-align:center;margin-top:12px">Tu proyecto merece<br><b>estar en este portafolio.</b></h2>
-    <p class="body-txt" style="margin:14px auto 28px;text-align:center">
-      Contanos qué necesitás y lo convertimos en realidad. Cotización sin costo en 24 horas.
-    </p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a class="btn-wa" href="index.html#contact" style="display:inline-flex">
-        <i class="bi bi-whatsapp"></i> Pedir cotización
-      </a>
-      <a class="btn-b" href="productos.html" style="display:inline-flex">
-        <i class="bi bi-grid-fill"></i> Ver productos
-      </a>
+
     </div>
   </div>
 </section>
- 
-<!-- FOOTER -->
+
+<!-- CTA -->
+<section style="background:var(--bg3);text-align:center">
+  <div class="wrap rv">
+    <div class="ey" style="justify-content:center"><i class="bi bi-plus-circle-fill"></i> ¿Querés ser el próximo?</div>
+    <h2 class="d2" style="text-align:center;margin-top:12px">Tu proyecto merece<br><b>estar en este portafolio.</b></h2>
+    <p class="sub" style="margin:14px auto 28px;text-align:center">Cotización sin costo en 24 horas. Sin excusas, sin demoras.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="btn-wa" href="index.html#contacto" style="display:inline-flex"><i class="bi bi-whatsapp"></i> Pedir cotización</a>
+      <a class="btn-b" href="productos.html" style="display:inline-flex"><i class="bi bi-grid-fill"></i> Ver productos</a>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <div class="wrap ft">
+  <div class="wrap">
     <div class="ft-top">
       <div class="ft-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-img" style="width:38px;height:38px">
-            <img src="./assets/logo.png" alt="logo" onerror="this.style.display='none'"/>
-          </div>
-          <span class="logo-name">Fibro<em>tek</em></span>
-        </a>
-        <p>Tu proyecto merece estar en este portafolio. Hecho en Bolivia para durar generaciones.</p>
+        <a href="index.html" class="logo"><div class="logo-img-box" style="width:38px;height:38px"><img src="./assets/logo.png" alt="logo" onerror="this.style.display='none'"/></div></a>
+        <p>Tu proyecto merece estar en este portafolio. Hecho en Bolivia.</p>
       </div>
-      <div class="ft-col">
-        <h4>Páginas</h4>
-        <ul>
-          <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
-          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Productos</a></li>
-          <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
-          <li><a href="index.html#contact"><i class="bi bi-chevron-right"></i>Contacto</a></li>
-        </ul>
-      </div>
-      <div class="ft-col">
-        <h4>Filtrar por</h4>
-        <ul>
-          <li><a href="#" onclick="document.querySelector('[data-cat=piscina]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
-          <li><a href="#" onclick="document.querySelector('[data-cat=tanque]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Tanques</a></li>
-          <li><a href="#" onclick="document.querySelector('[data-cat=juego]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Juegos</a></li>
-          <li><a href="#" onclick="document.querySelector('[data-cat=estructura]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
-        </ul>
-      </div>
+      <div class="ft-col"><h4>Páginas</h4><ul>
+        <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
+        <li><a href="nosotros.html"><i class="bi bi-chevron-right"></i>Nosotros</a></li>
+        <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Productos</a></li>
+        <li><a href="servicios.html"><i class="bi bi-chevron-right"></i>Servicios</a></li>
+      </ul></div>
+      <div class="ft-col"><h4>Filtrar por</h4><ul>
+        <li><a href="#" onclick="document.querySelector('[data-cat=piscina]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-cat=tanque]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Tanques</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-cat=juego]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Juegos</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-cat=estructura]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
+      </ul></div>
     </div>
     <div class="ft-bot">
       <p>© 2025 Fibrotek Company · Todos los derechos reservados</p>
       <div class="socs">
-        <a class="soc" href="#"><i class="bi bi-facebook"></i></a>
-        <a class="soc" href="#"><i class="bi bi-instagram"></i></a>
-        <a class="soc" href="#"><i class="bi bi-tiktok"></i></a>
-        <a class="soc" href="https://wa.me/59168124071"><i class="bi bi-whatsapp"></i></a>
+        <a class="soc" href="#"><i class="bi bi-facebook"></i></a><a class="soc" href="#"><i class="bi bi-instagram"></i></a>
+        <a class="soc" href="#"><i class="bi bi-tiktok"></i></a><a class="soc" href="https://wa.me/591XXXXXXXXX"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
   </div>
 </footer>
- 
-<div class="wa-float">
-  <div class="wa-bubble">¿Querés un proyecto como este? 👋</div>
-  <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
-</div>
+
+<div class="wa-float"><div class="wa-bubble">¿Querés un proyecto así? 👋</div><a class="wa-fab" href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="bi bi-whatsapp"></i></a></div>
 <button id="btt"><i class="bi bi-arrow-up"></i></button>
- 
 <script src="./js/main.js"></script>
 <script>
-// init carousels de proyectos al cargar
-document.querySelectorAll('.proj-card .car').forEach(c => {
-  if(typeof buildCarousel==='function') buildCarousel(c);
-});
+document.querySelectorAll('.proj-c .car').forEach(c=>{ if(typeof buildCar==='function') buildCar(c); });
 </script>
 </body>
 </html>

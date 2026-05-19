@@ -1,586 +1,361 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Productos — Fibrotek Company</title>
-  <meta name="description" content="Catálogo completo de productos en fibra de vidrio: piscinas, tanques, juegos infantiles y estructuras a medida. Cotización directa por WhatsApp."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <meta name="description" content="Catálogo de productos en fibra de vidrio: piscinas, tanques, juegos infantiles y estructuras. Cotizá directo por WhatsApp."/>
+  <link rel="icon" type="image/png" href="./assets/favicon.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
   <link rel="stylesheet" href="./css/styles.css"/>
 </head>
 <body>
-<div id="cur"></div>
-<div id="cur-r"></div>
- 
-<!-- MOB NAV -->
+<div id="preloader"><div class="pl-logo">Fibro<em>tek</em></div><div class="pl-track"><div class="pl-bar"></div></div></div>
+<div id="cur"></div><div id="cur-r"></div>
+
 <div class="mob-nav" id="mobNav">
-  <button type="button" class="mob-close" onclick="closeMob()" aria-label="Cerrar menú" title="Cerrar menú"><i class="bi bi-x-lg"></i></button>
-  <a href="index.html"     onclick="closeMob()">Inicio</a>
-  <a href="productos.html" onclick="closeMob()">Productos</a>
-  <a href="proyectos.html" onclick="closeMob()">Proyectos</a>
-  <a href="index.html#services" onclick="closeMob()">Servicios</a>
-  <a href="index.html#contact"  onclick="closeMob()">Contacto</a>
+  <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
+  <a href="index.html" onclick="closeMob()">Inicio</a><a href="nosotros.html" onclick="closeMob()">Nosotros</a>
+  <a href="productos.html" onclick="closeMob()">Productos</a><a href="proyectos.html" onclick="closeMob()">Proyectos</a>
+  <a href="servicios.html" onclick="closeMob()">Servicios</a><a href="index.html#contacto" onclick="closeMob()">Contacto</a>
 </div>
- 
-<!-- NAVBAR -->
 <nav>
   <a href="index.html" class="logo">
-    <div class="logo-img">
-      <img src="./assets/logo.png" alt="Fibrotek"
-        onerror="this.style.display='none';document.querySelector('.logo-fb').style.display='block'"/>
-      <span class="logo-fb">FT</span>
-    </div>
-    <span class="logo-name">Fibro<em>tek</em></span>
+    <div class="logo-img-box"><img src="./assets/logo.png" alt="Fibrotek" onerror="this.style.display='none';document.querySelector('.logo-fb').style.display='block'"/><span class="logo-fb">FT</span></div>
+    
   </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="productos.html">Productos</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="index.html#services">Servicios</a></li>
-    <li><a href="index.html#contact">Contacto</a></li>
+  <ul class="nav-ul">
+    <li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="productos.html">Productos</a></li><li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="servicios.html">Servicios</a></li><li><a href="index.html#contacto">Contacto</a></li>
   </ul>
-  <a class="nav-cta" href="index.html#contact">
-    <i class="bi bi-chat-dots-fill"></i> Cotizar ahora
-  </a>
-  <button type="button" class="ham" onclick="openMob()" aria-label="Abrir menú" title="Abrir menú">
-    <span></span><span></span><span></span>
-  </button>
+  <a class="nav-cta" href="index.html#contacto"><i class="bi bi-whatsapp"></i> Cotizar</a>
+  <button class="ham" onclick="openMob()"><span></span><span></span><span></span></button>
 </nav>
- 
-<!-- ═══════════════════════════════════════
-     SUB-HERO
-     eslogan: "Cada producto, una promesa de durabilidad"
-═══════════════════════════════════════════ -->
+
+<!-- SUB-HERO -->
 <div class="sub-hero">
-  <div class="h-bg"></div>
-  <div class="h-grid"></div>
-  <div class="h-orb h-orb1" style="opacity:.5"></div>
+  <div class="h-bg"></div><div class="h-grid"></div>
   <div class="wrap">
-    <div class="sub-hero-inner">
+    <div class="sub-hi">
       <div>
         <div class="ey"><i class="bi bi-box-seam-fill"></i> Catálogo completo</div>
-        <h1 class="d1-title">Cada producto,<br><b>una promesa</b><br><i>de durabilidad.</i></h1>
-        <p class="body-txt">
-          Selecciona la categoría y encontrá el producto que necesitás.
-          Cotizá directo por WhatsApp en segundos.
-        </p>
+        <h1 class="d1">Cada producto,<br><b>una promesa</b><br><i>de durabilidad.</i></h1>
+        <p class="sub">Seleccioná la categoría, revisá las fotos y cotizá directo por WhatsApp en segundos.</p>
       </div>
-      <a class="btn-wa" href="index.html#contact" style="white-space:nowrap;align-self:flex-end">
-        <i class="bi bi-whatsapp"></i> Pedir cotización
-      </a>
+      <a class="btn-wa" href="index.html#contacto" style="white-space:nowrap;align-self:flex-end"><i class="bi bi-whatsapp"></i> Cotización gratis</a>
     </div>
   </div>
 </div>
- 
-<!-- ═══════════════════════════════════════
-     CATÁLOGO
-═══════════════════════════════════════════ -->
-<section style="background:var(--ink2);padding-top:48px">
+
+<!-- CATÁLOGO -->
+<section style="background:var(--bg2);padding-top:48px">
   <div class="wrap">
- 
-    <!-- TABS -->
     <div class="cat-tabs rv">
       <button class="c-tab on" data-tab="p-piscinas"><i class="bi bi-droplet-fill"></i> Piscinas</button>
       <button class="c-tab" data-tab="p-tanques"><i class="bi bi-archive-fill"></i> Tanques</button>
-      <button class="c-tab" data-tab="p-juegos"><i class="bi bi-emoji-smile-fill"></i> Juegos infantiles</button>
+      <button class="c-tab" data-tab="p-juegos"><i class="bi bi-emoji-smile-fill"></i> Juegos</button>
       <button class="c-tab" data-tab="p-estructuras"><i class="bi bi-columns-gap"></i> Estructuras</button>
     </div>
- 
-    <!-- ── PISCINAS ── -->
+
+    <!-- PISCINAS  →  assets/piscina-res-1.jpg … piscina-res-3.jpg etc -->
     <div class="cat-panel on" id="p-piscinas">
- 
-      <!-- Piscina residencial
-           Fotos en: assets/piscina-res-1.jpg, assets/piscina-res-2.jpg, assets/piscina-res-3.jpg -->
-      <div class="prd-card rv">
+      <div class="prd-c rv">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/piscina-res-1.jpg" alt="Piscina residencial 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/piscina-res-2.jpg" alt="Piscina residencial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/piscina-res-3.jpg" alt="Piscina residencial 3"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a4a5c)\'>🏊</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/piscina-res-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
+            <div class="car-sl"><img src="./assets/piscina-res-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
+            <div class="car-sl"><img src="./assets/piscina-res-3.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#7aafd0)\'>🏊</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 3</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div>
         </div>
         <div class="prd-body">
           <h3>Piscina Residencial</h3>
-          <p>Diseñada para el hogar. Fácil mantenimiento, acabados premium y colores a elección. Desde 4×2m hasta medidas personalizadas.</p>
-          <div class="prd-footer">
+          <p>Fácil mantenimiento, acabados premium y colores a elección. Desde 4×2m hasta medidas personalizadas.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-house-fill"></i> Para el hogar</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Piscina residencial');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Piscina residencial');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Piscina comercial
-           Fotos en: assets/piscina-com-1.jpg, assets/piscina-com-2.jpg -->
-      <div class="prd-card rv d1">
+      <div class="prd-c rv d1">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/piscina-com-1.jpg" alt="Piscina comercial 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a3d5c)\'>🏨</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/piscina-com-2.jpg" alt="Piscina comercial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#0a3d5c)\'>🏨</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/piscina-com-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#5a9fc8)\'>🏨</div>'"/></div>
+            <div class="car-sl"><img src="./assets/piscina-com-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#5a9fc8)\'>🏨</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Piscina Comercial</h3>
-          <p>Para hoteles, clubes y complejos deportivos. Construida para soportar el uso intensivo diario sin perder estética.</p>
-          <div class="prd-footer">
+          <p>Para hoteles, clubes y complejos deportivos. Construida para soportar el uso intensivo diario.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-building-fill"></i> Uso intensivo</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Piscina comercial / hotel');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Piscina comercial / hotel');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Piscina olímpica
-           Fotos en: assets/piscina-oli-1.jpg, assets/piscina-oli-2.jpg -->
-      <div class="prd-card rv d2">
+      <div class="prd-c rv d2">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/piscina-oli-1.jpg" alt="Piscina olímpica 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#083050)\'>🏅</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/piscina-oli-2.jpg" alt="Piscina olímpica 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081825,#083050)\'>🏅</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/piscina-oli-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🏅</div>'"/></div>
+            <div class="car-sl"><img src="./assets/piscina-oli-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🏅</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Piscina Olímpica</h3>
-          <p>50m reglamentarios para competencia oficial. Certificación de calidad y resistencia de nivel internacional.</p>
-          <div class="prd-footer">
+          <p>50m reglamentarios para competencia oficial. Certificación de calidad de nivel internacional.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-trophy-fill"></i> Competencia</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Piscina olímpica');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Piscina olímpica');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-    </div><!-- /p-piscinas -->
- 
-    <!-- ── TANQUES ── -->
+    </div>
+
+    <!-- TANQUES  →  assets/tanque-agua-1.jpg … tanque-ind-2.jpg etc -->
     <div class="cat-panel" id="p-tanques">
- 
-      <!-- Tanque de agua
-           Fotos en: assets/tanque-agua-1.jpg, assets/tanque-agua-2.jpg, assets/tanque-agua-3.jpg -->
-      <div class="prd-card rv">
+      <div class="prd-c rv">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/tanque-agua-1.jpg" alt="Tanque de agua 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180808,#4a1208)\'>🛢️</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/tanque-agua-2.jpg" alt="Tanque de agua 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180808,#4a1208)\'>🛢️</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/tanque-agua-3.jpg" alt="Tanque de agua 3"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180808,#4a1208)\'>🛢️</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/tanque-agua-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c8b8,#c8a070)\'>🛢️</div>'"/></div>
+            <div class="car-sl"><img src="./assets/tanque-agua-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c8b8,#c8a070)\'>🛢️</div>'"/></div>
+            <div class="car-sl"><img src="./assets/tanque-agua-3.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c8b8,#c8a070)\'>🛢️</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 3</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div>
         </div>
         <div class="prd-body">
           <h3>Tanque de Agua Potable</h3>
           <p>Desde 500L hasta 30,000L. Apto para agua potable y caliente. Certificado para uso domiciliario e institucional.</p>
-          <div class="prd-footer">
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-droplet-fill"></i> Agua potable</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Tanque de agua potable');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Tanque de agua potable');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Tanque industrial
-           Fotos en: assets/tanque-ind-1.jpg, assets/tanque-ind-2.jpg -->
-      <div class="prd-card rv d1">
+      <div class="prd-c rv d1">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/tanque-ind-1.jpg" alt="Tanque industrial 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#181008,#503a00)\'>⚙️</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/tanque-ind-2.jpg" alt="Tanque industrial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#181008,#503a00)\'>⚙️</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/tanque-ind-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0a8,#b87840)\'>⚙️</div>'"/></div>
+            <div class="car-sl"><img src="./assets/tanque-ind-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0a8,#b87840)\'>⚙️</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Tanque Industrial</h3>
-          <p>Para combustibles, aceites y químicos. Alta resistencia química y mecánica. Fabricación 100% a medida del cliente.</p>
-          <div class="prd-footer">
+          <p>Para combustibles, aceites y químicos. Alta resistencia química y mecánica. Fabricación 100% a medida.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-gear-fill"></i> Industrial</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Tanque industrial / químicos');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Tanque industrial / químicos');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Reservorio comunal
-           Fotos en: assets/reservorio-1.jpg, assets/reservorio-2.jpg -->
-      <div class="prd-card rv d2">
+      <div class="prd-c rv d2">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/reservorio-1.jpg" alt="Reservorio 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#001810,#004a30)\'>🌊</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/reservorio-2.jpg" alt="Reservorio 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#001810,#004a30)\'>🌊</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/reservorio-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#70b890)\'>🌊</div>'"/></div>
+            <div class="car-sl"><img src="./assets/reservorio-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#70b890)\'>🌊</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Reservorios Comunales</h3>
-          <p>Soluciones de almacenamiento de gran capacidad para comunidades rurales y proyectos de desarrollo social.</p>
-          <div class="prd-footer">
+          <p>Gran capacidad para comunidades rurales y proyectos de desarrollo social en todo el país.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-people-fill"></i> Comunidades</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Reservorio comunal');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Reservorio comunal');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-    </div><!-- /p-tanques -->
- 
-    <!-- ── JUEGOS ── -->
+    </div>
+
+    <!-- JUEGOS  →  assets/juego-parque-1.jpg … tobogan-2.jpg etc -->
     <div class="cat-panel" id="p-juegos">
- 
-      <!-- Juegos de parque
-           Fotos en: assets/juego-parque-1.jpg, assets/juego-parque-2.jpg, assets/juego-parque-3.jpg -->
-      <div class="prd-card rv">
+      <div class="prd-c rv">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/juego-parque-1.jpg" alt="Juegos de parque 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081808,#204818)\'>🎠</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/juego-parque-2.jpg" alt="Juegos de parque 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081808,#204818)\'>🎠</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/juego-parque-3.jpg" alt="Juegos de parque 3"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#081808,#204818)\'>🎠</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/juego-parque-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
+            <div class="car-sl"><img src="./assets/juego-parque-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
+            <div class="car-sl"><img src="./assets/juego-parque-3.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 3</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div>
         </div>
         <div class="prd-body">
           <h3>Juegos de Parque</h3>
-          <p>Toboganes, columpios, trepadoras. Colores UV resistentes que no se decoloran. Seguros y certificados para uso público.</p>
-          <div class="prd-footer">
+          <p>Toboganes, columpios, trepadoras. Colores UV resistentes. Seguros y certificados para uso público.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-sun-fill"></i> Anti-UV</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Juegos infantiles / parque');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Juegos infantiles / parque');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Toboganes
-           Fotos en: assets/tobogan-1.jpg, assets/tobogan-2.jpg -->
-      <div class="prd-card rv d1">
+      <div class="prd-c rv d1">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/tobogan-1.jpg" alt="Tobogán 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180818,#481848)\'>🎢</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/tobogan-2.jpg" alt="Tobogán 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#180818,#481848)\'>🎢</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/tobogan-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8d8,#b888b8)\'>🎢</div>'"/></div>
+            <div class="car-sl"><img src="./assets/tobogan-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8d8,#b888b8)\'>🎢</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Toboganes</h3>
-          <p>Simples y en espiral para piscinas y parques. Superficie lisa de alto brillo. Fácil instalación y mantenimiento mínimo.</p>
-          <div class="prd-footer">
+          <p>Simples y en espiral para piscinas y parques. Superficie lisa de alto brillo. Instalación fácil.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-water"></i> Acuático</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Mobiliario urbano
-           Fotos en: assets/mobiliario-1.jpg, assets/mobiliario-2.jpg -->
-      <div class="prd-card rv d2">
+      <div class="prd-c rv d2">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/mobiliario-1.jpg" alt="Mobiliario 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#080818,#181848)\'>🪑</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/mobiliario-2.jpg" alt="Mobiliario 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#080818,#181848)\'>🪑</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/mobiliario-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8c8d8,#8888b8)\'>🪑</div>'"/></div>
+            <div class="car-sl"><img src="./assets/mobiliario-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8c8d8,#8888b8)\'>🪑</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Mobiliario Urbano</h3>
-          <p>Bancas, maceteros, pérgolas y elementos decorativos para espacios públicos y privados. Duraderos ante la intemperie.</p>
-          <div class="prd-footer">
+          <p>Bancas, maceteros, pérgolas. Duraderos ante la intemperie para espacios públicos y privados.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-tree-fill"></i> Exterior</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Mobiliario urbano');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Mobiliario urbano');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-    </div><!-- /p-juegos -->
- 
-    <!-- ── ESTRUCTURAS ── -->
+    </div>
+
+    <!-- ESTRUCTURAS  →  assets/estructura-1.jpg … pieza-2.jpg etc -->
     <div class="cat-panel" id="p-estructuras">
- 
-      <!-- Estructuras industriales
-           Fotos en: assets/estructura-1.jpg, assets/estructura-2.jpg -->
-      <div class="prd-card rv">
+      <div class="prd-c rv">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/estructura-1.jpg" alt="Estructura 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#080810,#141840)\'>🏗️</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/estructura-2.jpg" alt="Estructura 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#080810,#141840)\'>🏗️</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/estructura-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8c8e0,#8888c0)\'>🏗️</div>'"/></div>
+            <div class="car-sl"><img src="./assets/estructura-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8c8e0,#8888c0)\'>🏗️</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Estructuras Industriales</h3>
-          <p>Canaletas, tuberías, cubiertas y piezas especiales para industria minera y manufacturera. Alta resistencia química.</p>
-          <div class="prd-footer">
+          <p>Canaletas, tuberías, cubiertas y piezas especiales para industria minera y manufacturera.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-gear-wide-connected"></i> Industrial</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Estructura industrial');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Estructura industrial');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Cubiertas
-           Fotos en: assets/cubierta-1.jpg, assets/cubierta-2.jpg -->
-      <div class="prd-card rv d1">
+      <div class="prd-c rv d1">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/cubierta-1.jpg" alt="Cubierta 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#181008,#402800)\'>🏠</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/cubierta-2.jpg" alt="Cubierta 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#181008,#402800)\'>🏠</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/cubierta-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b0,#c09060)\'>🏠</div>'"/></div>
+            <div class="car-sl"><img src="./assets/cubierta-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b0,#c09060)\'>🏠</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Cubiertas y Techos</h3>
-          <p>Translúcidas y opacas para galpones, canchas y centros comerciales. Livianas, resistentes al granizo y UV.</p>
-          <div class="prd-footer">
+          <p>Translúcidas y opacas para galpones, canchas y centros comerciales. Livianas y resistentes al granizo.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-house-fill"></i> Arquitectura</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Cubierta / techo');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Cubierta / techo');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-      <!-- Piezas a medida
-           Fotos en: assets/pieza-1.jpg, assets/pieza-2.jpg -->
-      <div class="prd-card rv d2">
+      <div class="prd-c rv d2">
         <div class="car">
-          <div class="car-inner">
-            <div class="car-slide">
-              <img src="./assets/pieza-1.jpg" alt="Pieza especial 1"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#001810,#004a30)\'>🔩</div>'"/>
-            </div>
-            <div class="car-slide">
-              <img src="./assets/pieza-2.jpg" alt="Pieza especial 2"
-                onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#001810,#004a30)\'>🔩</div>'"/>
-            </div>
+          <div class="car-in">
+            <div class="car-sl"><img src="./assets/pieza-1.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c0,#70a880)\'>🔩</div>'"/></div>
+            <div class="car-sl"><img src="./assets/pieza-2.jpg" alt="" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c0,#70a880)\'>🔩</div>'"/></div>
           </div>
-          <button class="car-arr car-prev"><i class="bi bi-chevron-left"></i></button>
-          <button class="car-arr car-next"><i class="bi bi-chevron-right"></i></button>
-          <div class="car-dots"></div>
-          <div class="car-ov"></div>
-          <div class="car-count">1 / 2</div>
+          <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+          <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+          <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
         </div>
         <div class="prd-body">
           <h3>Piezas a Medida</h3>
-          <p>Si tenés un plano, lo fabricamos. Cualquier geometría en fibra de vidrio. El límite lo pone tu proyecto, no nosotros.</p>
-          <div class="prd-footer">
+          <p>Si tenés un plano, lo fabricamos. Cualquier geometría en fibra de vidrio. Sin límites de diseño.</p>
+          <div class="prd-ft">
             <span class="prd-tag"><i class="bi bi-rulers"></i> Personalizado</span>
-            <a class="prd-cta" href="#" onclick="cotizarWA('Pieza a medida');return false">
-              <i class="bi bi-whatsapp"></i> Cotizar
-            </a>
+            <a class="prd-cta" href="#" onclick="cotizarWA('Pieza a medida');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
           </div>
         </div>
       </div>
- 
-    </div><!-- /p-estructuras -->
- 
+    </div>
   </div>
 </section>
- 
-<!-- CTA FINAL -->
-<section style="background:var(--ink3);padding:72px 0;text-align:center">
+
+<!-- CTA -->
+<section style="background:var(--bg3);text-align:center">
   <div class="wrap rv">
     <div class="ey" style="justify-content:center"><i class="bi bi-chat-dots-fill"></i> ¿No encontraste lo que buscabas?</div>
-    <h2 class="d2-title" style="text-align:center;margin-top:12px">Si lo podés imaginar,<br><b>lo podemos construir.</b></h2>
-    <p class="body-txt" style="margin:14px auto 28px;text-align:center">
-      Fabricamos piezas completamente personalizadas. Contanos tu proyecto y te sorprendemos.
-    </p>
-    <a class="btn-wa" href="index.html#contact" style="display:inline-flex">
-      <i class="bi bi-whatsapp"></i> Consultar por WhatsApp
-    </a>
+    <h2 class="d2" style="text-align:center;margin-top:12px">Si lo podés imaginar,<br><b>lo podemos construir.</b></h2>
+    <p class="sub" style="margin:14px auto 28px;text-align:center">Fabricamos piezas completamente personalizadas. Contanos tu proyecto.</p>
+    <a class="btn-wa" href="index.html#contacto" style="display:inline-flex"><i class="bi bi-whatsapp"></i> Consultar por WhatsApp</a>
   </div>
 </section>
- 
-<!-- FOOTER -->
+
 <footer>
-  <div class="wrap ft">
+  <div class="wrap">
     <div class="ft-top">
       <div class="ft-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-img" style="width:38px;height:38px">
-            <img src="./assets/logo.png" alt="logo" onerror="this.style.display='none'"/>
-          </div>
-          <span class="logo-name">Fibro<em>tek</em></span>
-        </a>
-        <p>Si lo podés imaginar, lo podemos construir. Hecho en Bolivia para durar generaciones.</p>
+        <a href="index.html" class="logo"><div class="logo-img-box" style="width:38px;height:38px"><img src="./assets/logo.png" alt="logo" onerror="this.style.display='none'"/></div></a>
+        <p>Si lo podés imaginar, lo podemos construir. Hecho en Bolivia.</p>
       </div>
-      <div class="ft-col">
-        <h4>Páginas</h4>
-        <ul>
-          <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
-          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Productos</a></li>
-          <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
-          <li><a href="index.html#contact"><i class="bi bi-chevron-right"></i>Contacto</a></li>
-        </ul>
-      </div>
-      <div class="ft-col">
-        <h4>Categorías</h4>
-        <ul>
-          <li><a href="#" onclick="document.querySelector('[data-tab=p-piscinas]').click();window.scrollTo(0,200);return false"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
-          <li><a href="#" onclick="document.querySelector('[data-tab=p-tanques]').click();window.scrollTo(0,200);return false"><i class="bi bi-chevron-right"></i>Tanques</a></li>
-          <li><a href="#" onclick="document.querySelector('[data-tab=p-juegos]').click();window.scrollTo(0,200);return false"><i class="bi bi-chevron-right"></i>Juegos</a></li>
-          <li><a href="#" onclick="document.querySelector('[data-tab=p-estructuras]').click();window.scrollTo(0,200);return false"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
-        </ul>
-      </div>
+      <div class="ft-col"><h4>Páginas</h4><ul>
+        <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
+        <li><a href="nosotros.html"><i class="bi bi-chevron-right"></i>Nosotros</a></li>
+        <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
+        <li><a href="servicios.html"><i class="bi bi-chevron-right"></i>Servicios</a></li>
+      </ul></div>
+      <div class="ft-col"><h4>Categorías</h4><ul>
+        <li><a href="#" onclick="document.querySelector('[data-tab=p-piscinas]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-tab=p-tanques]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Tanques</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-tab=p-juegos]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Juegos</a></li>
+        <li><a href="#" onclick="document.querySelector('[data-tab=p-estructuras]').click();window.scrollTo(0,300);return false"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
+      </ul></div>
     </div>
     <div class="ft-bot">
       <p>© 2025 Fibrotek Company · Todos los derechos reservados</p>
       <div class="socs">
-        <a class="soc" href="#"><i class="bi bi-facebook"></i></a>
-        <a class="soc" href="#"><i class="bi bi-instagram"></i></a>
-        <a class="soc" href="#"><i class="bi bi-tiktok"></i></a>
-        <a class="soc" href="https://wa.me/68124071"><i class="bi bi-whatsapp"></i></a>
+        <a class="soc" href="#"><i class="bi bi-facebook"></i></a><a class="soc" href="#"><i class="bi bi-instagram"></i></a>
+        <a class="soc" href="#"><i class="bi bi-tiktok"></i></a><a class="soc" href="https://wa.me/591XXXXXXXXX"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
   </div>
 </footer>
- 
-<div class="wa-float">
-  <div class="wa-bubble">¿Querés cotizar un producto? 👋</div>
-  <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
-</div>
+
+<div class="wa-float"><div class="wa-bubble">¿Querés cotizar? 👋</div><a class="wa-fab" href="https://wa.me/591XXXXXXXXX" target="_blank"><i class="bi bi-whatsapp"></i></a></div>
 <button id="btt"><i class="bi bi-arrow-up"></i></button>
- 
 <script src="./js/main.js"></script>
 <script>
-// Cotizar producto específico directo por WhatsApp
-window.cotizarWA = function(producto){
-  const WA_NUMBER = '59168124071'; // ⚠️ Cambiar por número real
-  const msg = `*CONSULTA FIBROTEK*\n\n`
-    + `📦 *Producto de interés:* ${producto}\n\n`
-    + `Hola, me gustaría recibir información y cotización sobre este producto.`;
-  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+window.cotizarWA = function(p){
+  const WA='591XXXXXXXXX';
+  const msg=`*CONSULTA FIBROTEK*\n\n📦 *Producto:* ${p}\n\nHola, me gustaría recibir información y cotización.`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
 };
 </script>
 </body>

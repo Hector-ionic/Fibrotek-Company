@@ -1,8 +1,13 @@
 /* ═══════════════════════════════════════════
-   FIBROTEK · main.js
+   FIBROTEK · main.js  v6
 ═══════════════════════════════════════════ */
 
-/* ── CURSOR ─────────────────────────────── */
+/* ── PRELOADER ───────────────────────────── */
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('preloader')?.classList.add('done'), 1600);
+});
+
+/* ── CURSOR ──────────────────────────────── */
 const cur  = document.getElementById('cur');
 const curR = document.getElementById('cur-r');
 let mx=0,my=0,rx=0,ry=0;
@@ -15,46 +20,52 @@ document.addEventListener('mousemove', e => {
   if(curR){ curR.style.left=rx+'px'; curR.style.top=ry+'px'; }
   requestAnimationFrame(loop);
 })();
-document.querySelectorAll('a,button,.h-mini,.prd-card,.proj-card,.gi,.srv-c,.ct-item').forEach(el=>{
+// fallback logo: si no carga la imagen, muestra el texto
+document.querySelectorAll('.logo-img-box img').forEach(img=>{
+  img.addEventListener('error', ()=>{
+    img.style.display='none';
+    const fb = img.closest('.logo-img-box')?.querySelector('.logo-fb');
+    if(fb) fb.style.display='block';
+  });
+});
+
+document.querySelectorAll('a,button,.h-mc,.prd-c,.proj-c,.gi,.srv-c,.ct-it,.ab-item,.test-c,.faq-q,.val-c,.team-c').forEach(el=>{
   el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
   el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
 });
 
-/* ── NAVBAR SCROLL + BTT ────────────────── */
-const nav = document.querySelector('nav');
+/* ── NAVBAR SCROLL + BTT ─────────────────── */
+const navEl = document.querySelector('nav');
 window.addEventListener('scroll', ()=>{
-  nav?.classList.toggle('sc', window.scrollY>40);
+  navEl?.classList.toggle('sc', window.scrollY>40);
   document.getElementById('btt')?.classList.toggle('show', window.scrollY>400);
 });
 
 /* ── ACTIVE NAV LINK ─────────────────────── */
 (()=>{
   const page = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(a=>{
-    const href = a.getAttribute('href');
-    if(href===page || (page==='index.html' && href==='index.html') ||
-       (page==='' && href==='index.html')) a.classList.add('active');
-    else if(href===page) a.classList.add('active');
+  document.querySelectorAll('.nav-ul a').forEach(a=>{
+    const h = a.getAttribute('href') || '';
+    if(h===page || (page===''&&h==='index.html')) a.classList.add('on');
   });
 })();
 
 /* ── REVEAL ──────────────────────────────── */
-const io = new IntersectionObserver(
-  entries=>entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }),
+const ioRv = new IntersectionObserver(
+  es=>es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); }),
   {threshold:.12}
 );
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+document.querySelectorAll('.rv').forEach(el=>ioRv.observe(el));
 
 /* ── TIMELINE ────────────────────────────── */
-const io2 = new IntersectionObserver(
-  entries=>entries.forEach((e,i)=>{
-    if(e.isIntersecting) setTimeout(()=>e.target.classList.add('in'), i*120);
-  }),{threshold:.1}
+const ioTl = new IntersectionObserver(
+  es=>es.forEach((e,i)=>{ if(e.isIntersecting) setTimeout(()=>e.target.classList.add('in'),i*120); }),
+  {threshold:.1}
 );
-document.querySelectorAll('.tl-row').forEach(el=>io2.observe(el));
+document.querySelectorAll('.tl-row').forEach(el=>ioTl.observe(el));
 
 /* ── COUNTER ─────────────────────────────── */
-function animCount(el,target){
+function animCount(el, target){
   let n=0; const step=Math.ceil(target/55);
   const t=setInterval(()=>{
     n=Math.min(n+step,target);
@@ -62,31 +73,28 @@ function animCount(el,target){
     if(n>=target) clearInterval(t);
   },28);
 }
-const cio = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
+const ioCnt = new IntersectionObserver(es=>{
+  es.forEach(e=>{
     if(e.isIntersecting){
       document.querySelectorAll('[data-count]').forEach(el=>animCount(el,+el.dataset.count));
-      cio.disconnect();
+      ioCnt.disconnect();
     }
   });
 },{threshold:.5});
-const kpis=document.querySelector('.h-stats');
-if(kpis) cio.observe(kpis);
+const kpis=document.querySelector('.h-kpis');
+if(kpis) ioCnt.observe(kpis);
 
-/* ── IMAGE CAROUSEL (reutilizable) ──────── */
-function buildCarousel(container){
-  const inner = container.querySelector('.car-inner');
+/* ── CAROUSEL (reutilizable) ─────────────── */
+function buildCar(container){
+  const inner = container.querySelector('.car-in');
   const dots  = container.querySelector('.car-dots');
-  const count = container.querySelector('.car-count');
-  const prev  = container.querySelector('.car-prev');
-  const next  = container.querySelector('.car-next');
+  const cnt   = container.querySelector('.car-cnt');
+  const prev  = container.querySelector('.car-pv');
+  const next  = container.querySelector('.car-nx');
   if(!inner) return;
-
   const slides=[...inner.children];
   const total=slides.length;
   let cur=0;
-
-  // build dots
   if(dots){
     dots.innerHTML='';
     slides.forEach((_,i)=>{
@@ -96,22 +104,17 @@ function buildCarousel(container){
       dots.appendChild(d);
     });
   }
-
   function goTo(n){
     cur=(n+total)%total;
     inner.style.transform=`translateX(-${cur*100}%)`;
     if(dots) [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===cur));
-    if(count) count.textContent=`${cur+1} / ${total}`;
+    if(cnt) cnt.textContent=`${cur+1} / ${total}`;
   }
-
   prev?.addEventListener('click',e=>{ e.stopPropagation(); goTo(cur-1); });
   next?.addEventListener('click',e=>{ e.stopPropagation(); goTo(cur+1); });
-
-  // init count
-  if(count) count.textContent=`1 / ${total}`;
+  if(cnt) cnt.textContent=`1 / ${total}`;
 }
-
-document.querySelectorAll('.car').forEach(buildCarousel);
+document.querySelectorAll('.car').forEach(buildCar);
 
 /* ── PRODUCT TABS ────────────────────────── */
 document.querySelectorAll('.c-tab').forEach(tab=>{
@@ -121,11 +124,10 @@ document.querySelectorAll('.c-tab').forEach(tab=>{
     document.querySelectorAll('.cat-panel').forEach(p=>p.classList.remove('on'));
     tab.classList.add('on');
     const panel=document.getElementById(id);
-    if(panel){ panel.classList.add('on'); panel.querySelectorAll('.car').forEach(buildCarousel); }
+    if(panel){ panel.classList.add('on'); panel.querySelectorAll('.car').forEach(buildCar); }
   });
 });
-// init first panel carousels
-document.querySelectorAll('.cat-panel.on .car').forEach(buildCarousel);
+document.querySelectorAll('.cat-panel.on .car').forEach(buildCar);
 
 /* ── PROJECT FILTER ──────────────────────── */
 document.querySelectorAll('.f-btn').forEach(btn=>{
@@ -133,21 +135,30 @@ document.querySelectorAll('.f-btn').forEach(btn=>{
     const cat=btn.dataset.cat;
     document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('on'));
     btn.classList.add('on');
-    document.querySelectorAll('.proj-card').forEach(c=>{
-      const match = cat==='all' || c.dataset.cat===cat;
-      c.style.display = match?'':'none';
+    document.querySelectorAll('.proj-c').forEach(c=>{
+      c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
     });
   });
 });
 
 /* ── VIDEO OVERLAY ───────────────────────── */
-const videoEl  = document.getElementById('mainVideo');
-const videoOv  = document.getElementById('videoOv');
-if(videoEl && videoOv){
-  videoOv.addEventListener('click',()=>{ videoEl.play(); videoOv.classList.add('gone'); });
-  videoEl.addEventListener('pause',()=>{ if(!videoEl.ended) videoOv.classList.remove('gone'); });
-  videoEl.addEventListener('ended',()=>videoOv.classList.remove('gone'));
+const vidEl = document.getElementById('mainVideo');
+const vidOv = document.getElementById('vidOv');
+if(vidEl && vidOv){
+  vidOv.addEventListener('click',()=>{ vidEl.play(); vidOv.classList.add('gone'); });
+  vidEl.addEventListener('pause',()=>{ if(!vidEl.ended) vidOv.classList.remove('gone'); });
+  vidEl.addEventListener('ended',()=>vidOv.classList.remove('gone'));
 }
+
+/* ── FAQ ─────────────────────────────────── */
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const it=q.closest('.faq-it');
+    const wasOpen=it.classList.contains('open');
+    document.querySelectorAll('.faq-it').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen) it.classList.add('open');
+  });
+});
 
 /* ── MOBILE NAV ──────────────────────────── */
 window.openMob  = ()=>document.getElementById('mobNav')?.classList.add('open');
@@ -159,30 +170,28 @@ window.sendWA = function(){
   const nombre  = document.getElementById('wa-nombre')?.value.trim();
   const tel     = document.getElementById('wa-tel')?.value.trim();
   const prod    = document.getElementById('wa-prod')?.value;
-  const detalle = document.getElementById('wa-detalle')?.value.trim();
   const ciudad  = document.getElementById('wa-ciudad')?.value.trim();
-
-  if(!nombre||!tel||!prod){
-    alert('Por favor completa: nombre, teléfono y producto de interés.');
-    return;
-  }
-
-  // ⚠️  CAMBIA ESTE NÚMERO por el real de Fibrotek (sin + ni espacios)
-  const WA_NUMBER = '59168124071';
-
-  const msg = `*COTIZACIÓN FIBROTEK*\n\n`
-    + `👤 *Nombre:* ${nombre}\n`
-    + `📱 *Teléfono:* ${tel}\n`
-    + `📦 *Producto:* ${prod}\n`
-    + (ciudad  ? `📍 *Ciudad:* ${ciudad}\n` : '')
-    + (detalle ? `💬 *Detalle:* ${detalle}\n` : '')
-    + `\n_Enviado desde fibrotek.bo_`;
-
-  const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
-  window.open(url,'_blank');
-
+  const detalle = document.getElementById('wa-detalle')?.value.trim();
+  if(!nombre||!tel||!prod){ alert('Por favor completá: nombre, teléfono y producto.'); return; }
+  /* ⚠️  CAMBIA ESTE NÚMERO por el real de Fibrotek */
+  const WA = '591XXXXXXXXX';
+  const msg=`*COTIZACIÓN FIBROTEK*\n\n`
+    +`👤 *Nombre:* ${nombre}\n`
+    +`📱 *Teléfono:* ${tel}\n`
+    +`📦 *Producto:* ${prod}\n`
+    +(ciudad?`📍 *Ciudad:* ${ciudad}\n`:'')
+    +(detalle?`💬 *Detalle:* ${detalle}\n`:'')
+    +`\n_enviado desde fibrotek.bo_`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
   document.getElementById('formFields').style.display='none';
   document.getElementById('formOk').style.display='block';
+};
+
+/* cotizar producto directo */
+window.cotizarWA = function(producto){
+  const WA = '591XXXXXXXXX';
+  const msg=`*CONSULTA FIBROTEK*\n\n📦 *Producto:* ${producto}\n\nHola, me gustaría recibir información y cotización.`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
 };
 
 /* ── GALLERY LIGHTBOX ────────────────────── */
@@ -191,15 +200,15 @@ document.querySelectorAll('.gi').forEach(item=>{
     const img=item.querySelector('img');
     if(!img) return;
     const ov=document.createElement('div');
-    ov.style.cssText='position:fixed;inset:0;z-index:9000;background:rgba(4,11,18,.96);display:flex;align-items:center;justify-content:center;padding:24px;cursor:none';
+    ov.style.cssText='position:fixed;inset:0;z-index:9000;background:rgba(15,37,69,.88);display:flex;align-items:center;justify-content:center;padding:24px;cursor:none';
     const im=document.createElement('img');
     im.src=img.src;
-    im.style.cssText='max-width:90vw;max-height:90vh;border-radius:14px;object-fit:contain;border:1px solid rgba(181,242,58,.25);box-shadow:0 0 60px rgba(181,242,58,.12)';
+    im.style.cssText='max-width:90vw;max-height:90vh;border-radius:16px;object-fit:contain;border:2px solid rgba(245,168,0,.4);box-shadow:0 0 60px rgba(245,168,0,.2)';
     const btn=document.createElement('button');
     btn.innerHTML='<i class="bi bi-x-lg"></i>';
-    btn.style.cssText='position:absolute;top:20px;right:26px;color:#eef5ff;font-size:24px;cursor:none;background:none;border:none;transition:color .2s';
-    btn.onmouseenter=()=>btn.style.color='#b5f23a';
-    btn.onmouseleave=()=>btn.style.color='#eef5ff';
+    btn.style.cssText='position:absolute;top:20px;right:26px;color:#fff;font-size:24px;cursor:none;background:none;border:none;transition:color .2s';
+    btn.onmouseenter=()=>btn.style.color='#f5a800';
+    btn.onmouseleave=()=>btn.style.color='#fff';
     ov.append(im,btn);
     document.body.appendChild(ov);
     const rm=()=>ov.remove();
@@ -210,3 +219,101 @@ document.querySelectorAll('.gi').forEach(item=>{
 
 /* ── BTT ─────────────────────────────────── */
 document.getElementById('btt')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* ── FORMULARIO WHATSAPP ──────────────────── */
+function sendWA() {
+  const nombre = document.getElementById('wa-nombre').value.trim();
+  const telefono = document.getElementById('wa-tel').value.trim();
+  const producto = document.getElementById('wa-prod').value;
+  const ciudad = document.getElementById('wa-ciudad').value.trim();
+  const detalle = document.getElementById('wa-detalle').value.trim();
+
+  // Validación
+  if (!nombre) {
+    showError('Por favor, ingresa tu nombre');
+    document.getElementById('wa-nombre').focus();
+    return;
+  }
+
+  if (!telefono) {
+    showError('Por favor, ingresa tu teléfono');
+    document.getElementById('wa-tel').focus();
+    return;
+  }
+
+  if (!producto) {
+    showError('Por favor, selecciona un producto de interés');
+    document.getElementById('wa-prod').focus();
+    return;
+  }
+
+  // Ocultar error si había
+  hideError();
+
+  // Mostrar loading
+  document.getElementById('sendButton').style.display = 'none';
+  document.getElementById('loadingIndicator').style.display = 'block';
+
+  // Construir mensaje
+  const productoText = document.getElementById('wa-prod').selectedOptions[0].text;
+  let mensaje = `Hola, soy ${nombre}.%0A`;
+  mensaje += `Teléfono: ${telefono}%0A`;
+  mensaje += `Producto de interés: ${productoText}%0A`;
+
+  if (ciudad) {
+    mensaje += `Ciudad/Departamento: ${ciudad}%0A`;
+  }
+
+  if (detalle) {
+    mensaje += `Detalle del proyecto:%0A${detalle}`;
+  } else {
+    mensaje += `Me gustaría obtener una cotización.`;
+  }
+
+  // Preparar URL de WhatsApp
+  const waUrl = `https://wa.me/5911234567?text=${mensaje}`;
+
+  // Simular procesamiento y abrir WhatsApp
+  setTimeout(() => {
+    // Abrir WhatsApp en nueva pestaña
+    window.open(waUrl, '_blank');
+
+    // Mostrar mensaje de éxito
+    document.getElementById('formFields').style.display = 'none';
+    document.getElementById('formOk').style.display = 'block';
+
+    // Resetear después de 5 segundos
+    setTimeout(() => {
+      document.getElementById('formFields').style.display = 'block';
+      document.getElementById('formOk').style.display = 'none';
+      document.getElementById('wa-nombre').value = '';
+      document.getElementById('wa-tel').value = '';
+      document.getElementById('wa-prod').value = '';
+      document.getElementById('wa-ciudad').value = '';
+      document.getElementById('wa-detalle').value = '';
+      document.getElementById('sendButton').style.display = 'flex';
+      document.getElementById('loadingIndicator').style.display = 'none';
+    }, 5000);
+  }, 1500);
+}
+
+function showError(message) {
+  const errorDiv = document.getElementById('formError');
+  const errorMessage = document.getElementById('errorMessage');
+  errorMessage.textContent = message;
+  errorDiv.style.display = 'block';
+}
+
+function hideError() {
+  document.getElementById('formError').style.display = 'none';
+}
+
+/* Animación para el spinner */
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+`;
+document.head.appendChild(style);
