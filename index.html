@@ -41,9 +41,9 @@
 <nav>
   <a href="index.html" class="logo">
     <div class="logo-img-box">
-      <img src="./assets/img/logo.png" alt="Fibrotek" loading="lazy"
-        onerror="this.style.display='none';document.querySelector('.logo-fb').style.display='block'"/>
-      <span class="logo-fb">FT</span>
+      <img src="./assets/logo.png" alt="Fibrotek"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
+      <span class="logo-fb">FIBROTEK</span>
     </div>
     
   </a>
@@ -114,7 +114,7 @@
         OPCIÓN A — Video local:   assets/video.mp4  +  assets/video-poster.jpg
         OPCIÓN B — YouTube:       comenta el <video> y descomenta el <iframe>
       -->
-      <video id="mainVideo" src="./assets/video/vid.mp4" poster="./assets/video-poster.jpg" preload="none" playsinline></video>
+      <video id="mainVideo" src="./assets/video.mp4" poster="./assets/video-poster.jpg" preload="none" playsinline></video>
       <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1" allowfullscreen></iframe> -->
       <div class="v-ov" id="vidOv">
         <div class="v-play"><i class="bi bi-play-fill"></i></div>
@@ -229,11 +229,11 @@
         <div class="ct-items">
           <div class="ct-it">
             <div class="ct-ic"><i class="bi bi-whatsapp"></i></div>
-            <div><strong>WhatsApp directo</strong><span>+591 123 4567</span></div>
+            <div><strong>WhatsApp directo</strong><span>++591 68124071</span></div>
           </div>
           <div class="ct-it">
             <div class="ct-ic"><i class="bi bi-envelope-fill"></i></div>
-            <div><strong>Email</strong><span>contacto@fibrotek.bo</span></div>
+            <div><strong>Email</strong><span>info@fibrotek.bo</span></div>
           </div>
           <div class="ct-it">
             <div class="ct-ic"><i class="bi bi-geo-alt-fill"></i></div>
@@ -248,41 +248,27 @@
       <div class="wa-form rv d2">
         <div id="formFields">
           <h3>Solicitar cotización</h3>
-          <div id="formError" style="display:none;background:#fee;border-left:4px solid #f00;padding:12px;margin-bottom:16px;border-radius:4px;color:#d00">
-            <i class="bi bi-exclamation-circle"></i> <span id="errorMessage"></span>
-          </div>
           <div class="frow">
-            <div class="fg"><label for="wa-nombre">Tu nombre *</label><input type="text" id="wa-nombre" placeholder="Nombre completo" required/></div>
-            <div class="fg"><label for="wa-tel">Teléfono *</label><input type="tel" id="wa-tel" placeholder="+591 XXX XXXXX" required/></div>
+            <div class="fg"><label>Tu nombre *</label><input type="text" id="wa-nombre" placeholder="Nombre completo"/></div>
+            <div class="fg"><label>Teléfono *</label><input type="tel" id="wa-tel" placeholder="++591 68124071"/></div>
           </div>
           <div class="fg">
-            <label for="wa-prod">Producto de interés *</label>
-            <select id="wa-prod" required>
+            <label>Producto de interés *</label>
+            <select id="wa-prod">
               <option value="">Seleccioná un producto…</option>
-              <option value="piscina-residencial">Piscina residencial</option>
-              <option value="piscina-comercial">Piscina comercial / hotel</option>
-              <option value="piscina-olimpica">Piscina olímpica</option>
-              <option value="tanque-agua">Tanque de agua potable</option>
-              <option value="tanque-industrial">Tanque industrial / químicos</option>
-              <option value="reservorio">Reservorio comunal</option>
-              <option value="juegos">Juegos infantiles / parque</option>
-              <option value="tobogan">Tobogán</option>
-              <option value="mobiliario">Mobiliario urbano</option>
-              <option value="estructura">Estructura industrial</option>
-              <option value="cubierta">Cubierta / techo</option>
-              <option value="medida">Pieza a medida</option>
-              <option value="otro">Otro</option>
+              <option>Piscina residencial</option><option>Piscina comercial / hotel</option>
+              <option>Piscina olímpica</option><option>Tanque de agua potable</option>
+              <option>Tanque industrial / químicos</option><option>Reservorio comunal</option>
+              <option>Juegos infantiles / parque</option><option>Tobogán</option>
+              <option>Mobiliario urbano</option><option>Estructura industrial</option>
+              <option>Cubierta / techo</option><option>Pieza a medida</option><option>Otro</option>
             </select>
           </div>
-          <div class="fg"><label for="wa-ciudad">Ciudad / Departamento</label><input type="text" id="wa-ciudad" placeholder="Ej: La Paz, Santa Cruz…"/></div>
-          <div class="fg"><label for="wa-detalle">Detalle del proyecto</label><textarea id="wa-detalle" placeholder="Dimensiones, cantidad, uso, plazos u otros detalles…" rows="4"></textarea></div>
-          <button class="btn-wa" style="width:100%;justify-content:center;margin-top:4px" onclick="sendWA()" id="sendButton">
+          <div class="fg"><label>Ciudad / Departamento</label><input type="text" id="wa-ciudad" placeholder="Ej: La Paz, Santa Cruz…"/></div>
+          <div class="fg"><label>Detalle del proyecto</label><textarea id="wa-detalle" placeholder="Dimensiones, cantidad, uso, plazos u otros detalles…"></textarea></div>
+          <button class="btn-wa" style="width:100%;justify-content:center;margin-top:4px" onclick="sendWA()">
             <i class="bi bi-whatsapp"></i> Enviar por WhatsApp
           </button>
-          <div id="loadingIndicator" style="display:none;text-align:center;margin-top:12px">
-            <div class="spinner" style="display:inline-block;width:20px;height:20px;border:3px solid #f3f3f3;border-top:3px solid #25d366;border-radius:50%;animation:spin 1s linear infinite"></div>
-            <span style="margin-left:8px;font-size:14px">Preparando mensaje...</span>
-          </div>
           <p style="font-family:var(--fM);font-size:10px;letter-spacing:1px;color:var(--t4);text-align:center;margin-top:12px">
             Al enviar se abrirá WhatsApp con tu mensaje listo.
           </p>
@@ -312,7 +298,7 @@
     <div class="ft-top">
       <div class="ft-brand">
         <a href="index.html" class="logo">
-          <div class="logo-img-box" style="width:38px;height:38px"><img src="./assets/img/logo.png" alt="logo" onerror="this.style.display='none'"/></div>
+          <div class="logo-img-box"><img src="./assets/logo.png" alt="logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="logo-fb">FIBROTEK</span></div>
           
         </a>
         <p>Fabricamos lo que otros no se atreven a construir. Hecho en Bolivia para durar generaciones.</p>
@@ -339,12 +325,12 @@
       </div>
     </div>
     <div class="ft-bot">
-      <p>© 2026 Fibrotek Company · Todos los derechos reservados</p>
+      <p>© 2025 Fibrotek Company · Todos los derechos reservados</p>
       <div class="socs">
-        <a class="soc" href="https://facebook.com/fibrotekcompany" title="Síguenos en Facebook"><i class="bi bi-facebook"></i></a>
-        <a class="soc" href="https://instagram.com/fibrotekcompany" title="Síguenos en Instagram"><i class="bi bi-instagram"></i></a>
-        <a class="soc" href="https://tiktok.com/@fibrotekcompany" title="Síguenos en TikTok"><i class="bi bi-tiktok"></i></a>
-        <a class="soc" href="https://wa.me/5911234567" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a class="soc" href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a class="soc" href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a class="soc" href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a class="soc" href="https://wa.me/59168124071" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
       </div>
     </div>
   </div>
@@ -352,7 +338,7 @@
 
 <div class="wa-float">
   <div class="wa-bubble">¿Necesitás cotización? Escribinos 👋</div>
-  <a class="wa-fab" href="https://wa.me/5911234567?text=Hola,%20me%20gustaría%20obtener%20una%20cotización" target="_blank"><i class="bi bi-whatsapp"></i></a>
+  <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
 </div>
 <button id="btt"><i class="bi bi-arrow-up"></i></button>
 <script src="./js/main.js"></script>

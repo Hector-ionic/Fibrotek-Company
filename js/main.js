@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════
-   FIBROTEK · main.js  v6
+   FIBROTEK · main.js  v5
 ═══════════════════════════════════════════ */
 
 /* ── PRELOADER ───────────────────────────── */
@@ -20,11 +20,19 @@ document.addEventListener('mousemove', e => {
   if(curR){ curR.style.left=rx+'px'; curR.style.top=ry+'px'; }
   requestAnimationFrame(loop);
 })();
-// fallback logo: si no carga la imagen, muestra el texto
+// fallback logo: si no carga la imagen muestra el nombre de la empresa
 document.querySelectorAll('.logo-img-box img').forEach(img=>{
+  // si ya falló (cached error)
+  if(!img.complete || img.naturalWidth === 0){
+    img.style.display='none';
+    const fb = img.closest('.logo-img-box')?.querySelector('.logo-fb') ||
+                img.closest('.logo')?.querySelector('.logo-fb');
+    if(fb) fb.style.display='block';
+  }
   img.addEventListener('error', ()=>{
     img.style.display='none';
-    const fb = img.closest('.logo-img-box')?.querySelector('.logo-fb');
+    const fb = img.closest('.logo-img-box')?.querySelector('.logo-fb') ||
+                img.closest('.logo')?.querySelector('.logo-fb');
     if(fb) fb.style.display='block';
   });
 });
@@ -174,7 +182,7 @@ window.sendWA = function(){
   const detalle = document.getElementById('wa-detalle')?.value.trim();
   if(!nombre||!tel||!prod){ alert('Por favor completá: nombre, teléfono y producto.'); return; }
   /* ⚠️  CAMBIA ESTE NÚMERO por el real de Fibrotek */
-  const WA = '591XXXXXXXXX';
+  const WA = '59168124071';
   const msg=`*COTIZACIÓN FIBROTEK*\n\n`
     +`👤 *Nombre:* ${nombre}\n`
     +`📱 *Teléfono:* ${tel}\n`
@@ -189,7 +197,7 @@ window.sendWA = function(){
 
 /* cotizar producto directo */
 window.cotizarWA = function(producto){
-  const WA = '591XXXXXXXXX';
+  const WA = '59168124071';
   const msg=`*CONSULTA FIBROTEK*\n\n📦 *Producto:* ${producto}\n\nHola, me gustaría recibir información y cotización.`;
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
 };
@@ -219,101 +227,3 @@ document.querySelectorAll('.gi').forEach(item=>{
 
 /* ── BTT ─────────────────────────────────── */
 document.getElementById('btt')?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-
-/* ── FORMULARIO WHATSAPP ──────────────────── */
-function sendWA() {
-  const nombre = document.getElementById('wa-nombre').value.trim();
-  const telefono = document.getElementById('wa-tel').value.trim();
-  const producto = document.getElementById('wa-prod').value;
-  const ciudad = document.getElementById('wa-ciudad').value.trim();
-  const detalle = document.getElementById('wa-detalle').value.trim();
-
-  // Validación
-  if (!nombre) {
-    showError('Por favor, ingresa tu nombre');
-    document.getElementById('wa-nombre').focus();
-    return;
-  }
-
-  if (!telefono) {
-    showError('Por favor, ingresa tu teléfono');
-    document.getElementById('wa-tel').focus();
-    return;
-  }
-
-  if (!producto) {
-    showError('Por favor, selecciona un producto de interés');
-    document.getElementById('wa-prod').focus();
-    return;
-  }
-
-  // Ocultar error si había
-  hideError();
-
-  // Mostrar loading
-  document.getElementById('sendButton').style.display = 'none';
-  document.getElementById('loadingIndicator').style.display = 'block';
-
-  // Construir mensaje
-  const productoText = document.getElementById('wa-prod').selectedOptions[0].text;
-  let mensaje = `Hola, soy ${nombre}.%0A`;
-  mensaje += `Teléfono: ${telefono}%0A`;
-  mensaje += `Producto de interés: ${productoText}%0A`;
-
-  if (ciudad) {
-    mensaje += `Ciudad/Departamento: ${ciudad}%0A`;
-  }
-
-  if (detalle) {
-    mensaje += `Detalle del proyecto:%0A${detalle}`;
-  } else {
-    mensaje += `Me gustaría obtener una cotización.`;
-  }
-
-  // Preparar URL de WhatsApp
-  const waUrl = `https://wa.me/5911234567?text=${mensaje}`;
-
-  // Simular procesamiento y abrir WhatsApp
-  setTimeout(() => {
-    // Abrir WhatsApp en nueva pestaña
-    window.open(waUrl, '_blank');
-
-    // Mostrar mensaje de éxito
-    document.getElementById('formFields').style.display = 'none';
-    document.getElementById('formOk').style.display = 'block';
-
-    // Resetear después de 5 segundos
-    setTimeout(() => {
-      document.getElementById('formFields').style.display = 'block';
-      document.getElementById('formOk').style.display = 'none';
-      document.getElementById('wa-nombre').value = '';
-      document.getElementById('wa-tel').value = '';
-      document.getElementById('wa-prod').value = '';
-      document.getElementById('wa-ciudad').value = '';
-      document.getElementById('wa-detalle').value = '';
-      document.getElementById('sendButton').style.display = 'flex';
-      document.getElementById('loadingIndicator').style.display = 'none';
-    }, 5000);
-  }, 1500);
-}
-
-function showError(message) {
-  const errorDiv = document.getElementById('formError');
-  const errorMessage = document.getElementById('errorMessage');
-  errorMessage.textContent = message;
-  errorDiv.style.display = 'block';
-}
-
-function hideError() {
-  document.getElementById('formError').style.display = 'none';
-}
-
-/* Animación para el spinner */
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-`;
-document.head.appendChild(style);
