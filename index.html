@@ -1,346 +1,433 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Fibrotek Company — Fabricamos lo que otros no se atreven a construir</title>
-  <meta name="description" content="Empresa boliviana líder en fibra de vidrio. Piscinas, tanques, juegos infantiles y estructuras a medida. Más de 15 años en Bolivia."/>
-  <meta property="og:title" content="Fibrotek Company — Fibra de vidrio Bolivia"/>
-  <meta property="og:description" content="Fabricamos en fibra de vidrio lo que otros no se atreven a construir. Resistencia que dura generaciones."/>
-  <meta property="og:image" content="./assets/og-image.jpg"/>
-  <meta property="og:type" content="website"/>
-  <link rel="icon" type="image/png" href="./assets/favicon.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-  <link rel="stylesheet" href="./css/styles.css"/>
+  <meta name="description"
+    content="Empresa boliviana líder en fibra de vidrio. Piscinas, tanques, juegos infantiles y estructuras a medida. Más de 15 años en Bolivia." />
+  <meta property="og:title" content="Fibrotek Company — Fibra de vidrio Bolivia" />
+  <meta property="og:description"
+    content="Fabricamos en fibra de vidrio lo que otros no se atreven a construir. Resistencia que dura generaciones." />
+  <meta property="og:image" content="./assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
+
 <body>
 
-<!-- PRELOADER -->
-<div id="preloader">
-  <div class="pl-logo">Fibro<em>tek</em></div>
-  <div class="pl-track"><div class="pl-bar"></div></div>
-</div>
-
-<div id="cur"></div><div id="cur-r"></div>
-
-<!-- MOB NAV -->
-<div class="mob-nav" id="mobNav">
-  <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
-  <a href="index.html"      onclick="closeMob()">Inicio</a>
-  <a href="nosotros.html"   onclick="closeMob()">Nosotros</a>
-  <a href="productos.html"  onclick="closeMob()">Productos</a>
-  <a href="proyectos.html"  onclick="closeMob()">Proyectos</a>
-  <a href="servicios.html"  onclick="closeMob()">Servicios</a>
-  <a href="#contacto"       onclick="closeMob()">Contacto</a>
-</div>
-
-<!-- NAVBAR -->
-<nav>
-  <a href="index.html" class="logo">
-    <div class="logo-img-box">
-      <img src="./assets/logo.png" alt="Fibrotek"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-      <span class="logo-fb">FIBROTEK</span>
-    </div>
-    
-  </a>
-  <ul class="nav-ul">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="productos.html">Productos</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-  <a class="nav-cta" href="#contacto"><i class="bi bi-whatsapp"></i> Cotizar</a>
-  <button class="ham" onclick="openMob()"><span></span><span></span><span></span></button>
-</nav>
-
-<!-- ═══════════════════════════════════════
-     HERO — "Más fuerte que el acero, más liviano"
-═══════════════════════════════════════════ -->
-<section id="hero">
-  <div class="h-bg"></div><div class="h-grid"></div>
-  <div class="h-orb h-o1"></div><div class="h-orb h-o2"></div>
-  <div class="h-in">
-    <div>
-      <div class="ey h-tag"><i class="bi bi-geo-alt-fill"></i> Hecho en Bolivia · Desde 2010</div>
-      <h1 class="h-tit">
-        <span class="a">Más fuerte</span>
-        <span class="b">que el acero,</span>
-        <span class="c">más liviano.</span>
-      </h1>
-      <p class="h-sl">Fabricamos en fibra de vidrio lo que otros no se atreven a construir. Resistencia que dura generaciones.</p>
-      <div class="h-btns">
-        <a class="btn-a" href="productos.html"><i class="bi bi-grid-fill"></i> Ver catálogo</a>
-        <a class="btn-b" href="proyectos.html"><i class="bi bi-journal-richtext"></i> Ver proyectos</a>
-      </div>
-      <div class="h-kpis">
-        <div class="kpi"><div class="kpi-n" data-count="15">15+</div><div class="kpi-l">Años activos</div></div>
-        <div class="kpi"><div class="kpi-n" data-count="500">500+</div><div class="kpi-l">Proyectos</div></div>
-        <div class="kpi"><div class="kpi-n" data-count="9">9</div><div class="kpi-l">Departamentos</div></div>
-      </div>
-    </div>
-    <div class="h-panel">
-      <div class="h-ph"><i class="bi bi-lightning-charge-fill"></i> Especialidades</div>
-      <div class="h-pg">
-        <div class="h-mc"><i class="bi bi-droplet-fill"></i><div class="h-mc-t">Piscinas</div><div class="h-mc-s">Residencial & hotel</div></div>
-        <div class="h-mc"><i class="bi bi-archive-fill"></i><div class="h-mc-t">Tanques</div><div class="h-mc-s">Agua & químicos</div></div>
-        <div class="h-mc"><i class="bi bi-emoji-smile-fill"></i><div class="h-mc-t">Juegos</div><div class="h-mc-s">Parques & toboganes</div></div>
-        <div class="h-mc"><i class="bi bi-columns-gap"></i><div class="h-mc-t">Estructuras</div><div class="h-mc-s">Industrial & civil</div></div>
-      </div>
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div class="pl-logo">Fibro<em>tek</em></div>
+    <div class="pl-track">
+      <div class="pl-bar"></div>
     </div>
   </div>
-  <div class="h-sc"><span>Descubrir</span><div class="h-sc-ln"></div></div>
-</section>
 
-<!-- ═══════════════════════════════════════
+  <div id="cur"></div>
+  <div id="cur-r"></div>
+
+  <!-- MOB NAV -->
+  <div class="mob-nav" id="mobNav">
+    <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
+    <a href="index.html" onclick="closeMob()">Inicio</a>
+    <a href="nosotros.html" onclick="closeMob()">Nosotros</a>
+    <a href="productos.html" onclick="closeMob()">Productos</a>
+    <a href="proyectos.html" onclick="closeMob()">Proyectos</a>
+    <a href="servicios.html" onclick="closeMob()">Servicios</a>
+    <a href="#contacto" onclick="closeMob()">Contacto</a>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <a href="index.html" class="logo">
+      <div class="logo-img-box">
+        <img src="./assets/img/logo.png" alt="Fibrotek"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="logo-fb">FIBROTEK</span>
+      </div>
+
+    </a>
+    <ul class="nav-ul">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="#contacto"><i class="bi bi-whatsapp"></i> Cotizar</a>
+    <button class="ham" onclick="openMob()"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+     HERO — "Más fuerte que el acero, más liviano"
+═══════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="h-bg"></div>
+    <div class="h-grid"></div>
+    <div class="h-orb h-o1"></div>
+    <div class="h-orb h-o2"></div>
+    <div class="h-in">
+      <div>
+        <div class="ey h-tag"><i class="bi bi-geo-alt-fill"></i> Hecho en Bolivia · Desde 2010</div>
+        <h1 class="h-tit">
+          <span class="a">Más fuerte</span>
+          <span class="b">que el acero,</span>
+          <span class="c">más liviano.</span>
+        </h1>
+        <p class="h-sl">Fabricamos en fibra de vidrio lo que otros no se atreven a construir. Resistencia que dura
+          generaciones.</p>
+        <div class="h-btns">
+          <a class="btn-a" href="productos.html"><i class="bi bi-grid-fill"></i> Ver catálogo</a>
+          <a class="btn-b" href="proyectos.html"><i class="bi bi-journal-richtext"></i> Ver proyectos</a>
+        </div>
+        <div class="h-kpis">
+          <div class="kpi">
+            <div class="kpi-n" data-count="15">15+</div>
+            <div class="kpi-l">Años activos</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-n" data-count="500">500+</div>
+            <div class="kpi-l">Proyectos</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-n" data-count="9">9</div>
+            <div class="kpi-l">Departamentos</div>
+          </div>
+        </div>
+      </div>
+      <div class="h-panel">
+        <div class="h-ph"><i class="bi bi-lightning-charge-fill"></i> Especialidades</div>
+        <div class="h-pg">
+          <div class="h-mc"><i class="bi bi-droplet-fill"></i>
+            <div class="h-mc-t">Piscinas</div>
+            <div class="h-mc-s">Residencial & hotel</div>
+          </div>
+          <div class="h-mc"><i class="bi bi-archive-fill"></i>
+            <div class="h-mc-t">Tanques</div>
+            <div class="h-mc-s">Agua & químicos</div>
+          </div>
+          <div class="h-mc"><i class="bi bi-emoji-smile-fill"></i>
+            <div class="h-mc-t">Juegos</div>
+            <div class="h-mc-s">Parques & toboganes</div>
+          </div>
+          <div class="h-mc"><i class="bi bi-columns-gap"></i>
+            <div class="h-mc-t">Estructuras</div>
+            <div class="h-mc-s">Industrial & civil</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="h-sc"><span>Descubrir</span>
+      <div class="h-sc-ln"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
      VIDEO — "Una mirada al proceso que nos distingue"
 ═══════════════════════════════════════════ -->
-<section id="vsec">
-  <div class="wrap">
-    <div class="v-hd rv">
-      <div class="ey" style="justify-content:center"><i class="bi bi-camera-video-fill"></i> Presentación</div>
-      <h2 class="d2" style="text-align:center;margin-top:10px">Una mirada al proceso<br><b>que nos distingue.</b></h2>
-      <p class="sub" style="margin:14px auto 0;text-align:center">
-        Desde la materia prima hasta la entrega final — así fabricamos con orgullo boliviano.
-      </p>
-    </div>
-    <div class="v-wrap rv d1" style="margin-top:48px">
-      <!--
+  <section id="vsec">
+    <div class="wrap">
+      <div class="v-hd rv">
+        <div class="ey" style="justify-content:center"><i class="bi bi-camera-video-fill"></i> Presentación</div>
+        <h2 class="d2" style="text-align:center;margin-top:10px">Una mirada al proceso<br><b>que nos distingue.</b></h2>
+        <p class="sub" style="margin:14px auto 0;text-align:center">
+          Desde la materia prima hasta la entrega final — así fabricamos con orgullo boliviano.
+        </p>
+      </div>
+      <div class="v-wrap rv d1" style="margin-top:48px">
+        <!--
         OPCIÓN A — Video local:   assets/video.mp4  +  assets/video-poster.jpg
         OPCIÓN B — YouTube:       comenta el <video> y descomenta el <iframe>
       -->
-      <video id="mainVideo" src="./assets/video.mp4" poster="./assets/video-poster.jpg" preload="none" playsinline></video>
-      <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1" allowfullscreen></iframe> -->
-      <div class="v-ov" id="vidOv">
-        <div class="v-play"><i class="bi bi-play-fill"></i></div>
-        <p>Reproducir presentación</p>
+        <video id="mainVideo" src="./assets/video/vid.mp4" poster="./assets/video-poster.jpg" preload="none"
+          playsinline></video>
+        <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1" allowfullscreen></iframe> -->
+        <div class="v-ov" id="vidOv">
+          <div class="v-play"><i class="bi bi-play-fill"></i></div>
+          <p>Reproducir presentación</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══════════════════════════════════════
+  <!-- ═══════════════════════════════════════
      SOBRE NOSOTROS (resumen) — "No vendemos, entregamos certeza"
 ═══════════════════════════════════════════ -->
-<section id="sobre" style="background:var(--bg3)">
-  <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center" class="rv">
-      <div>
-        <div class="ey"><i class="bi bi-building-fill"></i> Nuestra empresa</div>
-        <h2 class="d2">No vendemos productos,<br><b>entregamos certeza.</b></h2>
-        <p class="sub">Más de 15 años fabricando en fibra de vidrio con los estándares más exigentes del mercado boliviano. Cada pieza lleva el sello de la permanencia.</p>
-        <div style="display:flex;flex-direction:column;gap:12px;margin-top:28px">
-          <div class="ab-item">
-            <div class="ab-ic"><i class="bi bi-gem"></i></div>
-            <div><h4>Materiales de grado industrial</h4><p>Resinas y fibras importadas que superan los estándares locales. Sin atajos, sin compromisos.</p></div>
+  <section id="sobre" style="background:var(--bg3)">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center" class="rv">
+        <div>
+          <div class="ey"><i class="bi bi-building-fill"></i> Nuestra empresa</div>
+          <h2 class="d2">No vendemos productos,<br><b>entregamos certeza.</b></h2>
+          <p class="sub">Más de 15 años fabricando en fibra de vidrio con los estándares más exigentes del mercado
+            boliviano. Cada pieza lleva el sello de la permanencia.</p>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:28px">
+            <div class="ab-item">
+              <div class="ab-ic"><i class="bi bi-gem"></i></div>
+              <div>
+                <h4>Materiales de grado industrial</h4>
+                <p>Resinas y fibras importadas que superan los estándares locales. Sin atajos, sin compromisos.</p>
+              </div>
+            </div>
+            <div class="ab-item">
+              <div class="ab-ic"><i class="bi bi-award-fill"></i></div>
+              <div>
+                <h4>Garantía real, no solo palabras</h4>
+                <p>Cada producto entregado cuenta con garantía de fabricación y soporte técnico post-instalación.</p>
+              </div>
+            </div>
+            <div class="ab-item">
+              <div class="ab-ic"><i class="bi bi-truck"></i></div>
+              <div>
+                <h4>Llegamos donde otros no llegan</h4>
+                <p>Distribución propia a los 9 departamentos. Embalaje especializado para cada tipo de producto.</p>
+              </div>
+            </div>
           </div>
-          <div class="ab-item">
-            <div class="ab-ic"><i class="bi bi-award-fill"></i></div>
-            <div><h4>Garantía real, no solo palabras</h4><p>Cada producto entregado cuenta con garantía de fabricación y soporte técnico post-instalación.</p></div>
-          </div>
-          <div class="ab-item">
-            <div class="ab-ic"><i class="bi bi-truck"></i></div>
-            <div><h4>Llegamos donde otros no llegan</h4><p>Distribución propia a los 9 departamentos. Embalaje especializado para cada tipo de producto.</p></div>
-          </div>
+          <a class="btn-b" href="nosotros.html" style="margin-top:28px;display:inline-flex">
+            <i class="bi bi-arrow-right"></i> Conocer más sobre nosotros
+          </a>
         </div>
-        <a class="btn-b" href="nosotros.html" style="margin-top:28px;display:inline-flex">
-          <i class="bi bi-arrow-right"></i> Conocer más sobre nosotros
-        </a>
-      </div>
-      <div class="big-card rv d2">
-        <div class="big-n">+500</div>
-        <div class="big-l">Proyectos completados</div>
-        <div class="big-ms">
-          <div class="ms-c"><div class="ms-n">+15</div><div class="ms-l">Años en el mercado</div></div>
-          <div class="ms-c"><div class="ms-n">9</div><div class="ms-l">Departamentos</div></div>
-          <div class="ms-c"><div class="ms-n">100%</div><div class="ms-l">Satisfacción</div></div>
-          <div class="ms-c"><div class="ms-n">24h</div><div class="ms-l">Tiempo respuesta</div></div>
+        <div class="big-card rv d2">
+          <div class="big-n">+500</div>
+          <div class="big-l">Proyectos completados</div>
+          <div class="big-ms">
+            <div class="ms-c">
+              <div class="ms-n">+15</div>
+              <div class="ms-l">Años en el mercado</div>
+            </div>
+            <div class="ms-c">
+              <div class="ms-n">9</div>
+              <div class="ms-l">Departamentos</div>
+            </div>
+            <div class="ms-c">
+              <div class="ms-n">100%</div>
+              <div class="ms-l">Satisfacción</div>
+            </div>
+            <div class="ms-c">
+              <div class="ms-n">24h</div>
+              <div class="ms-l">Tiempo respuesta</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══════════════════════════════════════
+  <!-- ═══════════════════════════════════════
      LINKS RÁPIDOS — acceso a páginas
 ═══════════════════════════════════════════ -->
-<section style="background:var(--bg2);padding:64px 0">
-  <div class="wrap">
-    <div style="text-align:center;margin-bottom:40px" class="rv">
-      <div class="ey" style="justify-content:center"><i class="bi bi-compass-fill"></i> Explorá el sitio</div>
-      <h2 class="d2">¿Qué estás <b>buscando?</b></h2>
+  <section style="background:var(--bg2);padding:64px 0">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:40px" class="rv">
+        <div class="ey" style="justify-content:center"><i class="bi bi-compass-fill"></i> Explorá el sitio</div>
+        <h2 class="d2">¿Qué estás <b>buscando?</b></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px" class="rv d1">
+        <!-- Productos -->
+        <a href="productos.html"
+          style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
+          onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
+          onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
+          <i class="bi bi-box-seam-fill" style="font-size:36px;color:var(--ac)"></i>
+          <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Productos</div>
+          <div style="font-size:13px;color:var(--t4)">Piscinas, tanques, juegos y estructuras</div>
+          <span
+            style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Ver
+            catálogo <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <!-- Proyectos -->
+        <a href="proyectos.html"
+          style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
+          onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
+          onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
+          <i class="bi bi-journal-richtext" style="font-size:36px;color:var(--ac)"></i>
+          <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Proyectos</div>
+          <div style="font-size:13px;color:var(--t4)">+500 trabajos realizados en Bolivia</div>
+          <span
+            style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Ver
+            portafolio <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <!-- Servicios -->
+        <a href="servicios.html"
+          style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
+          onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
+          onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
+          <i class="bi bi-tools" style="font-size:36px;color:var(--ac)"></i>
+          <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Servicios</div>
+          <div style="font-size:13px;color:var(--t4)">Fabricación, instalación y garantía</div>
+          <span
+            style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Ver
+            servicios <i class="bi bi-arrow-right"></i></span>
+        </a>
+        <!-- Nosotros -->
+        <a href="nosotros.html"
+          style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
+          onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
+          onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
+          <i class="bi bi-building-fill" style="font-size:36px;color:var(--ac)"></i>
+          <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Nosotros</div>
+          <div style="font-size:13px;color:var(--t4)">Historia, equipo y valores</div>
+          <span
+            style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Conocernos
+            <i class="bi bi-arrow-right"></i></span>
+        </a>
+      </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px" class="rv d1">
-      <!-- Productos -->
-      <a href="productos.html" style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
-         onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
-         onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
-        <i class="bi bi-box-seam-fill" style="font-size:36px;color:var(--ac)"></i>
-        <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Productos</div>
-        <div style="font-size:13px;color:var(--t4)">Piscinas, tanques, juegos y estructuras</div>
-        <span style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Ver catálogo <i class="bi bi-arrow-right"></i></span>
-      </a>
-      <!-- Proyectos -->
-      <a href="proyectos.html" style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
-         onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
-         onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
-        <i class="bi bi-journal-richtext" style="font-size:36px;color:var(--ac)"></i>
-        <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Proyectos</div>
-        <div style="font-size:13px;color:var(--t4)">+500 trabajos realizados en Bolivia</div>
-        <span style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Ver portafolio <i class="bi bi-arrow-right"></i></span>
-      </a>
-      <!-- Servicios -->
-      <a href="servicios.html" style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
-         onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
-         onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
-        <i class="bi bi-tools" style="font-size:36px;color:var(--ac)"></i>
-        <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Servicios</div>
-        <div style="font-size:13px;color:var(--t4)">Fabricación, instalación y garantía</div>
-        <span style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Ver servicios <i class="bi bi-arrow-right"></i></span>
-      </a>
-      <!-- Nosotros -->
-      <a href="nosotros.html" style="background:var(--bg4);border:1px solid var(--bd2);border-radius:var(--r);padding:28px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;transition:all .25s;text-decoration:none"
-         onmouseenter="this.style.borderColor='var(--bd1)';this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 32px rgba(15,37,69,.12)'"
-         onmouseleave="this.style.borderColor='var(--bd2)';this.style.transform='none';this.style.boxShadow='none'">
-        <i class="bi bi-building-fill" style="font-size:36px;color:var(--ac)"></i>
-        <div style="font-family:var(--fD);font-size:26px;letter-spacing:1px;color:var(--t1)">Nosotros</div>
-        <div style="font-size:13px;color:var(--t4)">Historia, equipo y valores</div>
-        <span style="font-family:var(--fM);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--acd);display:flex;align-items:center;gap:5px">Conocernos <i class="bi bi-arrow-right"></i></span>
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══════════════════════════════════════
+  <!-- ═══════════════════════════════════════
      CONTACTO — "Tu proyecto empieza con un mensaje"
 ═══════════════════════════════════════════ -->
-<section id="contacto" style="background:var(--bg1)">
-  <div class="wrap">
-    <div class="ct-in">
-      <div class="rv">
-        <div class="ey"><i class="bi bi-whatsapp"></i> Contacto directo</div>
-        <h2 class="d2">Tu proyecto empieza<br><b>con un mensaje.</b></h2>
-        <p class="sub">Completá el formulario y tu consulta llega directo a nuestro WhatsApp. Sin esperas, sin formularios perdidos.</p>
-        <div class="ct-items">
-          <div class="ct-it">
-            <div class="ct-ic"><i class="bi bi-whatsapp"></i></div>
-            <div><strong>WhatsApp directo</strong><span>++591 68124071</span></div>
+  <section id="contacto" style="background:var(--bg1)">
+    <div class="wrap">
+      <div class="ct-in">
+        <div class="rv">
+          <div class="ey"><i class="bi bi-whatsapp"></i> Contacto directo</div>
+          <h2 class="d2">Tu proyecto empieza<br><b>con un mensaje.</b></h2>
+          <p class="sub">Completá el formulario y tu consulta llega directo a nuestro WhatsApp. Sin esperas, sin
+            formularios perdidos.</p>
+          <div class="ct-items">
+            <div class="ct-it">
+              <div class="ct-ic"><i class="bi bi-whatsapp"></i></div>
+              <div><strong>WhatsApp directo</strong><span>++591 68124071</span></div>
+            </div>
+            <div class="ct-it">
+              <div class="ct-ic"><i class="bi bi-envelope-fill"></i></div>
+              <div><strong>Email</strong><span>info@fibrotek.bo</span></div>
+            </div>
+            <div class="ct-it">
+              <div class="ct-ic"><i class="bi bi-geo-alt-fill"></i></div>
+              <div><strong>Taller y oficina</strong><span>La Paz, Bolivia</span></div>
+            </div>
+            <div class="ct-it">
+              <div class="ct-ic"><i class="bi bi-clock-fill"></i></div>
+              <div><strong>Horario</strong><span>Lun–Vie 8:00–18:00 · Sáb 9:00–13:00</span></div>
+            </div>
           </div>
-          <div class="ct-it">
-            <div class="ct-ic"><i class="bi bi-envelope-fill"></i></div>
-            <div><strong>Email</strong><span>info@fibrotek.bo</span></div>
+        </div>
+        <div class="wa-form rv d2">
+          <div id="formFields">
+            <h3>Solicitar cotización</h3>
+            <div class="frow">
+              <div class="fg"><label>Tu nombre *</label><input type="text" id="wa-nombre"
+                  placeholder="Nombre completo" /></div>
+              <div class="fg"><label>Teléfono *</label><input type="tel" id="wa-tel" placeholder="++591 68124071" />
+              </div>
+            </div>
+            <div class="fg">
+              <label>Producto de interés *</label>
+              <select id="wa-prod">
+                <option value="">Seleccioná un producto…</option>
+                <option>Piscina residencial</option>
+                <option>Piscina comercial / hotel</option>
+                <option>Piscina olímpica</option>
+                <option>Tanque de agua potable</option>
+                <option>Tanque industrial / químicos</option>
+                <option>Reservorio comunal</option>
+                <option>Juegos infantiles / parque</option>
+                <option>Tobogán</option>
+                <option>Mobiliario urbano</option>
+                <option>Estructura industrial</option>
+                <option>Cubierta / techo</option>
+                <option>Pieza a medida</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="fg"><label>Ciudad / Departamento</label><input type="text" id="wa-ciudad"
+                placeholder="Ej: La Paz, Santa Cruz…" /></div>
+            <div class="fg"><label>Detalle del proyecto</label><textarea id="wa-detalle"
+                placeholder="Dimensiones, cantidad, uso, plazos u otros detalles…"></textarea></div>
+            <button class="btn-wa" style="width:100%;justify-content:center;margin-top:4px" onclick="sendWA()">
+              <i class="bi bi-whatsapp"></i> Enviar por WhatsApp
+            </button>
+            <p
+              style="font-family:var(--fM);font-size:10px;letter-spacing:1px;color:var(--t4);text-align:center;margin-top:12px">
+              Al enviar se abrirá WhatsApp con tu mensaje listo.
+            </p>
           </div>
-          <div class="ct-it">
-            <div class="ct-ic"><i class="bi bi-geo-alt-fill"></i></div>
-            <div><strong>Taller y oficina</strong><span>La Paz, Bolivia</span></div>
-          </div>
-          <div class="ct-it">
-            <div class="ct-ic"><i class="bi bi-clock-fill"></i></div>
-            <div><strong>Horario</strong><span>Lun–Vie 8:00–18:00 · Sáb 9:00–13:00</span></div>
+          <div class="form-ok" id="formOk">
+            <i class="bi bi-whatsapp"></i>
+            <h3>¡WhatsApp abierto!</h3>
+            <p>Tu mensaje está listo en WhatsApp.<br>Solo presioná enviar y te respondemos en minutos.</p>
           </div>
         </div>
       </div>
-      <div class="wa-form rv d2">
-        <div id="formFields">
-          <h3>Solicitar cotización</h3>
-          <div class="frow">
-            <div class="fg"><label>Tu nombre *</label><input type="text" id="wa-nombre" placeholder="Nombre completo"/></div>
-            <div class="fg"><label>Teléfono *</label><input type="tel" id="wa-tel" placeholder="++591 68124071"/></div>
-          </div>
-          <div class="fg">
-            <label>Producto de interés *</label>
-            <select id="wa-prod">
-              <option value="">Seleccioná un producto…</option>
-              <option>Piscina residencial</option><option>Piscina comercial / hotel</option>
-              <option>Piscina olímpica</option><option>Tanque de agua potable</option>
-              <option>Tanque industrial / químicos</option><option>Reservorio comunal</option>
-              <option>Juegos infantiles / parque</option><option>Tobogán</option>
-              <option>Mobiliario urbano</option><option>Estructura industrial</option>
-              <option>Cubierta / techo</option><option>Pieza a medida</option><option>Otro</option>
-            </select>
-          </div>
-          <div class="fg"><label>Ciudad / Departamento</label><input type="text" id="wa-ciudad" placeholder="Ej: La Paz, Santa Cruz…"/></div>
-          <div class="fg"><label>Detalle del proyecto</label><textarea id="wa-detalle" placeholder="Dimensiones, cantidad, uso, plazos u otros detalles…"></textarea></div>
-          <button class="btn-wa" style="width:100%;justify-content:center;margin-top:4px" onclick="sendWA()">
-            <i class="bi bi-whatsapp"></i> Enviar por WhatsApp
-          </button>
-          <p style="font-family:var(--fM);font-size:10px;letter-spacing:1px;color:var(--t4);text-align:center;margin-top:12px">
-            Al enviar se abrirá WhatsApp con tu mensaje listo.
-          </p>
+    </div>
+  </section>
+
+  <!-- MAPA -->
+  <div id="mapa">
+    <div class="map-box">
+      <!-- Reemplazá con el embed real de tu taller -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120891.02613975068!2d-68.17383!3d-16.50000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20d9e6578fbb%3A0x4c5c7b9b2a6d1234!2sLa%20Paz%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1700000000000"
+        allowfullscreen loading="lazy"></iframe>
+      <div class="map-badge"><i class="bi bi-geo-alt-fill"></i> Fibrotek Company — La Paz, Bolivia</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="ft-top">
+        <div class="ft-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-img-box"><img src="./assets/logo.png" alt="logo"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><span
+                class="logo-fb">FIBROTEK</span></div>
+
+          </a>
+          <p>Fabricamos lo que otros no se atreven a construir. Hecho en Bolivia para durar generaciones.</p>
         </div>
-        <div class="form-ok" id="formOk">
-          <i class="bi bi-whatsapp"></i>
-          <h3>¡WhatsApp abierto!</h3>
-          <p>Tu mensaje está listo en WhatsApp.<br>Solo presioná enviar y te respondemos en minutos.</p>
+        <div class="ft-col">
+          <h4>Páginas</h4>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
+            <li><a href="nosotros.html"><i class="bi bi-chevron-right"></i>Nosotros</a></li>
+            <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Productos</a></li>
+            <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
+            <li><a href="servicios.html"><i class="bi bi-chevron-right"></i>Servicios</a></li>
+            <li><a href="#contacto"><i class="bi bi-chevron-right"></i>Contacto</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
+            <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Tanques</a></li>
+            <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Juegos infantiles</a></li>
+            <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bot">
+        <p>© 2025 Fibrotek Company · Todos los derechos reservados</p>
+        <div class="socs">
+          <a class="soc" href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="soc" href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="soc" href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a class="soc" href="https://wa.me/59168124071" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- MAPA -->
-<div id="mapa">
-  <div class="map-box">
-    <!-- Reemplazá con el embed real de tu taller -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120891.02613975068!2d-68.17383!3d-16.50000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f20d9e6578fbb%3A0x4c5c7b9b2a6d1234!2sLa%20Paz%2C%20Bolivia!5e0!3m2!1ses!2sbo!4v1700000000000" allowfullscreen loading="lazy"></iframe>
-    <div class="map-badge"><i class="bi bi-geo-alt-fill"></i> Fibrotek Company — La Paz, Bolivia</div>
+  <div class="wa-float">
+    <div class="wa-bubble">¿Necesitás cotización? Escribinos 👋</div>
+    <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
   </div>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <div class="wrap">
-    <div class="ft-top">
-      <div class="ft-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-img-box"><img src="./assets/logo.png" alt="logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="logo-fb">FIBROTEK</span></div>
-          
-        </a>
-        <p>Fabricamos lo que otros no se atreven a construir. Hecho en Bolivia para durar generaciones.</p>
-      </div>
-      <div class="ft-col">
-        <h4>Páginas</h4>
-        <ul>
-          <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
-          <li><a href="nosotros.html"><i class="bi bi-chevron-right"></i>Nosotros</a></li>
-          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Productos</a></li>
-          <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
-          <li><a href="servicios.html"><i class="bi bi-chevron-right"></i>Servicios</a></li>
-          <li><a href="#contacto"><i class="bi bi-chevron-right"></i>Contacto</a></li>
-        </ul>
-      </div>
-      <div class="ft-col">
-        <h4>Productos</h4>
-        <ul>
-          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Piscinas</a></li>
-          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Tanques</a></li>
-          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Juegos infantiles</a></li>
-          <li><a href="productos.html"><i class="bi bi-chevron-right"></i>Estructuras</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="ft-bot">
-      <p>© 2025 Fibrotek Company · Todos los derechos reservados</p>
-      <div class="socs">
-        <a class="soc" href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-        <a class="soc" href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
-        <a class="soc" href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
-        <a class="soc" href="https://wa.me/59168124071" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<div class="wa-float">
-  <div class="wa-bubble">¿Necesitás cotización? Escribinos 👋</div>
-  <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
-</div>
-<button id="btt"><i class="bi bi-arrow-up"></i></button>
-<script src="./js/main.js"></script>
+  <button id="btt"><i class="bi bi-arrow-up"></i></button>
+  <script src="./js/main.js"></script>
 </body>
+
 </html>
