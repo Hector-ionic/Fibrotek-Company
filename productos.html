@@ -1,1106 +1,1426 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Catálogo de Productos — Fibrotek Company</title>
-  <meta name="description" content="Catálogo completo de productos Fibrotek en fibra de vidrio (P.R.F.V.): parques infantiles, juegos acuáticos, toboganes, gimnasio al aire libre, botes, kayaks y más."/>
-  <link rel="icon" type="image/png" href="./assets/favicon.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-  <link rel="stylesheet" href="./css/styles.css"/>
+  <meta name="description"
+    content="Catálogo completo de productos Fibrotek en fibra de vidrio (P.R.F.V.): parques infantiles, juegos acuáticos, toboganes, gimnasio al aire libre, botes, kayaks y más." />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
   <style>
     /* estilos extra solo para productos */
-    .prod-specs{list-style:none;display:flex;flex-direction:column;gap:5px;margin-top:10px}
-    .prod-specs li{font-size:12px;color:var(--t4);display:flex;align-items:flex-start;gap:6px;line-height:1.4}
-    .prod-specs li::before{content:'•';color:var(--ac);flex-shrink:0;margin-top:1px}
-    .badge-cat{
-      display:inline-flex;align-items:center;gap:5px;
-      font-family:var(--fM);font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
-      color:var(--acd);padding:4px 11px;background:var(--ac2);border-radius:100px;
-      border:1px solid rgba(245,168,0,.25);margin-bottom:16px;
+    .prod-specs {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px
     }
-    .badge-cat i{font-size:12px}
-    .mod-label{
-      font-family:var(--fM);font-size:10px;font-weight:700;letter-spacing:2px;
-      text-transform:uppercase;color:var(--t4);margin-bottom:4px;display:block;
+
+    .prod-specs li {
+      font-size: 12px;
+      color: var(--t4);
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      line-height: 1.4
     }
-    .cat-section{margin-bottom:72px}
-    .cat-section-hd{
-      display:flex;align-items:center;gap:16px;margin-bottom:28px;
-      padding-bottom:18px;border-bottom:2px solid var(--bd1);
+
+    .prod-specs li::before {
+      content: '•';
+      color: var(--ac);
+      flex-shrink: 0;
+      margin-top: 1px
     }
-    .cat-section-hd i{font-size:28px;color:var(--ac)}
-    .cat-section-hd h2{font-family:var(--fD);font-size:36px;letter-spacing:1px;color:var(--t1)}
-    .cat-section-hd span{font-size:13px;color:var(--t4);margin-left:auto;font-family:var(--fM);letter-spacing:.5px}
-    .prod-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .prod-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    @media(max-width:1100px){
-      .prod-grid-3,.prod-grid-4{grid-template-columns:1fr 1fr}
+
+    .badge-cat {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: var(--fM);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--acd);
+      padding: 4px 11px;
+      background: var(--ac2);
+      border-radius: 100px;
+      border: 1px solid rgba(245, 168, 0, .25);
+      margin-bottom: 16px;
     }
-    @media(max-width:560px){
-      .prod-grid-3,.prod-grid-4{grid-template-columns:1fr}
-      .cat-section-hd h2{font-size:26px}
+
+    .badge-cat i {
+      font-size: 12px
+    }
+
+    .mod-label {
+      font-family: var(--fM);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--t4);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .cat-section {
+      margin-bottom: 72px
+    }
+
+    .cat-section-hd {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--bd1);
+    }
+
+    .cat-section-hd i {
+      font-size: 28px;
+      color: var(--ac)
+    }
+
+    .cat-section-hd h2 {
+      font-family: var(--fD);
+      font-size: 36px;
+      letter-spacing: 1px;
+      color: var(--t1)
+    }
+
+    .cat-section-hd span {
+      font-size: 13px;
+      color: var(--t4);
+      margin-left: auto;
+      font-family: var(--fM);
+      letter-spacing: .5px
+    }
+
+    .prod-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .prod-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px
+    }
+
+    @media(max-width:1100px) {
+
+      .prod-grid-3,
+      .prod-grid-4 {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:560px) {
+
+      .prod-grid-3,
+      .prod-grid-4 {
+        grid-template-columns: 1fr
+      }
+
+      .cat-section-hd h2 {
+        font-size: 26px
+      }
     }
   </style>
 </head>
+
 <body>
-<div id="preloader"><div class="pl-logo">Fibro<em>tek</em></div><div class="pl-track"><div class="pl-bar"></div></div></div>
-<div id="cur"></div><div id="cur-r"></div>
-
-<div class="mob-nav" id="mobNav">
-  <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
-  <a href="index.html" onclick="closeMob()">Inicio</a>
-  <a href="nosotros.html" onclick="closeMob()">Nosotros</a>
-  <a href="productos.html" onclick="closeMob()">Productos</a>
-  <a href="proyectos.html" onclick="closeMob()">Proyectos</a>
-  <a href="servicios.html" onclick="closeMob()">Servicios</a>
-  <a href="index.html#contacto" onclick="closeMob()">Contacto</a>
-</div>
-
-<nav>
-  <a href="index.html" class="logo">
-    <div class="logo-img-box">
-      <img src="./assets/logo.png" alt="Fibrotek Company"
-        onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
-      <span class="logo-fb">FIBROTEK</span>
-    </div>
-  </a>
-  <ul class="nav-ul">
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="nosotros.html">Nosotros</a></li>
-    <li><a href="productos.html" class="on">Productos</a></li>
-    <li><a href="proyectos.html">Proyectos</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="index.html#contacto">Contacto</a></li>
-  </ul>
-  <a class="nav-cta" href="index.html#contacto"><i class="bi bi-whatsapp"></i> Cotizar</a>
-  <button class="ham" onclick="openMob()"><span></span><span></span><span></span></button>
-</nav>
-
-<!-- SUB-HERO -->
-<div class="sub-hero">
-  <div class="h-bg"></div><div class="h-grid"></div>
-  <div class="wrap">
-    <div class="sub-hi">
-      <div>
-        <div class="ey"><i class="bi bi-box-seam-fill"></i> Catálogo 2026</div>
-        <h1 class="d1">Cada producto,<br><b>una promesa</b><br><i>de durabilidad.</i></h1>
-        <p class="sub">34 modelos fabricados en P.R.F.V. (Plástico Reforzado con Fibra de Vidrio). Diseño a medida, colores a elección y entrega a todo Bolivia.</p>
-      </div>
-      <a class="btn-wa" href="https://wa.me/59168124071?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20del%20cat%C3%A1logo%20Fibrotek." target="_blank" style="white-space:nowrap;align-self:flex-end">
-        <i class="bi bi-whatsapp"></i> Pedir cotización
-      </a>
+  <div id="preloader">
+    <div class="pl-logo">Fibro<em>tek</em></div>
+    <div class="pl-track">
+      <div class="pl-bar"></div>
     </div>
   </div>
-</div>
+  <div id="cur"></div>
+  <div id="cur-r"></div>
 
-<!-- CATÁLOGO -->
-<section style="background:var(--bg2)">
-  <div class="wrap">
+  <div class="mob-nav" id="mobNav">
+    <button class="mob-close" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
+    <a href="index.html" onclick="closeMob()">Inicio</a>
+    <a href="nosotros.html" onclick="closeMob()">Nosotros</a>
+    <a href="productos.html" onclick="closeMob()">Productos</a>
+    <a href="proyectos.html" onclick="closeMob()">Proyectos</a>
+    <a href="servicios.html" onclick="closeMob()">Servicios</a>
+    <a href="index.html#contacto" onclick="closeMob()">Contacto</a>
+  </div>
 
-    <!-- ══════════════════════════════════════
+  <nav>
+    <a href="index.html" class="logo">
+      <div class="logo-img-box">
+        <img src="./assets/img/logo.png" alt="Fibrotek Company"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <span class="logo-fb">FIBROTEK</span>
+      </div>
+    </a>
+    <ul class="nav-ul">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="productos.html" class="on">Productos</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#contacto"><i class="bi bi-whatsapp"></i> Cotizar</a>
+    <button class="ham" onclick="openMob()"><span></span><span></span><span></span></button>
+  </nav>
+
+  <!-- SUB-HERO -->
+  <div class="sub-hero">
+    <div class="h-bg"></div>
+    <div class="h-grid"></div>
+    <div class="wrap">
+      <div class="sub-hi">
+        <div>
+          <div class="ey"><i class="bi bi-box-seam-fill"></i> Catálogo 2026</div>
+          <h1 class="d1">Cada producto,<br><b>una promesa</b><br><i>de durabilidad.</i></h1>
+          <p class="sub">34 modelos fabricados en P.R.F.V. (Plástico Reforzado con Fibra de Vidrio). Diseño a medida,
+            colores a elección y entrega a todo Bolivia.</p>
+        </div>
+        <a class="btn-wa"
+          href="https://wa.me/59168124071?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20del%20cat%C3%A1logo%20Fibrotek."
+          target="_blank" style="white-space:nowrap;align-self:flex-end">
+          <i class="bi bi-whatsapp"></i> Pedir cotización
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CATÁLOGO -->
+  <section style="background:var(--bg2)">
+    <div class="wrap">
+
+      <!-- ══════════════════════════════════════
          PARQUES INFANTILES
     ══════════════════════════════════════ -->
-    <div class="cat-section rv">
-      <div class="cat-section-hd">
-        <i class="bi bi-emoji-smile-fill"></i>
-        <h2>Parques Infantiles</h2>
-        <span>8 modelos disponibles</span>
+      <div class="cat-section rv">
+        <div class="cat-section-hd">
+          <i class="bi bi-emoji-smile-fill"></i>
+          <h2>Parques Infantiles</h2>
+          <span>8 modelos disponibles</span>
+        </div>
+        <div class="prod-grid-3">
+
+          <!-- Modelo 1 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-01-a.jpg" alt="Parque Infantil Modelo 1"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-01-b.jpg" alt="Parque Infantil Modelo 1 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-01-c.jpg" alt="Parque Infantil Modelo 1 vista 3"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 3</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 1</span>
+              <h3>Parque Infantil</h3>
+              <ul class="prod-specs">
+                <li>Resbalines de P.R.F.V.</li>
+                <li>Palmera de P.R.F.V.</li>
+                <li>Techo tipo tejado de P.R.F.V.</li>
+                <li>Carita de personajes Disney de P.R.F.V.</li>
+                <li>Graderías y plataforma de P.R.F.V.</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 1');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 2 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-02-a.jpg" alt="Parque Infantil Modelo 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#60a888)\'>🎠</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-02-b.jpg" alt="Parque Infantil Modelo 2 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#60a888)\'>🎠</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-02-c.jpg" alt="Parque Infantil Modelo 2 vista 3"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#60a888)\'>🎠</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 3</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 2</span>
+              <h3>Parque Infantil</h3>
+              <ul class="prod-specs">
+                <li>Resbalines + Tobogán de P.R.F.V.</li>
+                <li>Palmera y techo tipo tejado de P.R.F.V.</li>
+                <li>Caritas de personajes Disney de P.R.F.V.</li>
+                <li>Graderías y plataforma de P.R.F.V.</li>
+                <li>Pasamanos y columpio de 3 asientos</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 2');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 3 -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-03-a.jpg" alt="Parque Infantil Modelo 3"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b8,#c8a878)\'>🎡</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-03-b.jpg" alt="Parque Infantil Modelo 3 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b8,#c8a878)\'>🎡</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-03-c.jpg" alt="Parque Infantil Modelo 3 vista 3"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b8,#c8a878)\'>🎡</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 3</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 3</span>
+              <h3>Parque Infantil</h3>
+              <ul class="prod-specs">
+                <li>1 Resbalín ondulado + 2 Toboganes de P.R.F.V.</li>
+                <li>3 Palmeras + 2 Techos tipo tejado de P.R.F.V.</li>
+                <li>Caritas Disney · Graderías y plataforma</li>
+                <li>Pasamanos y columpio de 3 asientos</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 3');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 4 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-04-a.jpg" alt="Parque Infantil Modelo 4"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78b858)\'>🏕️</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-04-b.jpg" alt="Parque Infantil Modelo 4 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78b858)\'>🏕️</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-04-c.jpg" alt="Parque Infantil Modelo 4 vista 3"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78b858)\'>🏕️</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 3</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 4</span>
+              <h3>Parque Infantil</h3>
+              <ul class="prod-specs">
+                <li>1 Resbalín gemelo + 1 Resbalín de P.R.F.V.</li>
+                <li>2 Palmeras + Techo tipo tejado de P.R.F.V.</li>
+                <li>Caritas Disney · Graderías y plataforma</li>
+                <li>Columpio con 2 asientos de P.R.F.V.</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 4');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 5 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-05-a.jpg" alt="Parque Infantil Modelo 5"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#6890b8)\'>🎪</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-05-b.jpg" alt="Parque Infantil Modelo 5 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#6890b8)\'>🎪</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 5</span>
+              <h3>Parque Infantil Premium</h3>
+              <ul class="prod-specs">
+                <li>1 Tobogán tipo "S" + 1 Tobogán recto de P.R.F.V.</li>
+                <li>1 Resbalín gemelo + 3 Resbalines pequeños</li>
+                <li>2 Palmeras + 2 Techos tipo tejado de P.R.F.V.</li>
+                <li>Caritas Disney · Graderías y plataforma</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-star-fill"></i> Premium</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 5 Premium');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 6 -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-06-a.jpg" alt="Parque Infantil Modelo 6"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c86868)\'>🎢</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-06-b.jpg" alt="Parque Infantil Modelo 6 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c86868)\'>🎢</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 6</span>
+              <h3>Parque con Resbalines</h3>
+              <ul class="prod-specs">
+                <li>1 Resbalín espiral de P.R.F.V.</li>
+                <li>1 Resbalín ondulado de P.R.F.V.</li>
+                <li>Plataforma de P.R.F.V.</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Parque Resbalines Modelo 6');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 12 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-12-a.jpg" alt="Parque Infantil Modelo 12"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88c868)\'>🏡</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-12-b.jpg" alt="Parque Infantil Modelo 12 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88c868)\'>🏡</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 12</span>
+              <h3>Parque Infantil Compact</h3>
+              <ul class="prod-specs">
+                <li>1 Resbalín + 2 Techos de P.R.F.V.</li>
+                <li>Caritas de personajes Disney</li>
+                <li>Graderías y plataforma de P.R.F.V.</li>
+                <li>Columpio con 2 asientos de P.R.F.V.</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 12');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 28 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-28-a.jpg" alt="Juego Infantil Modelo 28"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8b8d8,#9878c8)\'>🎭</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-28-b.jpg" alt="Juego Infantil Modelo 28 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8b8d8,#9878c8)\'>🎭</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 28</span>
+              <h3>Juego Infantil Multi</h3>
+              <ul class="prod-specs">
+                <li>4 Resbalines ondulados de P.R.F.V.</li>
+                <li>8 Tapacantos</li>
+                <li>Estructura metálica · Pintura a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Juego Infantil Multi Modelo 28');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="prod-grid-3">
 
-        <!-- Modelo 1 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-01-a.jpg" alt="Parque Infantil Modelo 1" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-01-b.jpg" alt="Parque Infantil Modelo 1 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-01-c.jpg" alt="Parque Infantil Modelo 1 vista 3" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88b868)\'>🎠</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 1</span>
-            <h3>Parque Infantil</h3>
-            <ul class="prod-specs">
-              <li>Resbalines de P.R.F.V.</li>
-              <li>Palmera de P.R.F.V.</li>
-              <li>Techo tipo tejado de P.R.F.V.</li>
-              <li>Carita de personajes Disney de P.R.F.V.</li>
-              <li>Graderías y plataforma de P.R.F.V.</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 1');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 2 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-02-a.jpg" alt="Parque Infantil Modelo 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#60a888)\'>🎠</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-02-b.jpg" alt="Parque Infantil Modelo 2 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#60a888)\'>🎠</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-02-c.jpg" alt="Parque Infantil Modelo 2 vista 3" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8c8,#60a888)\'>🎠</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 2</span>
-            <h3>Parque Infantil</h3>
-            <ul class="prod-specs">
-              <li>Resbalines + Tobogán de P.R.F.V.</li>
-              <li>Palmera y techo tipo tejado de P.R.F.V.</li>
-              <li>Caritas de personajes Disney de P.R.F.V.</li>
-              <li>Graderías y plataforma de P.R.F.V.</li>
-              <li>Pasamanos y columpio de 3 asientos</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 2');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 3 -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-03-a.jpg" alt="Parque Infantil Modelo 3" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b8,#c8a878)\'>🎡</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-03-b.jpg" alt="Parque Infantil Modelo 3 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b8,#c8a878)\'>🎡</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-03-c.jpg" alt="Parque Infantil Modelo 3 vista 3" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8b8,#c8a878)\'>🎡</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 3</span>
-            <h3>Parque Infantil</h3>
-            <ul class="prod-specs">
-              <li>1 Resbalín ondulado + 2 Toboganes de P.R.F.V.</li>
-              <li>3 Palmeras + 2 Techos tipo tejado de P.R.F.V.</li>
-              <li>Caritas Disney · Graderías y plataforma</li>
-              <li>Pasamanos y columpio de 3 asientos</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 3');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 4 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-04-a.jpg" alt="Parque Infantil Modelo 4" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78b858)\'>🏕️</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-04-b.jpg" alt="Parque Infantil Modelo 4 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78b858)\'>🏕️</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-04-c.jpg" alt="Parque Infantil Modelo 4 vista 3" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78b858)\'>🏕️</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 3</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 4</span>
-            <h3>Parque Infantil</h3>
-            <ul class="prod-specs">
-              <li>1 Resbalín gemelo + 1 Resbalín de P.R.F.V.</li>
-              <li>2 Palmeras + Techo tipo tejado de P.R.F.V.</li>
-              <li>Caritas Disney · Graderías y plataforma</li>
-              <li>Columpio con 2 asientos de P.R.F.V.</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 4');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 5 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-05-a.jpg" alt="Parque Infantil Modelo 5" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#6890b8)\'>🎪</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-05-b.jpg" alt="Parque Infantil Modelo 5 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#6890b8)\'>🎪</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 5</span>
-            <h3>Parque Infantil Premium</h3>
-            <ul class="prod-specs">
-              <li>1 Tobogán tipo "S" + 1 Tobogán recto de P.R.F.V.</li>
-              <li>1 Resbalín gemelo + 3 Resbalines pequeños</li>
-              <li>2 Palmeras + 2 Techos tipo tejado de P.R.F.V.</li>
-              <li>Caritas Disney · Graderías y plataforma</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-star-fill"></i> Premium</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 5 Premium');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 6 -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-06-a.jpg" alt="Parque Infantil Modelo 6" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c86868)\'>🎢</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-06-b.jpg" alt="Parque Infantil Modelo 6 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c86868)\'>🎢</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 6</span>
-            <h3>Parque con Resbalines</h3>
-            <ul class="prod-specs">
-              <li>1 Resbalín espiral de P.R.F.V.</li>
-              <li>1 Resbalín ondulado de P.R.F.V.</li>
-              <li>Plataforma de P.R.F.V.</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Parque Resbalines Modelo 6');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 12 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-12-a.jpg" alt="Parque Infantil Modelo 12" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88c868)\'>🏡</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-12-b.jpg" alt="Parque Infantil Modelo 12 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#88c868)\'>🏡</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 12</span>
-            <h3>Parque Infantil Compact</h3>
-            <ul class="prod-specs">
-              <li>1 Resbalín + 2 Techos de P.R.F.V.</li>
-              <li>Caritas de personajes Disney</li>
-              <li>Graderías y plataforma de P.R.F.V.</li>
-              <li>Columpio con 2 asientos de P.R.F.V.</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Parque Infantil Modelo 12');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 28 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-28-a.jpg" alt="Juego Infantil Modelo 28" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8b8d8,#9878c8)\'>🎭</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-28-b.jpg" alt="Juego Infantil Modelo 28 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8b8d8,#9878c8)\'>🎭</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 28</span>
-            <h3>Juego Infantil Multi</h3>
-            <ul class="prod-specs">
-              <li>4 Resbalines ondulados de P.R.F.V.</li>
-              <li>8 Tapacantos</li>
-              <li>Estructura metálica · Pintura a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Juego Infantil Multi Modelo 28');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════
+      <!-- ══════════════════════════════════════
          JUEGOS ACUÁTICOS
     ══════════════════════════════════════ -->
-    <div class="cat-section rv">
-      <div class="cat-section-hd">
-        <i class="bi bi-water"></i>
-        <h2>Juegos Acuáticos</h2>
-        <span>3 modelos disponibles</span>
+      <div class="cat-section rv">
+        <div class="cat-section-hd">
+          <i class="bi bi-water"></i>
+          <h2>Juegos Acuáticos</h2>
+          <span>3 modelos disponibles</span>
+        </div>
+        <div class="prod-grid-3">
+
+          <!-- Modelo 7 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-07-a.jpg" alt="Juego Acuático Modelo 7"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🌊</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-07-b.jpg" alt="Juego Acuático Modelo 7 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🌊</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 7</span>
+              <h3>Juego Acuático con Toboganes</h3>
+              <ul class="prod-specs">
+                <li>2 Toboganes medianos 5m × 0.80m de P.R.F.V.</li>
+                <li>Techo de fibra de vidrio</li>
+                <li>6 caritas de personajes Disney</li>
+                <li>2 Palmeras decorativas · 2 Baldes movibles</li>
+                <li>1 Bomba 2hp marca PEDROLLO–VULCANO</li>
+                <li>Instalación hidráulica general incluida</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-droplet-fill"></i> Acuático</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Juego Acuático con Toboganes Modelo 7');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 8 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-08-a.jpg" alt="Juego Acuático Modelo 8"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#2a6ab5)\'>💦</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-08-b.jpg" alt="Juego Acuático Modelo 8 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#2a6ab5)\'>💦</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 8</span>
+              <h3>Juego Acuático Multi-nivel</h3>
+              <ul class="prod-specs">
+                <li>3 Plataformas estructura de fierro</li>
+                <li>1 Balde movible · 5 Caritas Disney</li>
+                <li>1 Techo tipo tejado · 2 Resbalines medianos</li>
+                <li>3 Peldaños · 4 Palmeras de P.R.F.V.</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-droplet-fill"></i> Acuático</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Juego Acuático Multi-nivel Modelo 8');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 24 -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-24-a.jpg" alt="Juego Acuático Modelo 24"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#a8c8e8,#1a5ab5)\'>🎿</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-24-b.jpg" alt="Juego Acuático Modelo 24 vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#a8c8e8,#1a5ab5)\'>🎿</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 24</span>
+              <h3>Tobogán Acuático Grande</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Tamaño 20m × 0.80m</li>
+                <li>Estructura de fierro</li>
+                <li>Pintura colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-droplet-fill"></i> Acuático</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán Acuático Grande Modelo 24');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="prod-grid-3">
 
-        <!-- Modelo 7 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-07-a.jpg" alt="Juego Acuático Modelo 7" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🌊</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-07-b.jpg" alt="Juego Acuático Modelo 7 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a7eb5)\'>🌊</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 7</span>
-            <h3>Juego Acuático con Toboganes</h3>
-            <ul class="prod-specs">
-              <li>2 Toboganes medianos 5m × 0.80m de P.R.F.V.</li>
-              <li>Techo de fibra de vidrio</li>
-              <li>6 caritas de personajes Disney</li>
-              <li>2 Palmeras decorativas · 2 Baldes movibles</li>
-              <li>1 Bomba 2hp marca PEDROLLO–VULCANO</li>
-              <li>Instalación hidráulica general incluida</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-droplet-fill"></i> Acuático</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Juego Acuático con Toboganes Modelo 7');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 8 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-08-a.jpg" alt="Juego Acuático Modelo 8" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#2a6ab5)\'>💦</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-08-b.jpg" alt="Juego Acuático Modelo 8 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#2a6ab5)\'>💦</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 8</span>
-            <h3>Juego Acuático Multi-nivel</h3>
-            <ul class="prod-specs">
-              <li>3 Plataformas estructura de fierro</li>
-              <li>1 Balde movible · 5 Caritas Disney</li>
-              <li>1 Techo tipo tejado · 2 Resbalines medianos</li>
-              <li>3 Peldaños · 4 Palmeras de P.R.F.V.</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-droplet-fill"></i> Acuático</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Juego Acuático Multi-nivel Modelo 8');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 24 -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-24-a.jpg" alt="Juego Acuático Modelo 24" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#a8c8e8,#1a5ab5)\'>🎿</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-24-b.jpg" alt="Juego Acuático Modelo 24 vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#a8c8e8,#1a5ab5)\'>🎿</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 24</span>
-            <h3>Tobogán Acuático Grande</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Tamaño 20m × 0.80m</li>
-              <li>Estructura de fierro</li>
-              <li>Pintura colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-droplet-fill"></i> Acuático</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán Acuático Grande Modelo 24');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════
+      <!-- ══════════════════════════════════════
          TOBOGANES Y RESBALINES
     ══════════════════════════════════════ -->
-    <div class="cat-section rv">
-      <div class="cat-section-hd">
-        <i class="bi bi-lightning-charge-fill"></i>
-        <h2>Toboganes y Resbalines</h2>
-        <span>7 modelos disponibles</span>
+      <div class="cat-section rv">
+        <div class="cat-section-hd">
+          <i class="bi bi-lightning-charge-fill"></i>
+          <h2>Toboganes y Resbalines</h2>
+          <span>7 modelos disponibles</span>
+        </div>
+        <div class="prod-grid-4">
+
+          <!-- Modelo 10 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-10-a.jpg" alt="Tobogán Caracol"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c85858)\'>🌀</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 10</span>
+              <h3>Tobogán Caracol</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Tamaño 9m × 0.80m</li>
+                <li>Estructura metálica</li>
+                <li>Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-arrow-down-circle-fill"></i> Tobogán</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán Caracol Modelo 10');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 13 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-13-a.jpg" alt="Tobogán Tipo S"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#5888c8)\'>〽️</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 13</span>
+              <h3>Tobogán Tipo "S"</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Tamaño 6m × 0.80m</li>
+                <li>Estructura metálica</li>
+                <li>Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-arrow-down-circle-fill"></i> Tobogán</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán Tipo S Modelo 13');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 14 -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-14-a.jpg" alt="Resbalín con Escalera"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#c8a828)\'>🛝</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 14</span>
+              <h3>Resbalín con Escalera</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín con Escalera Modelo 14');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 17 -->
+          <div class="prd-c rv d3">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-17-a.jpg" alt="Resbalín Ondulado"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8a8,#c8a818)\'>〰️</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 17</span>
+              <h3>Resbalín Ondulado</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Ondulado Modelo 17');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 18 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-18-a.jpg" alt="Resbalín Gemelo"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c86868)\'>🛝</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 18</span>
+              <h3>Resbalín Gemelo</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Gemelo Modelo 18');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 19 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-19-a.jpg" alt="Resbalín Espiral"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8c8,#c85888)\'>🌀</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 19</span>
+              <h3>Resbalín Espiral</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Espiral Modelo 19');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 21 -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-21-a.jpg" alt="Resbalín Ondulado M21"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8a8,#88b848)\'>〰️</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 21</span>
+              <h3>Resbalín Ondulado Grande</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Ondulado Grande Modelo 21');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="prod-grid-4">
 
-        <!-- Modelo 10 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-10-a.jpg" alt="Tobogán Caracol" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c85858)\'>🌀</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 10</span>
-            <h3>Tobogán Caracol</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Tamaño 9m × 0.80m</li>
-              <li>Estructura metálica</li>
-              <li>Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-arrow-down-circle-fill"></i> Tobogán</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán Caracol Modelo 10');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 13 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-13-a.jpg" alt="Tobogán Tipo S" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#5888c8)\'>〽️</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 13</span>
-            <h3>Tobogán Tipo "S"</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Tamaño 6m × 0.80m</li>
-              <li>Estructura metálica</li>
-              <li>Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-arrow-down-circle-fill"></i> Tobogán</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Tobogán Tipo S Modelo 13');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 14 -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-14-a.jpg" alt="Resbalín con Escalera" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#c8a828)\'>🛝</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 14</span>
-            <h3>Resbalín con Escalera</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín con Escalera Modelo 14');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 17 -->
-        <div class="prd-c rv d3">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-17-a.jpg" alt="Resbalín Ondulado" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c8a8,#c8a818)\'>〰️</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 17</span>
-            <h3>Resbalín Ondulado</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Ondulado Modelo 17');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 18 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-18-a.jpg" alt="Resbalín Gemelo" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8b8,#c86868)\'>🛝</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 18</span>
-            <h3>Resbalín Gemelo</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Gemelo Modelo 18');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 19 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-19-a.jpg" alt="Resbalín Espiral" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8b8c8,#c85888)\'>🌀</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 19</span>
-            <h3>Resbalín Espiral</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Espiral Modelo 19');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 21 -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-21-a.jpg" alt="Resbalín Ondulado M21" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8a8,#88b848)\'>〰️</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 21</span>
-            <h3>Resbalín Ondulado Grande</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Resbalín Ondulado Grande Modelo 21');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════
+      <!-- ══════════════════════════════════════
          ACCESORIOS DE PARQUE
     ══════════════════════════════════════ -->
-    <div class="cat-section rv">
-      <div class="cat-section-hd">
-        <i class="bi bi-grid-fill"></i>
-        <h2>Accesorios de Parque</h2>
-        <span>6 modelos disponibles</span>
+      <div class="cat-section rv">
+        <div class="cat-section-hd">
+          <i class="bi bi-grid-fill"></i>
+          <h2>Accesorios de Parque</h2>
+          <span>6 modelos disponibles</span>
+        </div>
+        <div class="prod-grid-4">
+
+          <!-- Modelo 9 — Mesedor -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-09-a.jpg" alt="Mesedor"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#d0b050)\'>🐣</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 9</span>
+              <h3>Mesedor</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Tamaño 0.90m × 0.50m</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Mesedor Modelo 9');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 11 — Cama Elástica -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-11-a.jpg" alt="Cama Elástica"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#4878a8)\'>⭕</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 11</span>
+              <h3>Cama Elástica</h3>
+              <ul class="prod-specs">
+                <li>Estructura metálica</li>
+                <li>Diámetro 2.40m × Altura 2m</li>
+                <li>Colores según fotografía</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-arrows-move"></i> Metálica</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Cama Elástica Modelo 11');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 15 — Balancín Doble -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-15-a.jpg" alt="Balancín Doble"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78a858)\'>⚖️</div>'" />
+                </div>
+                <div class="car-sl"><img src="./assets/img/modelo-15-b.jpg" alt="Balancín Doble vista 2"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78a858)\'>⚖️</div>'" />
+                </div>
+              </div>
+              <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
+              <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 2</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 15</span>
+              <h3>Balancín Doble</h3>
+              <ul class="prod-specs">
+                <li>Asientos de P.R.F.V.</li>
+                <li>Estructura metálica</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Balancín Doble Modelo 15');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 16 — Columpio -->
+          <div class="prd-c rv d3">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-16-a.jpg" alt="Columpio"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a8ab5)\'>🪁</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 16</span>
+              <h3>Columpio</h3>
+              <ul class="prod-specs">
+                <li>Estructura de fierro</li>
+                <li>3 Asientos de P.R.F.V.</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Columpio Modelo 16');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 20 — Túnel Gusano -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-20-a.jpg" alt="Túnel Gusano"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#b8a030)\'>🐛</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 20</span>
+              <h3>Túnel Gusano</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Túnel Gusano Modelo 20');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 22 — Paraguita -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-22-a.jpg" alt="Paraguita"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#80b858)\'>☂️</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 22</span>
+              <h3>Paraguita</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Diámetro 2.50m × Altura 2m</li>
+                <li>Colores determinados</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Paraguita Modelo 22');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="prod-grid-4">
 
-        <!-- Modelo 9 — Mesedor -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-09-a.jpg" alt="Mesedor" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#d0b050)\'>🐣</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 9</span>
-            <h3>Mesedor</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Tamaño 0.90m × 0.50m</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Mesedor Modelo 9');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 11 — Cama Elástica -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-11-a.jpg" alt="Cama Elástica" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8c8d8,#4878a8)\'>⭕</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 11</span>
-            <h3>Cama Elástica</h3>
-            <ul class="prod-specs">
-              <li>Estructura metálica</li>
-              <li>Diámetro 2.40m × Altura 2m</li>
-              <li>Colores según fotografía</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-arrows-move"></i> Metálica</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Cama Elástica Modelo 11');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 15 — Balancín Doble -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-15-a.jpg" alt="Balancín Doble" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78a858)\'>⚖️</div>'"/></div>
-              <div class="car-sl"><img src="./assets/modelo-15-b.jpg" alt="Balancín Doble vista 2" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#78a858)\'>⚖️</div>'"/></div>
-            </div>
-            <button class="car-ar car-pv"><i class="bi bi-chevron-left"></i></button>
-            <button class="car-ar car-nx"><i class="bi bi-chevron-right"></i></button>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 2</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 15</span>
-            <h3>Balancín Doble</h3>
-            <ul class="prod-specs">
-              <li>Asientos de P.R.F.V.</li>
-              <li>Estructura metálica</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Balancín Doble Modelo 15');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 16 — Columpio -->
-        <div class="prd-c rv d3">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-16-a.jpg" alt="Columpio" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#3a8ab5)\'>🪁</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 16</span>
-            <h3>Columpio</h3>
-            <ul class="prod-specs">
-              <li>Estructura de fierro</li>
-              <li>3 Asientos de P.R.F.V.</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Columpio Modelo 16');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 20 — Túnel Gusano -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-20-a.jpg" alt="Túnel Gusano" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#b8a030)\'>🐛</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 20</span>
-            <h3>Túnel Gusano</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Túnel Gusano Modelo 20');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 22 — Paraguita -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-22-a.jpg" alt="Paraguita" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#c8d8b8,#80b858)\'>☂️</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 22</span>
-            <h3>Paraguita</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Diámetro 2.50m × Altura 2m</li>
-              <li>Colores determinados</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-patch-check-fill"></i> P.R.F.V.</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Paraguita Modelo 22');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════
+      <!-- ══════════════════════════════════════
          BOTES Y ACUÁTICOS RECREATIVOS
     ══════════════════════════════════════ -->
-    <div class="cat-section rv">
-      <div class="cat-section-hd">
-        <i class="bi bi-tsunami"></i>
-        <h2>Botes y Recreación Acuática</h2>
-        <span>3 modelos disponibles</span>
+      <div class="cat-section rv">
+        <div class="cat-section-hd">
+          <i class="bi bi-tsunami"></i>
+          <h2>Botes y Recreación Acuática</h2>
+          <span>3 modelos disponibles</span>
+        </div>
+        <div class="prod-grid-3">
+
+          <!-- Modelo 25 — Bote a Pedal -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-25-a.jpg" alt="Bote a Pedal"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#5898d8)\'>⛵</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 25</span>
+              <h3>Bote a Pedal</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Tamaño 2.50m × 1.40m</li>
+                <li>Capacidad para 2 pasajeros</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-water"></i> Náutico</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Bote a Pedal Modelo 25');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 26 — Kayak -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-26-a.jpg" alt="Kayak"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8b8,#50a858)\'>🛶</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 26</span>
+              <h3>Kayak</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Tamaño 3m × 0.80m</li>
+                <li>Capacidad para 2 pasajeros</li>
+                <li>2 Remos incluidos</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-water"></i> Náutico</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Kayak Modelo 26');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 27 — Bote Cisne -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-27-a.jpg" alt="Bote a Pedal Cisne"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#e8e8e8,#c8c8c8)\'>🦢</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 27</span>
+              <h3>Bote a Pedal Cisne</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Tamaño 2.60m × 1.50m</li>
+                <li>Capacidad para 2 pasajeros</li>
+                <li>Colores a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-water"></i> Náutico</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Bote Cisne Modelo 27');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="prod-grid-3">
 
-        <!-- Modelo 25 — Bote a Pedal -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-25-a.jpg" alt="Bote a Pedal" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d0e8,#5898d8)\'>⛵</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 25</span>
-            <h3>Bote a Pedal</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Tamaño 2.50m × 1.40m</li>
-              <li>Capacidad para 2 pasajeros</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-water"></i> Náutico</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Bote a Pedal Modelo 25');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 26 — Kayak -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-26-a.jpg" alt="Kayak" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#b8d8b8,#50a858)\'>🛶</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 26</span>
-            <h3>Kayak</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Tamaño 3m × 0.80m</li>
-              <li>Capacidad para 2 pasajeros</li>
-              <li>2 Remos incluidos</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-water"></i> Náutico</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Kayak Modelo 26');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 27 — Bote Cisne -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-27-a.jpg" alt="Bote a Pedal Cisne" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#e8e8e8,#c8c8c8)\'>🦢</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 27</span>
-            <h3>Bote a Pedal Cisne</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Tamaño 2.60m × 1.50m</li>
-              <li>Capacidad para 2 pasajeros</li>
-              <li>Colores a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-water"></i> Náutico</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Bote Cisne Modelo 27');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════
+      <!-- ══════════════════════════════════════
          GIMNASIO AL AIRE LIBRE
     ══════════════════════════════════════ -->
-    <div class="cat-section rv">
-      <div class="cat-section-hd">
-        <i class="bi bi-person-arms-up"></i>
-        <h2>Gimnasio al Aire Libre</h2>
-        <span>6 modelos disponibles</span>
+      <div class="cat-section rv">
+        <div class="cat-section-hd">
+          <i class="bi bi-person-arms-up"></i>
+          <h2>Gimnasio al Aire Libre</h2>
+          <span>6 modelos disponibles</span>
+        </div>
+        <div class="prod-grid-3">
+
+          <!-- Modelo 29 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-29-a.jpg" alt="Gimnasio M29"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c0a8,#c87828)\'>💪</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 29</span>
+              <h3>Equipo de Gimnasio</h3>
+              <ul class="prod-specs">
+                <li>Asiento y espaldar de P.R.F.V.</li>
+                <li>Tamaño 1.80m × 0.80m proporcional</li>
+                <li>Estructura metálica · Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Equipo de Gimnasio Modelo 29');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 30 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-30-a.jpg" alt="Gimnasio M30"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c0a8,#c87828)\'>🏋️</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 30</span>
+              <h3>Equipo de Gimnasio Pisaderas</h3>
+              <ul class="prod-specs">
+                <li>Pisaderas de P.R.F.V.</li>
+                <li>Tamaño 1.50m × 0.80m proporcional</li>
+                <li>Estructura metálica · Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
+                <a class="prd-cta" href="#"
+                  onclick="cotizarWA('Equipo de Gimnasio Pisaderas Modelo 30');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 31 -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-31-a.jpg" alt="Gimnasio M31"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b87030)\'>🏅</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 31</span>
+              <h3>Equipo de Gimnasio Doble</h3>
+              <ul class="prod-specs">
+                <li>Asiento y espaldar de P.R.F.V.</li>
+                <li>Tamaño 1.80m × 0.80m proporcional</li>
+                <li>Estructura metálica · Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Equipo de Gimnasio Doble Modelo 31');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 32 -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-32-a.jpg" alt="Gimnasio M32"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b07030)\'>🤸</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 32</span>
+              <h3>Equipo de Gimnasio Barra</h3>
+              <ul class="prod-specs">
+                <li>Tamaño 1.70m × 1.50m proporcional</li>
+                <li>Estructura metálica · Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Equipo de Gimnasio Barra Modelo 32');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 33 -->
+          <div class="prd-c rv d1">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-33-a.jpg" alt="Gimnasio M33"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b07030)\'>🦵</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 33</span>
+              <h3>Equipo Gimnasio Pisaderas 2</h3>
+              <ul class="prod-specs">
+                <li>Pisaderas de P.R.F.V.</li>
+                <li>Tamaño 1.50m × 1m proporcional</li>
+                <li>Estructura metálica · Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Equipo Gimnasio Pisaderas 2 Modelo 33');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modelo 34 -->
+          <div class="prd-c rv d2">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-34-a.jpg" alt="Juego Infantil M34"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b07030)\'>🌀</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
+            </div>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 34</span>
+              <h3>Juego Giratorio</h3>
+              <ul class="prod-specs">
+                <li>Pisaderas de P.R.F.V.</li>
+                <li>Tamaño 1.50m × 1.50m proporcional</li>
+                <li>Estructura metálica · Colores a elección</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Infantil</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Juego Giratorio Modelo 34');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <div class="prod-grid-3">
 
-        <!-- Modelo 29 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-29-a.jpg" alt="Gimnasio M29" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c0a8,#c87828)\'>💪</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 29</span>
-            <h3>Equipo de Gimnasio</h3>
-            <ul class="prod-specs">
-              <li>Asiento y espaldar de P.R.F.V.</li>
-              <li>Tamaño 1.80m × 0.80m proporcional</li>
-              <li>Estructura metálica · Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Equipo de Gimnasio Modelo 29');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 30 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-30-a.jpg" alt="Gimnasio M30" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8c0a8,#c87828)\'>🏋️</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 30</span>
-            <h3>Equipo de Gimnasio Pisaderas</h3>
-            <ul class="prod-specs">
-              <li>Pisaderas de P.R.F.V.</li>
-              <li>Tamaño 1.50m × 0.80m proporcional</li>
-              <li>Estructura metálica · Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Equipo de Gimnasio Pisaderas Modelo 30');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 31 -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-31-a.jpg" alt="Gimnasio M31" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b87030)\'>🏅</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 31</span>
-            <h3>Equipo de Gimnasio Doble</h3>
-            <ul class="prod-specs">
-              <li>Asiento y espaldar de P.R.F.V.</li>
-              <li>Tamaño 1.80m × 0.80m proporcional</li>
-              <li>Estructura metálica · Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Equipo de Gimnasio Doble Modelo 31');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 32 -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-32-a.jpg" alt="Gimnasio M32" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b07030)\'>🤸</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 32</span>
-            <h3>Equipo de Gimnasio Barra</h3>
-            <ul class="prod-specs">
-              <li>Tamaño 1.70m × 1.50m proporcional</li>
-              <li>Estructura metálica · Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Equipo de Gimnasio Barra Modelo 32');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 33 -->
-        <div class="prd-c rv d1">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-33-a.jpg" alt="Gimnasio M33" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b07030)\'>🦵</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 33</span>
-            <h3>Equipo Gimnasio Pisaderas 2</h3>
-            <ul class="prod-specs">
-              <li>Pisaderas de P.R.F.V.</li>
-              <li>Tamaño 1.50m × 1m proporcional</li>
-              <li>Estructura metálica · Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Gimnasio</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Equipo Gimnasio Pisaderas 2 Modelo 33');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 34 -->
-        <div class="prd-c rv d2">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-34-a.jpg" alt="Juego Infantil M34" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d0c0b0,#b07030)\'>🌀</div>'"/></div>
-            </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 34</span>
-            <h3>Juego Giratorio</h3>
-            <ul class="prod-specs">
-              <li>Pisaderas de P.R.F.V.</li>
-              <li>Tamaño 1.50m × 1.50m proporcional</li>
-              <li>Estructura metálica · Colores a elección</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-person-arms-up"></i> Infantil</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Juego Giratorio Modelo 34');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════════
+      <!-- ══════════════════════════════════════
          OTROS PRODUCTOS
     ══════════════════════════════════════ -->
-    <div class="cat-section rv">
-      <div class="cat-section-hd">
-        <i class="bi bi-box-seam-fill"></i>
-        <h2>Otros Productos</h2>
-        <span>1 modelo disponible</span>
-      </div>
-      <div class="prod-grid-4">
-        <!-- Modelo 23 — Carrito Heladero -->
-        <div class="prd-c rv">
-          <div class="car">
-            <div class="car-in">
-              <div class="car-sl"><img src="./assets/modelo-23-a.jpg" alt="Carrito Heladero" onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#d8a828)\'>🍦</div>'"/></div>
+      <div class="cat-section rv">
+        <div class="cat-section-hd">
+          <i class="bi bi-box-seam-fill"></i>
+          <h2>Otros Productos</h2>
+          <span>1 modelo disponible</span>
+        </div>
+        <div class="prod-grid-4">
+          <!-- Modelo 23 — Carrito Heladero -->
+          <div class="prd-c rv">
+            <div class="car">
+              <div class="car-in">
+                <div class="car-sl"><img src="./assets/img/modelo-23-a.jpg" alt="Carrito Heladero"
+                    onerror="this.parentElement.innerHTML='<div class=\'car-fb\' style=\'background:linear-gradient(135deg,#d8d0a8,#d8a828)\'>🍦</div>'" />
+                </div>
+              </div>
+              <div class="car-dots"></div>
+              <div class="car-ov"></div>
+              <div class="car-cnt">1 / 1</div>
             </div>
-            <div class="car-dots"></div><div class="car-ov"></div><div class="car-cnt">1 / 1</div>
-          </div>
-          <div class="prd-body">
-            <span class="mod-label">Modelo 23</span>
-            <h3>Carrito Heladero</h3>
-            <ul class="prod-specs">
-              <li>Fabricado de P.R.F.V.</li>
-              <li>Capacidad para 40 litros</li>
-              <li>2 Ruedas · Estructura de fierro</li>
-              <li>Pintura a elección del cliente</li>
-            </ul>
-            <div class="prd-ft">
-              <span class="prd-tag"><i class="bi bi-cart-fill"></i> Comercial</span>
-              <a class="prd-cta" href="#" onclick="cotizarWA('Carrito Heladero Modelo 23');return false"><i class="bi bi-whatsapp"></i> Cotizar</a>
+            <div class="prd-body">
+              <span class="mod-label">Modelo 23</span>
+              <h3>Carrito Heladero</h3>
+              <ul class="prod-specs">
+                <li>Fabricado de P.R.F.V.</li>
+                <li>Capacidad para 40 litros</li>
+                <li>2 Ruedas · Estructura de fierro</li>
+                <li>Pintura a elección del cliente</li>
+              </ul>
+              <div class="prd-ft">
+                <span class="prd-tag"><i class="bi bi-cart-fill"></i> Comercial</span>
+                <a class="prd-cta" href="#" onclick="cotizarWA('Carrito Heladero Modelo 23');return false"><i
+                    class="bi bi-whatsapp"></i> Cotizar</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- CTA FINAL -->
+  <section style="background:var(--bg3);text-align:center">
+    <div class="wrap rv">
+      <div class="ey" style="justify-content:center"><i class="bi bi-rulers"></i> ¿No encontraste lo que buscás?</div>
+      <h2 class="d2" style="text-align:center;margin-top:12px">Si lo podés imaginar,<br><b>lo podemos construir.</b>
+      </h2>
+      <p class="sub" style="margin:14px auto 28px;text-align:center">Fabricamos piezas completamente personalizadas en
+        P.R.F.V. Contanos tu proyecto y te sorprendemos.</p>
+      <a class="btn-wa"
+        href="https://wa.me/59168124071?text=Hola%2C%20quiero%20consultar%20sobre%20un%20producto%20personalizado%20Fibrotek."
+        target="_blank" style="display:inline-flex">
+        <i class="bi bi-whatsapp"></i> Consultar por WhatsApp
+      </a>
+    </div>
+  </section>
 
-<!-- CTA FINAL -->
-<section style="background:var(--bg3);text-align:center">
-  <div class="wrap rv">
-    <div class="ey" style="justify-content:center"><i class="bi bi-rulers"></i> ¿No encontraste lo que buscás?</div>
-    <h2 class="d2" style="text-align:center;margin-top:12px">Si lo podés imaginar,<br><b>lo podemos construir.</b></h2>
-    <p class="sub" style="margin:14px auto 28px;text-align:center">Fabricamos piezas completamente personalizadas en P.R.F.V. Contanos tu proyecto y te sorprendemos.</p>
-    <a class="btn-wa" href="https://wa.me/59168124071?text=Hola%2C%20quiero%20consultar%20sobre%20un%20producto%20personalizado%20Fibrotek." target="_blank" style="display:inline-flex">
-      <i class="bi bi-whatsapp"></i> Consultar por WhatsApp
-    </a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div class="ft-top">
-      <div class="ft-brand">
-        <a href="index.html" class="logo">
-          <div class="logo-img-box"><img src="./assets/logo.png" alt="Fibrotek" onerror="this.style.display='none'"/></div>
-        </a>
-        <p>34 modelos en fibra de vidrio (P.R.F.V.). Fabricados en Bolivia para durar generaciones.</p>
+  <footer>
+    <div class="wrap">
+      <div class="ft-top">
+        <div class="ft-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-img-box"><img src="./assets/img/logo.png" alt="Fibrotek"
+                onerror="this.style.display='none'" />
+            </div>
+          </a>
+          <p>34 modelos en fibra de vidrio (P.R.F.V.). Fabricados en Bolivia para durar generaciones.</p>
+        </div>
+        <div class="ft-col">
+          <h4>Categorías</h4>
+          <ul>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Parques Infantiles</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Juegos Acuáticos</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Toboganes y Resbalines</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Gimnasio al Aire Libre</a></li>
+            <li><a href="#"><i class="bi bi-chevron-right"></i>Botes y Náuticos</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>Páginas</h4>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
+            <li><a href="nosotros.html"><i class="bi bi-chevron-right"></i>Nosotros</a></li>
+            <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
+            <li><a href="servicios.html"><i class="bi bi-chevron-right"></i>Servicios</a></li>
+            <li><a href="index.html#contacto"><i class="bi bi-chevron-right"></i>Contacto</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="ft-col"><h4>Categorías</h4><ul>
-        <li><a href="#"><i class="bi bi-chevron-right"></i>Parques Infantiles</a></li>
-        <li><a href="#"><i class="bi bi-chevron-right"></i>Juegos Acuáticos</a></li>
-        <li><a href="#"><i class="bi bi-chevron-right"></i>Toboganes y Resbalines</a></li>
-        <li><a href="#"><i class="bi bi-chevron-right"></i>Gimnasio al Aire Libre</a></li>
-        <li><a href="#"><i class="bi bi-chevron-right"></i>Botes y Náuticos</a></li>
-      </ul></div>
-      <div class="ft-col"><h4>Páginas</h4><ul>
-        <li><a href="index.html"><i class="bi bi-chevron-right"></i>Inicio</a></li>
-        <li><a href="nosotros.html"><i class="bi bi-chevron-right"></i>Nosotros</a></li>
-        <li><a href="proyectos.html"><i class="bi bi-chevron-right"></i>Proyectos</a></li>
-        <li><a href="servicios.html"><i class="bi bi-chevron-right"></i>Servicios</a></li>
-        <li><a href="index.html#contacto"><i class="bi bi-chevron-right"></i>Contacto</a></li>
-      </ul></div>
-    </div>
-    <div class="ft-bot">
-      <p>© 2026 Fibrotek Company · Todos los derechos reservados</p>
-      <div class="socs">
-        <a class="soc" href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
-        <a class="soc" href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
-        <a class="soc" href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
-        <a class="soc" href="https://wa.me/59168124071" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      <div class="ft-bot">
+        <p>© 2026 Fibrotek Company · Todos los derechos reservados</p>
+        <div class="socs">
+          <a class="soc" href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a class="soc" href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+          <a class="soc" href="#" title="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a class="soc" href="https://wa.me/59168124071" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
       </div>
     </div>
+  </footer>
+
+  <div class="wa-float">
+    <div class="wa-bubble">¿Querés cotizar? ¡Escribinos! 👋</div>
+    <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
   </div>
-</footer>
+  <button id="btt"><i class="bi bi-arrow-up"></i></button>
 
-<div class="wa-float">
-  <div class="wa-bubble">¿Querés cotizar? ¡Escribinos! 👋</div>
-  <a class="wa-fab" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a>
-</div>
-<button id="btt"><i class="bi bi-arrow-up"></i></button>
-
-<script src="./js/main.js"></script>
-<script>
-window.cotizarWA = function(producto){
-  const msg = `*CONSULTA FIBROTEK*\n\n📦 *Producto:* ${producto}\n\nHola, me gustaría recibir información y cotización sobre este producto.`;
-  window.open(`https://wa.me/59168124071?text=${encodeURIComponent(msg)}`, '_blank');
-};
-</script>
+  <script src="./js/main.js"></script>
+  <script>
+    window.cotizarWA = function (producto) {
+      const msg = `*CONSULTA FIBROTEK*\n\n📦 *Producto:* ${producto}\n\nHola, me gustaría recibir información y cotización sobre este producto.`;
+      window.open(`https://wa.me/59168124071?text=${encodeURIComponent(msg)}`, '_blank');
+    };
+  </script>
 </body>
+
 </html>
