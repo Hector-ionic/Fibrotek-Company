@@ -252,7 +252,7 @@ section {
 /* ── DISPLAY TITLES ─────────────────────────────────── */
 .d1 {
   font-family: var(--fD);
-  font-size: clamp(52px, 8vw, 110px);
+  font-size: clamp(42px, 6vw, 90px);
   line-height: .9;
   letter-spacing: 1.5px;
   color: var(--t1)
@@ -271,7 +271,7 @@ section {
 
 .d2 {
   font-family: var(--fD);
-  font-size: clamp(40px, 5vw, 72px);
+  font-size: clamp(32px, 4vw, 60px);
   line-height: .92;
   letter-spacing: 1px;
   color: var(--t1)
@@ -684,9 +684,9 @@ nav.sc .ham span {
   margin: 0 auto;
   padding: 80px 48px;
   display: grid;
-  grid-template-columns: 1fr 460px;
-  gap: 64px;
-  align-items: center;
+  grid-template-columns: 1fr 540px;
+  gap: 40px;
+  align-items: stretch;
 }
 
 .h-tag {
@@ -696,7 +696,7 @@ nav.sc .ham span {
 
 .h-tit {
   font-family: var(--fD);
-  font-size: clamp(48px, 7.5vw, 100px);
+  font-size: clamp(38px, 6vw, 84px);
   line-height: .93;
   letter-spacing: 1.5px;
   animation: fadeU .6s .08s both;
@@ -773,16 +773,29 @@ nav.sc .ham span {
   margin-top: 4px
 }
 
-/* panel especialidades */
 .h-panel {
-  background: var(--bg4);
-  border: 1px solid var(--bd1);
-  border-radius: 20px;
-  padding: 50px;
-  animation: fadeU .6s .2s both;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(0,180,216,.30);
+  border-radius: 24px;
+  padding: 48px 44px 44px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 336px rgba(15, 37, 69, .10);
+  box-shadow:
+    0 8px 40px rgba(0,180,216,.10),
+    0 1px 3px rgba(15,37,69,.06);
+  transition: box-shadow .4s, transform .4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.h-panel:hover {
+  box-shadow:
+    0 16px 60px rgba(0,180,216,.18),
+    0 2px 6px rgba(15,37,69,.08);
+  transform: translateY(-4px);
 }
 
 .h-panel::before {
@@ -792,12 +805,19 @@ nav.sc .ham span {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--ac), transparent);
+  background: linear-gradient(90deg, transparent, var(--ac), var(--ru), transparent);
+  background-size: 200% 100%;
+  animation: shimmerBar 3s linear infinite;
+}
+
+@keyframes shimmerBar {
+  0%   { background-position: -200% 0 }
+  100% { background-position: 200% 0 }
 }
 
 .h-ph {
   font-family: var(--fM);
-  font-size: 11px;
+  font-size: 13px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--acd);
@@ -815,43 +835,50 @@ nav.sc .ham span {
 .h-pg {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px
+  gap: 16px
 }
 
 .h-mc {
-  background: var(--bg5);
+  background: rgba(248,249,250,.9);
   border: 1px solid var(--bd2);
-  border-radius: 14px;
-  padding: 24px 16px;
+  border-radius: 16px;
+  padding: 32px 20px;
   text-align: center;
-  transition: background .25s, border-color .25s, transform .2s, box-shadow .2s;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+  position: relative;
 }
 
 .h-mc:hover {
-  background: var(--ac2);
-  border-color: var(--bd1);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 16px var(--ac3)
+  background: rgba(0,180,216,.08);
+  border-color: var(--ac);
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(0,180,216,.18);
 }
 
 .h-mc i {
-  font-size: 32px;
+  font-size: 42px;
   color: var(--ac);
   display: block;
-  margin-bottom: 10px
+  margin-bottom: 12px;
+  transition: transform .3s;
+}
+
+.h-mc:hover i {
+  transform: scale(1.2) rotate(-5deg);
 }
 
 .h-mc-t {
   font-family: var(--fM);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--t1)
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--t1);
+  letter-spacing: .3px;
 }
 
 .h-mc-s {
   font-size: 14px;
   color: var(--t4);
-  margin-top: 4px
+  margin-top: 6px;
 }
 
 /* scroll hint */
@@ -2738,15 +2765,15 @@ footer .logo-img-box img {
 
   /* Tipografía fluida */
   .d1 {
-    font-size: clamp(40px, 13vw, 80px)
+    font-size: clamp(34px, 10vw, 64px)
   }
 
   .d2 {
-    font-size: clamp(28px, 9vw, 56px)
+    font-size: clamp(24px, 7vw, 44px)
   }
 
   .h-tit {
-    font-size: clamp(38px, 11vw, 64px)
+    font-size: clamp(32px, 9vw, 54px)
   }
 
   /* Secciones en 1 columna */
@@ -2858,4 +2885,9 @@ footer .logo-img-box img {
   .mob-nav a {
     font-size: 28px
   }
+}
+
+/* ── UPPERCASE TITLES ───────────────────────────────── */
+h1, h2, h3, h4, h5, h6, .d1, .d2, .h-tit, .ey, .ab-item h4, .ft-col h4 {
+  text-transform: uppercase !important;
 }
