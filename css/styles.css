@@ -984,7 +984,10 @@ nav.sc .ham span {
   width: 100%;
   display: block;
   aspect-ratio: 16/9;
-  border: none
+  border: none;
+  background: linear-gradient(135deg, #0f2545 0%, #0b4a6f 40%, #00b4d8 100%);
+  object-fit: contain;
+  object-position: center;
 }
 
 .v-ov {
