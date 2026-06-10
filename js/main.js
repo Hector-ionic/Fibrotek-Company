@@ -108,6 +108,7 @@ function buildCar(container){
     slides.forEach((_,i)=>{
       const d=document.createElement('button');
       d.className='car-dot'+(i===0?' on':'');
+      d.setAttribute('aria-label', 'Ir a diapositiva ' + (i+1));
       d.onclick=e=>{ e.stopPropagation(); goTo(i); };
       dots.appendChild(d);
     });
@@ -214,6 +215,7 @@ document.querySelectorAll('.gi').forEach(item=>{
     im.style.cssText='max-width:90vw;max-height:90vh;border-radius:16px;object-fit:contain;border:2px solid rgba(245,168,0,.4);box-shadow:0 0 60px rgba(245,168,0,.2)';
     const btn=document.createElement('button');
     btn.innerHTML='<i class="bi bi-x-lg"></i>';
+    btn.setAttribute('aria-label', 'Cerrar imagen');
     btn.style.cssText='position:absolute;top:20px;right:26px;color:#fff;font-size:24px;cursor:none;background:none;border:none;transition:color .2s';
     btn.onmouseenter=()=>btn.style.color='#f5a800';
     btn.onmouseleave=()=>btn.style.color='#fff';
