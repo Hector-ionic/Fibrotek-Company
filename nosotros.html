@@ -1,9 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Nosotros — Fibrotek Company</title>
   <meta name="description" content="Conocé la historia, valores y equipo detrás de Fibrotek. Más de 15 años fabricando en fibra de vidrio con orgullo boliviano."/>
+  <meta property="og:title" content="Nosotros — Fibrotek Company" />
+  <meta property="og:description" content="Conocé la historia, valores y equipo detrás de Fibrotek. Más de 15 años fabricando en fibra de vidrio con orgullo boliviano." />
+  <meta property="og:image" content="./assets/img/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fibrotek.bo/nosotros.html" />
   <meta property="og:title" content="Nosotros — Fibrotek Company" />
   <meta property="og:description" content="Conocé la historia, valores y equipo detrás de Fibrotek. Más de 15 años fabricando en fibra de vidrio con orgullo boliviano." />
   <meta property="og:image" content="./assets/img/logo.png" />
@@ -13,14 +19,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
-  <link rel="stylesheet" href="./css/styles.css"/>
+  <link rel="stylesheet" href="./css/styles.css?v=4"/>
 </head>
 <body>
 <div id="preloader"><div class="pl-logo">Fibro<em>tek</em></div><div class="pl-track"><div class="pl-bar"></div></div></div>
 <div id="cur"></div><div id="cur-r"></div>
 
 <div class="mob-nav" id="mobNav">
-  <button class="mob-close" aria-label="Cerrar menú" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
+  <button class="mob-close" aria-label="Cerrar menú" aria-label="Cerrar menú" onclick="closeMob()"><i class="bi bi-x-lg"></i></button>
   <a href="index.html" onclick="closeMob()">Inicio</a>
   <a href="nosotros.html" onclick="closeMob()">Nosotros</a>
   <a href="productos.html" onclick="closeMob()">Productos</a>
@@ -31,7 +37,7 @@
 
 <nav>
   <a href="index.html" class="logo">
-    <div class="logo-img-box"><img src="./assets/img/logo.png" alt="Fibrotek" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="logo-fb">FIBROTEK</span></div>
+    <div class="logo-img-box"><img src="./assets/img/logo.png" alt="Fibrotek" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="logo-fb">Fibrotek</span></div>
     
   </a>
   <ul class="nav-ul">
@@ -43,7 +49,7 @@
     <li><a href="index.html#contacto">Contacto</a></li>
   </ul>
   <a class="nav-cta" href="index.html#contacto"><i class="bi bi-whatsapp"></i> Cotizar</a>
-  <button class="ham" aria-label="Abrir menú" onclick="openMob()"><span></span><span></span><span></span></button>
+  <button class="ham" aria-label="Abrir menú" aria-label="Abrir menú" onclick="openMob()"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
@@ -123,7 +129,7 @@
       <h2 class="d2" style="text-align:center">Las personas detrás<br><b>de cada obra.</b></h2>
       <p class="sub" style="margin:14px auto 0;text-align:center">Más de 40 profesionales especializados que convierten tu visión en realidad.</p>
     </div>
-    <!-- Fotos del equipo en: assets/equipo-1.jpg … equipo-4.jpg -->
+    <!-- Fotos del equipo en: assets/equipo-1.jpg â€¦ equipo-4.jpg -->
     <div class="team-grid rv d1">
       <div class="team-c">
         <div class="team-img">
@@ -167,7 +173,7 @@
     <div class="test-grid rv d1">
       <div class="test-c">
         <div class="test-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <p class="test-txt">Instalaron nuestra piscina en tiempo récord y la calidad superó todas las expectativas. El equipo fue profesional de principio a fin.</p>
+        <p class="test-txt">Instalaron nuestro parque infantil en tiempo récord y la calidad superó todas las expectativas. El equipo fue profesional de principio a fin.</p>
         <div class="test-au">
           <div class="test-av"><i class="bi bi-person-fill"></i></div>
           <div><div class="test-nm">Carlos Mendoza</div><div class="test-loc"><i class="bi bi-geo-alt-fill" style="color:var(--ac);font-size:11px"></i> Santa Cruz</div></div>
@@ -175,7 +181,7 @@
       </div>
       <div class="test-c">
         <div class="test-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-        <p class="test-txt">Los tanques que fabricaron para nuestra planta llevan tres años funcionando sin ningún problema. Inversión que valió cada centavo.</p>
+        <p class="test-txt">Las estructuras que fabricaron para nuestro parque llevan tres años funcionando sin ningún problema. Inversión que valió cada centavo.</p>
         <div class="test-au">
           <div class="test-av"><i class="bi bi-person-fill"></i></div>
           <div><div class="test-nm">Ing. Patricia Rojas</div><div class="test-loc"><i class="bi bi-geo-alt-fill" style="color:var(--ac);font-size:11px"></i> Cochabamba</div></div>
@@ -202,8 +208,8 @@
     </div>
     <div class="faq-list rv d1">
       <div class="faq-it">
-        <div class="faq-q">¿Cuánto tarda la fabricación de una piscina? <i class="bi bi-plus-lg"></i></div>
-        <div class="faq-a"><p>Dependiendo del tamaño, entre 15 y 45 días hábiles desde la aprobación del pedido. Piscinas residenciales estándar suelen estar listas en 3 semanas.</p></div>
+        <div class="faq-q">¿Cuánto tarda la fabricación de un proyecto? <i class="bi bi-plus-lg"></i></div>
+        <div class="faq-a"><p>Dependiendo del tamaño, entre 15 y 45 días hábiles desde la aprobación del pedido. Los proyectos estándar suelen estar listas en 3 semanas.</p></div>
       </div>
       <div class="faq-it">
         <div class="faq-q">¿Entregan a todo Bolivia? <i class="bi bi-plus-lg"></i></div>
@@ -243,7 +249,7 @@
   <div class="wrap">
     <div class="ft-top">
       <div class="ft-brand">
-        <a href="index.html" class="logo"><div class="logo-img-box"><img src="./assets/img/logo.png" alt="logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="logo-fb">FIBROTEK</span></div></a>
+        <a href="index.html" class="logo"><div class="logo-img-box"><img src="./assets/img/logo.png" alt="logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/><span class="logo-fb">Fibrotek</span></div></a>
         <p>Quince años moldeando Bolivia con fibra de vidrio de grado industrial.</p>
       </div>
       <div class="ft-col"><h4>Páginas</h4><ul>
@@ -272,11 +278,13 @@
   </div>
 </footer>
 
-<div class="wa-float"><div class="wa-bubble">¿Preguntas? Escribinos 👋</div><a class="wa-fab" aria-label="Chat en WhatsApp" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a></div>
-<button id="btt" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+<div class="wa-float"><div class="wa-bubble">¿Preguntas? Escribinos ðŸ‘‹</div><a class="wa-fab" aria-label="Chat en WhatsApp" aria-label="Chat en WhatsApp" href="https://wa.me/59168124071" target="_blank"><i class="bi bi-whatsapp"></i></a></div>
+<button id="btt" aria-label="Volver arriba" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="./js/main.js"></script>
   <script src="./js/animations.js"></script>
 </body>
 </html>
+
+
